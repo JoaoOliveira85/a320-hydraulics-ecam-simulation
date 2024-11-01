@@ -1,0 +1,23 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.left-container {
+  left: 0;
+  width: auto;
+  position: relative;
+  flex: 2;
+  height: 100%;
+}
+
+.right-container {
+  right: 0;
+  height: 100%;
+  flex: 1;
+  position: relative;
+}
