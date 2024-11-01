@@ -4,5 +4,5 @@ import { LayoutConstructor } from "../LayoutConstructor";
 
 test("Renders layout component", () => {
   const { asFragment } = render(<LayoutConstructor />);
-  expect(asFragment).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

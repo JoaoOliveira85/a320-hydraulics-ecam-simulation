@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import { test, expect } from "vitest";
-import { App } from "../App";
+import { Ecam } from "../Ecam";
 
 test("Renders layout component", () => {
-  const { asFragment } = render(<App />);
+  const { asFragment } = render(<Ecam />);
   expect(asFragment()).toMatchSnapshot();
 });

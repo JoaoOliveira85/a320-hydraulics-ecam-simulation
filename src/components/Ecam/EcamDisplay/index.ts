@@ -1,2 +1,1 @@
-export * from "./Ecam";
 export * from "./EcamDisplay";

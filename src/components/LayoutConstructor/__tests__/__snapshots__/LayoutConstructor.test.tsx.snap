@@ -1,3 +1,47 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Renders layout component 1`] = `[Function]`;
+exports[`Renders layout component 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="left-container"
+    >
+      <div
+        class="container__ecam"
+      >
+        <img
+          alt="ECAM and panel"
+          class="container__ecam__image"
+          src="/src/assets/ecam_and_panel_day_hyd_off.webp"
+        />
+        <canvas
+          class="canvas"
+          data-testid="canvas"
+          height="0"
+          width="0"
+        />
+      </div>
+    </div>
+    <div
+      class="right-container"
+    >
+      <div
+        class="right-container__header"
+      >
+        <h1>
+          ECAM
+        </h1>
+      </div>
+      <div
+        class="right-container__content"
+      >
+        <p>
+          Electronic Centralized Aircraft Monitor
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

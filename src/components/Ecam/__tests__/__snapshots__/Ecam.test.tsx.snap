@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Renders layout component 1`] = `
+<DocumentFragment>
+  <div
+    class="container__ecam"
+  >
+    <img
+      alt="ECAM and panel"
+      class="container__ecam__image"
+      src="/src/assets/ecam_and_panel_day_hyd_off.webp"
+    />
+    <canvas
+      class="canvas"
+      data-testid="canvas"
+      height="0"
+      width="0"
+    />
+  </div>
+</DocumentFragment>
+`;

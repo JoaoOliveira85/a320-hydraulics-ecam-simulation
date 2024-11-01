@@ -1,0 +1,10 @@
+.canvas {
+  width: 44%;
+  height: 45%;
+  left: 14.8%;
+  top: 8.1%;
+  z-index: 1;
+  position: absolute;
+  transform: perspective(600px) rotateX(-3.4deg);
+  border-radius: 13px;
+}

@@ -6,13 +6,13 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   server: {
     host: "0.0.0.0",
-    port: 5173,
+    port: 2019,
   },
   plugins: [react(), tsconfigPaths()],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "src/styles/global.scss";',
+        additionalData: '@add "src/styles/global.scss";',
       },
     },
   },

@@ -1,5 +1,5 @@
 import "./LayoutConstructor.scss";
-import { Ecam } from "components/Ecam";
+import { Ecam } from "components";
 
 export const LayoutConstructor = () => {
   return (

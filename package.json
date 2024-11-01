@@ -20,12 +20,14 @@
   },
   "dependencies": {
     "a320-hydraulics-frontend-demo": "file:",
+    "canvas": "^2.11.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@testing-library/react": "^16.0.1",
+    "@types/node": "^22.8.6",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
@@ -49,6 +51,7 @@
     "typescript-eslint": "^8.12.2",
     "vite": "^5.4.9",
     "vite-tsconfig-paths": "^5.0.1",
-    "vitest": "^2.1.4"
+    "vitest": "^2.1.4",
+    "vitest-canvas-mock": "^0.3.3"
   }
 }
