@@ -5,6 +5,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  background: none;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .left-container {
@@ -12,7 +17,16 @@
   width: auto;
   position: relative;
   flex: 2;
+  overflow: hidden;
+  min-width: 500px;
+
+  // For desktop, use full height
   height: 100%;
+
+  @media screen and (max-width: 768px) {
+    // For mobile, limit height to create a cropped effect
+    height: 50vh; // Adjust this value as needed for the desired cropping
+  }
 }
 
 .right-container {
@@ -20,4 +34,11 @@
   height: 100%;
   flex: 1;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.right-container-content {
+  height: 20%;
 }

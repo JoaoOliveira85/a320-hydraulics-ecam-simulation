@@ -8,13 +8,13 @@ import "vitest-canvas-mock";
 describe("EcamDisplay Component", () => {
   test("renders without crashing", () => {
     render(<EcamDisplay />);
-    const canvasElement = screen.getByTestId("canvas") as HTMLCanvasElement;
+    const canvasElement = screen.getByTestId("canvas");
     expect(canvasElement).not.toBeNull();
   });
 
   test("sets canvas width and height based on resolution and scaling", () => {
     render(<EcamDisplay />);
-    const canvasElement = screen.getByTestId("canvas") as HTMLCanvasElement;
+    const canvasElement: HTMLCanvasElement = screen.getByTestId("canvas");
 
     canvasElement.width = 800;
     canvasElement.height = 600;
@@ -30,7 +30,7 @@ describe("EcamDisplay Component", () => {
 
   test("fills the canvas with the correct background color", () => {
     render(<EcamDisplay />);
-    const canvasElement = screen.getByTestId("canvas") as HTMLCanvasElement;
+    const canvasElement: HTMLCanvasElement = screen.getByTestId("canvas");
     const ctx = canvasElement.getContext("2d");
     if (!ctx) {
       throw new Error("2D context not supported or canvas already initialized");
@@ -43,7 +43,7 @@ describe("EcamDisplay Component", () => {
 
   test("draws the correct text on the canvas", () => {
     render(<EcamDisplay />);
-    const canvasElement = screen.getByTestId("canvas") as HTMLCanvasElement;
+    const canvasElement: HTMLCanvasElement = screen.getByTestId("canvas");
     const ctx = canvasElement.getContext("2d");
     if (!ctx) {
       throw new Error("2D context not supported or canvas already initialized");
@@ -65,7 +65,7 @@ describe("EcamDisplay Component", () => {
 
   test("draws a green circle at the center of the canvas", () => {
     render(<EcamDisplay />);
-    const canvasElement = screen.getByTestId("canvas") as HTMLCanvasElement;
+    const canvasElement: HTMLCanvasElement = screen.getByTestId("canvas");
     const ctx = canvasElement.getContext("2d");
     if (!ctx) {
       throw new Error("2D context not supported or canvas already initialized");

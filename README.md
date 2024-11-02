@@ -6,7 +6,7 @@ A repository for the deliverables of the Frontend portion of the Test Task: Full
 
 ### Full Stack Development of Airbus Hydraulic System Simulation using Microsoft Flight Simulator 2020 SDK
 
-#### Objective:
+#### Objective
 
 Develop a frontend application to simulate and visualize the hydraulic system of an Airbus aircraft. The simulation should leverage the Microsoft Flight Simulator 2020 SDK to fetch and manipulate data, providing a realistic simulation environment.
 
@@ -68,7 +68,7 @@ This task is expected to take approximately 20-30 hours of work, assuming famili
 - Access to Microsoft Flight Simulator 2020 and its SDK will be necessary to complete this task.
 - The applicant should demonstrate both technical skills and creativity in approaching the problem.
 
-#### Resources:
+#### Resources
 
 - [AviaLearn Hydraulic System Presentation A320 Family](https://youtu.be/o2dJM9UNFqw?si=xzwAbIatnkLzQwzL)
 - [Microsoft Flight Simulator 2020 SDK Documentation](https://docs.flightsimulator.com/html/Introduction/Introduction.htm)

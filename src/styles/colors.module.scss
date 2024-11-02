@@ -1,0 +1,78 @@
+// Based on the Airbus branding guidelines https://brand.airbus.com/en/asset-library/colours
+
+// Primary Airbus Colors
+$white: #ffffff;
+$black: #000000;
+$airbus-blue: #00205b;
+$airbus-dark-blue: #005587;
+$airbus-medium-blue: #0085ad;
+$airbus-light-blue: #6399ae;
+$airbus-silver: #b7c9d3;
+
+// Additional Airbus Colors
+$green: #84bd00;
+$yellow: #e1e000;
+$orange: #fe5000;
+$red: #e4002b;
+$magenta: #da1884;
+$purple: #a51890;
+$cyan: #00aec7;
+
+// Grayscale Airbus Colors (Darker to Lighter)
+$dark-gray: #2e2e2e;
+$medium-gray: #6d6d6d;
+$light-gray: #d0d0d0;
+$extra-light-gray: #f0f0f0;
+
+// Tints and Shades (Dark Variants)
+$green-dark: #4b8a00;
+$yellow-dark: #a1a000;
+$orange-dark: #b33900;
+$red-dark: #a8001f;
+$magenta-dark: #8d0058;
+$purple-dark: #6b0e60;
+$cyan-dark: #007f94;
+
+// Tints and Shades (Light Variants)
+$green-light: #bde54f;
+$yellow-light: #f3f370;
+$orange-light: #ff8650;
+$red-light: #f04b6b;
+$magenta-light: #e86ea2;
+$purple-light: #c061b0;
+$cyan-light: #52c5d9;
+
+:export {
+  white: $white;
+  black: $black;
+  airbusBlue: $airbus-blue;
+  airbusDarkBlue: $airbus-dark-blue;
+  airbusMediumBlue: $airbus-medium-blue;
+  airbusLightBlue: $airbus-light-blue;
+  airbusSilver: $airbus-silver;
+  green: $green;
+  yellow: $yellow;
+  orange: $orange;
+  red: $red;
+  magenta: $magenta;
+  purple: $purple;
+  cyan: $cyan;
+  darkGray: $dark-gray;
+  mediumGray: $medium-gray;
+  lightGray: $light-gray;
+  extraLightGray: $extra-light-gray;
+  greenDark: $green-dark;
+  yellowDark: $yellow-dark;
+  orangeDark: $orange-dark;
+  redDark: $red-dark;
+  magentaDark: $magenta-dark;
+  purpleDark: $purple-dark;
+  cyanDark: $cyan-dark;
+  greenLight: $green-light;
+  yellowLight: $yellow-light;
+  orangeLight: $orange-light;
+  redLight: $red-light;
+  magentaLight: $magenta-light;
+  purpleLight: $purple-light;
+  cyanLight: $cyan-light;
+}

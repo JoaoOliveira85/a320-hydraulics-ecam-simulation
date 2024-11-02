@@ -3,43 +3,363 @@
 exports[`Renders layout component 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="MuiBox-root css-1boiz6q"
   >
     <div
-      class="left-container"
+      class="MuiContainer-root MuiContainer-maxWidthXl css-7r9cn7-MuiContainer-root"
     >
       <div
-        class="container__ecam"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 left-container css-1b3f5l1-MuiPaper-root"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
-        <img
-          alt="ECAM and panel"
-          class="container__ecam__image"
-          src="/src/assets/ecam_and_panel_day_hyd_off.webp"
-        />
-        <canvas
-          class="canvas"
-          data-testid="canvas"
-          height="0"
-          width="0"
-        />
-      </div>
-    </div>
-    <div
-      class="right-container"
-    >
-      <div
-        class="right-container__header"
-      >
-        <h1>
-          ECAM
-        </h1>
+        <div
+          class="container__ecam"
+        >
+          <img
+            alt="ECAM and panel"
+            class="container__ecam__image"
+            src="/src/assets/ecam_and_panel_day_hyd_off.webp"
+          />
+          <canvas
+            class="canvas"
+            data-testid="canvas"
+            height="0"
+            width="0"
+          />
+        </div>
       </div>
       <div
-        class="right-container__content"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 right-container css-qd3u7k-MuiPaper-root"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
-        <p>
-          Electronic Centralized Aircraft Monitor
-        </p>
+        <div
+          class="right-container__content MuiBox-root css-0"
+        >
+          <div
+            class="MuiContainer-root MuiContainer-maxWidthLg css-d3c8ik-MuiContainer-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1oaabpf-MuiPaper-root"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              >
+                <h3
+                  class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+                >
+                  <div
+                    aria-expanded="false"
+                    class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+                    >
+                      Overhead Panel
+                    </div>
+                    <div
+                      class="MuiAccordionSummary-expandIconWrapper css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="ExpandMoreIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </h3>
+                <div
+                  class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+                  style="min-height: 0px;"
+                >
+                  <div
+                    class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                  >
+                    <div
+                      class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                    >
+                      <div
+                        class="MuiAccordion-region"
+                        role="region"
+                      >
+                        <div
+                          class="MuiAccordionDetails-root css-12ypfdp-MuiAccordionDetails-root"
+                        >
+                          <div
+                            class="MuiBox-root css-1et8dn9"
+                          >
+                            <div
+                              class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+                            >
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="eng1-pump"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  ENG 1 PUMP
+                                </button>
+                              </div>
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="elec-pump"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  ELEC PUMP
+                                </button>
+                              </div>
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="eng2-pump"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  ENG 2 PUMP
+                                </button>
+                              </div>
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="rat-man-on"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  RAT MAN ON
+                                </button>
+                              </div>
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="ptu-auto"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  PTU (auto)
+                                </button>
+                              </div>
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="elec-pump-2"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  ELEC PUMP
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-disabled MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              >
+                <h3
+                  class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+                >
+                  <div
+                    aria-disabled="true"
+                    aria-expanded="false"
+                    class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-disabled MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+                    >
+                      Simulation Controls
+                    </div>
+                    <div
+                      class="MuiAccordionSummary-expandIconWrapper css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="ExpandMoreIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </h3>
+                <div
+                  class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+                  style="min-height: 0px;"
+                >
+                  <div
+                    class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                  >
+                    <div
+                      class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                    >
+                      <div
+                        class="MuiAccordion-region"
+                        role="region"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-disabled MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              >
+                <h3
+                  class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+                >
+                  <div
+                    aria-disabled="true"
+                    aria-expanded="false"
+                    class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-disabled MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+                    >
+                      Real Time Data
+                    </div>
+                    <div
+                      class="MuiAccordionSummary-expandIconWrapper css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="ExpandMoreIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </h3>
+                <div
+                  class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+                  style="min-height: 0px;"
+                >
+                  <div
+                    class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                  >
+                    <div
+                      class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                    >
+                      <div
+                        class="MuiAccordion-region"
+                        role="region"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-disabled MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              >
+                <h3
+                  class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+                >
+                  <div
+                    aria-disabled="true"
+                    aria-expanded="false"
+                    class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-disabled MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+                    >
+                      Failures
+                    </div>
+                    <div
+                      class="MuiAccordionSummary-expandIconWrapper css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="ExpandMoreIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </h3>
+                <div
+                  class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+                  style="min-height: 0px;"
+                >
+                  <div
+                    class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                  >
+                    <div
+                      class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                    >
+                      <div
+                        class="MuiAccordion-region"
+                        role="region"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="right-container__header MuiBox-root css-0"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1xvkes7-MuiPaper-root"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+          >
+            <h1>
+              TASK #1: Frontend Development
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et tortor nec urna maximus auctor nec at mi. Mauris vitae leo lorem. Ut convallis metus vitae dolor pellentesque, a mattis dolor egestas. Suspendisse dignissim felis a iaculis pulvinar. Donec ut sem quis eros feugiat blandit. Nulla ullamcorper turpis eu sapien sodales lobortis. Phasellus quis eros vitae lacus convallis consequat ac id massa. Sed at egestas ligula. Praesent maximus nulla vitae leo tempor, nec tempus magna hendrerit. Fusce bibendum semper condimentum. Nulla facilisi. Nulla bibendum sed dolor eu dignissim. Nunc sollicitudin egestas nulla nec faucibus. Cras fermentum enim ac metus auctor, ut tristique libero blandit.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

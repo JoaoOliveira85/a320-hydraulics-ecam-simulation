@@ -6,8 +6,10 @@
   &__ecam {
     position: relative;
     height: 100%;
-    margin: 0 auto;
     aspect-ratio: 1 / 1;
+    @media screen and (max-width: 768px) {
+      height: 50vh;
+    }
 
     &__image {
       width: auto;
@@ -15,11 +17,6 @@
       display: block;
       position: absolute;
       left: 0;
-      mask-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 1) 75%,
-        rgba(0, 0, 0, 0) 85%
-      );
     }
   }
 }
