@@ -92,11 +92,17 @@ exports[`Renders layout component 1`] = `
                         role="region"
                       >
                         <div
-                          class="MuiAccordionDetails-root css-12ypfdp-MuiAccordionDetails-root"
+                          class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
                         >
                           <div
                             class="MuiBox-root css-1et8dn9"
                           >
+                            <h6
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-17uzhmm-MuiTypography-root"
+                              style="--Typography-textAlign: center;"
+                            >
+                              Hydraulic Pumps
+                            </h6>
                             <div
                               class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
                             >
@@ -109,7 +115,7 @@ exports[`Renders layout component 1`] = `
                                   tabindex="0"
                                   type="button"
                                 >
-                                  ENG 1 PUMP
+                                  ENG 1 Pump
                                 </button>
                               </div>
                               <div
@@ -121,7 +127,7 @@ exports[`Renders layout component 1`] = `
                                   tabindex="0"
                                   type="button"
                                 >
-                                  ELEC PUMP
+                                  Blue Pump
                                 </button>
                               </div>
                               <div
@@ -133,7 +139,7 @@ exports[`Renders layout component 1`] = `
                                   tabindex="0"
                                   type="button"
                                 >
-                                  ENG 2 PUMP
+                                  ENG 2 Pump
                                 </button>
                               </div>
                               <div
@@ -145,7 +151,7 @@ exports[`Renders layout component 1`] = `
                                   tabindex="0"
                                   type="button"
                                 >
-                                  RAT MAN ON
+                                  RAM MAN ON
                                 </button>
                               </div>
                               <div
@@ -169,7 +175,45 @@ exports[`Renders layout component 1`] = `
                                   tabindex="0"
                                   type="button"
                                 >
-                                  ELEC PUMP
+                                  Y Elec Pump
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiBox-root css-1et8dn9"
+                          >
+                            <h6
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-17uzhmm-MuiTypography-root"
+                              style="--Typography-textAlign: center;"
+                            >
+                              Engine Fire Valves
+                            </h6>
+                            <div
+                              class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+                            >
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="eng1-valve"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  ENG 1 Valve
+                                </button>
+                              </div>
+                              <div
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-19yvhla-MuiGrid2-root"
+                              >
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-smz89g-MuiButtonBase-root-MuiButton-root"
+                                  id="eng2-valve"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  ENG 2 Valve
                                 </button>
                               </div>
                             </div>
@@ -181,18 +225,17 @@ exports[`Renders layout component 1`] = `
                 </div>
               </div>
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-disabled MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <h3
                   class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
                 >
                   <div
-                    aria-disabled="true"
                     aria-expanded="false"
-                    class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-disabled MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
+                    class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
                     role="button"
-                    tabindex="-1"
+                    tabindex="0"
                   >
                     <div
                       class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
@@ -229,24 +272,31 @@ exports[`Renders layout component 1`] = `
                       <div
                         class="MuiAccordion-region"
                         role="region"
-                      />
+                      >
+                        <div
+                          class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
+                        >
+                          <div>
+                            foo
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-disabled MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <h3
                   class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
                 >
                   <div
-                    aria-disabled="true"
                     aria-expanded="false"
-                    class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-disabled MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
+                    class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
                     role="button"
-                    tabindex="-1"
+                    tabindex="0"
                   >
                     <div
                       class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
@@ -283,24 +333,31 @@ exports[`Renders layout component 1`] = `
                       <div
                         class="MuiAccordion-region"
                         role="region"
-                      />
+                      >
+                        <div
+                          class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
+                        >
+                          <div>
+                            bar
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-disabled MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-qb7i9s-MuiPaper-root-MuiAccordion-root"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <h3
                   class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
                 >
                   <div
-                    aria-disabled="true"
                     aria-expanded="false"
-                    class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-disabled MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
+                    class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-jineix-MuiButtonBase-root-MuiAccordionSummary-root"
                     role="button"
-                    tabindex="-1"
+                    tabindex="0"
                   >
                     <div
                       class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
@@ -337,7 +394,15 @@ exports[`Renders layout component 1`] = `
                       <div
                         class="MuiAccordion-region"
                         role="region"
-                      />
+                      >
+                        <div
+                          class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
+                        >
+                          <div>
+                            baz
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

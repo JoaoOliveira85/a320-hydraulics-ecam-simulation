@@ -3,6 +3,54 @@
     "title": "ECAM"
   },
   "overhead_panel": {
-    "title": "Overhead Panel"
+    "title": "Overhead Panel",
+    "instruments": {
+      "hydraulic_pumps": {
+        "sub_title": "Hydraulic Pumps",
+        "eng1-pump": "ENG 1 Pump",
+        "eng2-pump": "ENG 2 Pump",
+        "elec-pump": "Blue Pump",
+        "elec-pump-2": "Y Elec Pump",
+        "rat-man-on": "RAM MAN ON",
+        "ptu-auto": "PTU (auto)"
+      },
+      "valves": {
+        "sub_title": "Engine Fire Valves",
+        "eng1-valve": "ENG 1 Valve",
+        "eng2-valve": "ENG 2 Valve"
+      }
+    }
+  },
+  "simulation_controls": {
+    "title": "Simulation Controls",
+    "start": "Start",
+    "pause": "Pause",
+    "stop": "Stop"
+  },
+  "real_time_data": {
+    "title": "Real Time Data",
+    "engine": {
+      "title": "Engine",
+      "eng1": "ENG 1",
+      "eng2": "ENG 2"
+    },
+    "hydraulic": {
+      "title": "Hydraulic",
+      "pressure": "Pressure",
+      "temperature": "Temperature"
+    }
+  },
+  "failures": {
+    "title": "Failures",
+    "engine": {
+      "title": "Engine",
+      "eng1": "ENG 1",
+      "eng2": "ENG 2"
+    },
+    "hydraulic": {
+      "title": "Hydraulic",
+      "pressure": "Pressure",
+      "temperature": "Temperature"
+    }
   }
 }

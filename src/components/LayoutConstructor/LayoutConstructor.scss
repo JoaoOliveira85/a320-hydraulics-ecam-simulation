@@ -19,13 +19,10 @@
   flex: 2;
   overflow: hidden;
   min-width: 500px;
-
-  // For desktop, use full height
   height: 100%;
 
   @media screen and (max-width: 768px) {
-    // For mobile, limit height to create a cropped effect
-    height: 50vh; // Adjust this value as needed for the desired cropping
+    height: 50vh;
   }
 }
 

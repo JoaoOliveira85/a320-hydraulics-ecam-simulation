@@ -4,7 +4,7 @@ import "./EcamDisplay.scss";
 const ecamDisplaySettings = {
   canvasResolutionY: 400,
   canvasResolutionX: 300,
-  backgroundColor: "navy",
+  backgroundColor: "black",
 };
 
 export const EcamDisplay = () => {
@@ -31,21 +31,40 @@ export const EcamDisplay = () => {
     ctx.fillStyle = ecamDisplaySettings.backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.font = `${30 * scaleFactor}px Arial`;
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.fillText("Hello World", canvas.width / 2, 50 * scaleFactor);
+    // Blue hydraulic line
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2, 100);
+    ctx.lineTo(canvas.width / 2, canvas.height - 50);
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.closePath();
 
     ctx.beginPath();
-    ctx.arc(
-      canvas.width / 2,
-      canvas.height / 2,
-      20 * scaleFactor,
-      0,
-      2 * Math.PI,
-    );
-    ctx.fillStyle = "green";
-    ctx.fill();
+    ctx.moveTo(canvas.width / 2, 80);
+    ctx.lineTo(canvas.width / 2 - 10, 100);
+    ctx.lineTo(canvas.width / 2 + 10, 100);
+    ctx.closePath();
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Green hydraulic line
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 5, 100);
+    ctx.lineTo(canvas.width / 5, canvas.height - 50);
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.closePath();
+
+    // Yellow hydraulic line
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 1.25, 100);
+    ctx.lineTo(canvas.width / 1.25, canvas.height - 50);
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 2;
+    ctx.stroke();
     ctx.closePath();
   }, [canvasRef.current?.width, canvasRef.current?.height]);
 
