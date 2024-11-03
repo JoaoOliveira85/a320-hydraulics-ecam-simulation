@@ -23,8 +23,8 @@ exports[`Renders layout component 1`] = `
           <canvas
             class="canvas"
             data-testid="canvas"
-            height="0"
-            width="0"
+            height="640"
+            width="480"
           />
         </div>
       </div>

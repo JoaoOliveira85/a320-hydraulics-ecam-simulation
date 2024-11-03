@@ -39,3 +39,8 @@ export interface Valve {
   [Valves.engine1]: boolean;
   [Valves.engine2]: boolean;
 }
+
+export interface OverheadPanelProps {
+  handlePumpButton: (button: TypesOfPumps) => void;
+  handleValveButton: (button: TypesOfValves) => void;
+}
