@@ -1,7 +1,8 @@
-import { Box, Typography, Grid2 as Grid, Button } from "@mui/material";
+import { Box, Typography, Grid, Button } from "@mui/material";
 import { OverheadPanelProps } from "types";
 import EN from "constants/EN.json";
 import { buttonList, ValveList } from "constants/controls";
+
 const {
   overhead_panel: {
     instruments: { hydraulic_pumps, valves },
@@ -18,21 +19,11 @@ export const OverheadPanel: React.FC<OverheadPanelProps> = ({
         <Typography variant="h6" align="center">
           {hydraulic_pumps.sub_title}
         </Typography>
-        <Grid
-          container
-          spacing={2}
-          columns={12}
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Grid container spacing={2} justifyContent="center" alignItems="center">
           {buttonList.map((button) => (
-            <Grid
-              key={button.id}
-              sx={{
-                width: { xs: "100%", sm: "50%", md: "33.33%" },
-              }}
-            >
+            <Grid item key={button.id} xs={6} md={4}>
               <Button
+                fullWidth
                 variant="contained"
                 color="primary"
                 id={button.id}
@@ -48,21 +39,11 @@ export const OverheadPanel: React.FC<OverheadPanelProps> = ({
         <Typography variant="h6" align="center">
           {valves.sub_title}
         </Typography>
-        <Grid
-          container
-          spacing={2}
-          columns={12}
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Grid container spacing={2} justifyContent="center" alignItems="center">
           {ValveList.map((button) => (
-            <Grid
-              key={button.id}
-              sx={{
-                width: { xs: "100%", sm: "50%", md: "33.33%" },
-              }}
-            >
+            <Grid item key={button.id} xs={6} md={4}>
               <Button
+                fullWidth
                 variant="contained"
                 color="primary"
                 id={button.id}

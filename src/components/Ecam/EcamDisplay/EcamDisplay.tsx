@@ -16,40 +16,31 @@ const ecamDisplaySettings = {
   backgroundColor: "black",
 };
 
-type EcamInputs = {
+interface EcampDisplayProps {
+  pressures: {
+    green: number;
+    blue: number;
+    yellow: number;
+  };
   pumps: {
     engine1: boolean;
     engine2: boolean;
+    blueElectricPump: boolean;
     powerTransferUnit: boolean;
     ramAirTurbine: boolean;
-    blueElectricPump: boolean;
     yellowElectricPump: boolean;
   };
   valves: {
     engine1: boolean;
     engine2: boolean;
   };
-  pressures: {
-    green: number;
-    blue: number;
-    yellow: number;
-  };
-  reservoirs: {
-    green: number;
-    blue: number;
-    yellow: number;
-  };
-  temps: {
-    tat: number;
-    sat: number;
-  };
-  time: Date;
-  gw: number;
-};
+}
 
-// @ts-expect-error 'data' will be used when the information starts puring in from the controls component
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const EcamDisplay = (data: EcamInputs) => {
+export const EcamDisplay = ({
+  pressures,
+  pumps,
+  valves,
+}: EcampDisplayProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -91,7 +82,11 @@ export const EcamDisplay = (data: EcamInputs) => {
 
     ecamHeader({
       ctx,
-      data: { green: 2900, blue: 3000, yellow: 2950 },
+      data: {
+        green: pressures.green,
+        blue: pressures.blue,
+        yellow: pressures.yellow,
+      },
       refCoords: refCoords,
     });
 
@@ -101,9 +96,14 @@ export const EcamDisplay = (data: EcamInputs) => {
       orientation: "vertical",
       from: { x: canvas.width / 5, y: canvas.height - 535 },
       length: 130,
-      color: "green",
+      color: `${(pumps.engine1 && valves.engine1) || (pumps.engine2 && valves.engine2 && pumps.powerTransferUnit) || (pumps.yellowElectricPump && pumps.powerTransferUnit) ? "green" : "orange"}`,
     });
-    drawPump(ctx, { x: canvas.width / 5, y: 250 }, false);
+    drawPump(
+      ctx,
+      { x: canvas.width / 5, y: 250 },
+      pumps.engine1,
+      `${(pumps.engine1 && valves.engine1) || (pumps.engine2 && valves.engine2 && pumps.powerTransferUnit) || (pumps.yellowElectricPump && pumps.powerTransferUnit) ? "green" : "orange"}`,
+    );
     ctx.font = "24px Arial";
     ctx.fillStyle = "white";
     ctx.fillText("1", canvas.width / 5 + 25, 260);
@@ -114,7 +114,11 @@ export const EcamDisplay = (data: EcamInputs) => {
       length: 70,
       color: "green",
     });
-    drawValve(ctx, { x: canvas.width / 5, y: canvas.height - 175 - 115 }, true);
+    drawValve(
+      ctx,
+      { x: canvas.width / 5, y: canvas.height - 175 - 115 },
+      valves.engine1,
+    );
     drawLine({
       ctx,
       orientation: "vertical",
@@ -132,42 +136,65 @@ export const EcamDisplay = (data: EcamInputs) => {
     });
     drawReservoir(ctx, canvas.width / 5, canvas.height - 95, 6, 130, 15);
 
+    const ptuActive =
+      pumps.powerTransferUnit &&
+      (((!pumps.engine1 || !valves.engine1) &&
+        pumps.engine2 &&
+        valves.engine2) ||
+        (pumps.engine1 &&
+          valves.engine1 &&
+          (!pumps.engine2 || !valves.engine2)));
+    const ptuLineColor = !ptuActive
+      ? "black"
+      : pumps.powerTransferUnit
+        ? "green"
+        : "orange";
     // Blue line
     ctx.font = "18px Arial";
-    ctx.fillStyle = "white";
+    ctx.fillStyle = `${pumps.ramAirTurbine ? "green" : "white"}`;
     ctx.fillText("RAT", canvas.width / 2 - 60, 200);
     drawShape({
       ctx,
-      position: { x: canvas.width / 2 - 10, y: 195 },
+      position: { x: canvas.width / 2 - 15, y: 193 },
       size: 10,
-      color: "white",
+      color: `${pumps.ramAirTurbine ? "green" : "white"}`,
+      fill: pumps.ramAirTurbine,
     }).triangle("right");
 
     drawShape({
       ctx,
-      position: { x: canvas.width / 2 + 117, y: 150 },
+      position: { x: canvas.width / 2 + 110, y: 150 },
       size: 15,
-      color: "green",
+      color: `${pumps.powerTransferUnit ? "green" : "orange"}`,
+      fill: ptuActive,
     }).triangle("right");
     ctx.font = "18px Arial";
     ctx.fillStyle = "white";
     ctx.fillText("PTU", canvas.width / 2 + 62, 156);
+    drawLine({
+      ctx,
+      orientation: "horizontal",
+      from: { x: canvas.width / 2 - 143, y: 150 },
+      length: 62,
+      color: ptuLineColor,
+    });
     drawShape({
       ctx,
-      position: { x: canvas.width / 2 + 40, y: 150 },
+      position: { x: canvas.width / 2 + 45, y: 150 },
       size: 15,
-      color: "green",
-    }).triangle("left");
+      color: `${pumps.powerTransferUnit ? "green" : "orange"}`,
+      fill: ptuActive,
+    }).triangle(ptuActive ? "right" : "left");
     drawLine({
       ctx,
       orientation: "horizontal",
       from: { x: canvas.width / 2 + 15, y: 150 },
       length: 25,
-      color: "green",
+      color: `${pumps.powerTransferUnit ? "green" : "orange"}`,
     });
     ctx.beginPath();
     ctx.arc(canvas.width / 2, 150, 15, Math.PI, Math.PI * 2, true);
-    ctx.strokeStyle = "green";
+    ctx.strokeStyle = `${pumps.powerTransferUnit ? "green" : "orange"}`;
     ctx.lineWidth = 3;
     ctx.stroke();
     drawLine({
@@ -175,14 +202,22 @@ export const EcamDisplay = (data: EcamInputs) => {
       orientation: "horizontal",
       from: { x: canvas.width / 2 - 65, y: 150 },
       length: 50,
-      color: "green",
+      color: `${pumps.powerTransferUnit ? "green" : "orange"}`,
     });
     drawShape({
       ctx,
-      position: { x: canvas.width / 2 - 80, y: 150 },
+      position: { x: canvas.width / 2 - 74, y: 150 },
       size: 15,
-      color: "green",
-    }).triangle("left");
+      color: `${pumps.powerTransferUnit ? "green" : "orange"}`,
+      fill: ptuActive,
+    }).triangle(ptuActive ? "right" : "left");
+    drawLine({
+      ctx,
+      orientation: "horizontal",
+      from: { x: canvas.width / 2 + 118, y: 150 },
+      length: 27,
+      color: ptuLineColor,
+    });
 
     drawLine({
       ctx,
@@ -191,7 +226,7 @@ export const EcamDisplay = (data: EcamInputs) => {
       length: 210,
       color: "green",
     });
-    drawPump(ctx, { x: canvas.width / 2, y: 330 }, false);
+    drawPump(ctx, { x: canvas.width / 2, y: 330 }, pumps.blueElectricPump);
     drawLine({
       ctx,
       orientation: "vertical",
@@ -215,17 +250,23 @@ export const EcamDisplay = (data: EcamInputs) => {
       orientation: "vertical",
       from: { x: canvas.width / 1.25, y: canvas.height - 535 },
       length: 130,
-      color: "green",
+      color: `${(pumps.engine2 && valves.engine2) || (pumps.engine1 && valves.engine1 && pumps.powerTransferUnit) || pumps.yellowElectricPump ? "green" : "orange"}`,
     });
     ctx.font = "18px Arial";
-    ctx.fillStyle = "white";
+    ctx.fillStyle = `${pumps.yellowElectricPump ? "green" : "white"}`;
     ctx.fillText("ELEC", canvas.width / 1.25 + 30, 200);
-    drawPump(ctx, { x: canvas.width / 1.25, y: 250 }, false);
+    drawPump(
+      ctx,
+      { x: canvas.width / 1.25, y: 250 },
+      pumps.engine2,
+      `${(pumps.engine2 && valves.engine2) || (pumps.engine1 && valves.engine1 && pumps.powerTransferUnit) || pumps.yellowElectricPump ? "green" : "orange"}`,
+    );
     drawShape({
       ctx,
       position: { x: canvas.width / 1.25 + 15, y: 195 },
       size: 10,
-      color: "white",
+      color: `${pumps.yellowElectricPump ? "green" : "white"}`,
+      fill: pumps.yellowElectricPump,
     }).triangle("left");
     ctx.font = "24px Arial";
     ctx.fillStyle = "white";
@@ -240,7 +281,7 @@ export const EcamDisplay = (data: EcamInputs) => {
     drawValve(
       ctx,
       { x: canvas.width / 1.255, y: canvas.height - 175 - 115 },
-      false,
+      valves.engine2,
     );
     drawLine({
       ctx,
@@ -260,7 +301,19 @@ export const EcamDisplay = (data: EcamInputs) => {
     drawReservoir(ctx, canvas.width / 1.25, canvas.height - 95, 6, 130, 20);
 
     permanentData({ ctx, tat: 14, sat: 14, time: new Date(), gw: 46420 });
-  }, [canvasRef.current?.width, canvasRef.current?.height]);
+  }, [
+    canvasRef.current?.width,
+    canvasRef.current?.height,
+    pressures,
+    pumps.engine1,
+    pumps.engine2,
+    pumps.blueElectricPump,
+    pumps.powerTransferUnit,
+    pumps.yellowElectricPump,
+    pumps.ramAirTurbine,
+    valves.engine1,
+    valves.engine2,
+  ]);
 
   return <canvas ref={canvasRef} data-testid="canvas" className="canvas" />;
 };

@@ -1,33 +1,9 @@
 import { LayoutConstructor } from "components";
-import {
-  ThemeProvider,
-  createTheme,
-  Box,
-  GlobalStyles,
-  useMediaQuery,
-} from "@mui/material";
-import colors from "styles/colors.module.scss";
+import { ThemeProvider, Box, GlobalStyles, useMediaQuery } from "@mui/material";
+import "./App.scss";
+import { darkTheme, lightTheme } from "styles/themes";
 
-console.log(colors.airbusDarkBlue);
 export const App = () => {
-  const lightTheme = createTheme({
-    palette: {
-      mode: "light",
-      primary: { main: colors.airbusDarkBlue },
-      background: { default: colors.airbusWhite },
-      text: { primary: "#000000" },
-    },
-  });
-
-  const darkTheme = createTheme({
-    palette: {
-      mode: "dark",
-      primary: { main: "#90caf9" },
-      background: { default: "#121212", paper: "#1d1d1d" },
-      text: { primary: "#ffffff" },
-    },
-  });
-
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const currentTheme = prefersDarkMode ? darkTheme : lightTheme;
 
@@ -35,17 +11,24 @@ export const App = () => {
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles
         styles={{
-          body: { backgroundColor: currentTheme.palette.background.default },
+          body: {
+            backgroundColor: currentTheme.palette.background.default,
+            color: currentTheme.palette.text.primary,
+            fontFamily: currentTheme.typography.fontFamily,
+          },
         }}
       />
       <Box
         sx={{
           width: "100vw",
           height: "100vh",
+          minHeight: { xs: 850, xl: "100%" },
+          maxHeight: { xs: 900, xl: "100%" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "background.default",
+          bgcolor: "background.default",
+          color: "text.primary",
         }}
       >
         <LayoutConstructor />

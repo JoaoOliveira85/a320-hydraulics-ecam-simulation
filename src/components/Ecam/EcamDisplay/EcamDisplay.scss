@@ -1,10 +1,31 @@
 .canvas {
   width: 44%;
   height: 45%;
-  left: 14.8%;
-  top: 8.1%;
+  left: 5.8%;
+  top: 7.9%;
   z-index: 1;
   position: absolute;
   transform: perspective(600px) rotateX(-3.4deg);
-  border-radius: 13px;
+  border-radius: 10px;
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 51.9%;
+    height: 53.5%;
+    left: 18.1%;
+    top: 9.1%;
+    position: absolute;
+    transform: perspective(600px) rotateX(-3.4deg);
+    border-radius: 9px;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    width: 57.9%;
+    height: 53.5%;
+    left: 6.1%;
+    top: 9.1%;
+    border-radius: 3px;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 51.9%;
+    left: 3.1%;
+    border-radius: 2px;
+  }
 }

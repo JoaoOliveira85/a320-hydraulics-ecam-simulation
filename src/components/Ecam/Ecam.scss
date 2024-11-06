@@ -1,22 +1,43 @@
 .container {
-  position: relative;
-  width: 100vw;
-  margin: 0 auto;
-  aspect-ratio: 1 / 1;
   &__ecam {
     position: relative;
     height: 100%;
     aspect-ratio: 1 / 1;
-    @media screen and (max-width: 768px) {
-      height: 50vh;
-    }
-
     &__image {
       width: auto;
       height: 100%;
-      display: block;
       position: absolute;
-      left: 0;
+      transform: translateX(-7%);
+      object-fit: cover;
+    }
+    @media screen and (max-width: $breakpoint-lg) {
+      width: 100%;
+      height: auto;
+      min-width: 735px;
+      min-height: 730px;
+      &__image {
+        width: 150%;
+        height: auto;
+        transform: translateX(0);
+      }
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      width: 100%;
+      height: auto;
+      min-width: 635px;
+      min-height: 630px;
+      &__image {
+        transform: translateX(-4%);
+      }
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 100%;
+      height: auto;
+      min-height: 500px;
+      min-width: 550px;
+      &__image {
+        transform: translateX(-10%);
+      }
     }
   }
 }

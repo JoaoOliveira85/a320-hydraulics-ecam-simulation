@@ -47,17 +47,23 @@ export const drawShape = ({
   position,
   size,
   color,
+  fill = false,
 }: {
   ctx: CanvasRenderingContext2D;
   position: Position;
   size: number;
   color: string;
+  fill?: boolean;
 }) => {
   return {
     circle: () => {
       ctx.beginPath();
       ctx.arc(position.x, position.y, size, 0, 2 * Math.PI);
       ctx.strokeStyle = color;
+      if (fill) {
+        ctx.fillStyle = color;
+        ctx.fill();
+      }
       ctx.stroke();
       ctx.closePath();
     },
@@ -65,27 +71,35 @@ export const drawShape = ({
       ctx.beginPath();
       ctx.rect(position.x - size / 2, position.y - size / 2, size, size);
       ctx.strokeStyle = color;
+      if (fill) {
+        ctx.fillStyle = color;
+        ctx.fill();
+      }
       ctx.stroke();
       ctx.closePath();
     },
     triangle: (pointing: "up" | "down" | "left" | "right") => {
       ctx.beginPath();
       if (pointing === "up") {
-        ctx.moveTo(position.x, position.y);
-        ctx.lineTo(position.x - size / 2, position.y + size);
-        ctx.lineTo(position.x + size / 2, position.y + size);
+        ctx.moveTo(position.x, position.y - size / 2);
+        ctx.lineTo(position.x - size / 2, position.y + size / 2);
+        ctx.lineTo(position.x + size / 2, position.y + size / 2);
       } else if (pointing === "down") {
-        ctx.moveTo(position.x, position.y);
-        ctx.lineTo(position.x - size / 2, position.y - size);
-        ctx.lineTo(position.x + size / 2, position.y - size);
+        ctx.moveTo(position.x, position.y + size / 2);
+        ctx.lineTo(position.x - size / 2, position.y - size / 2);
+        ctx.lineTo(position.x + size / 2, position.y - size / 2);
       } else if (pointing === "left") {
-        ctx.moveTo(position.x, position.y);
-        ctx.lineTo(position.x + size, position.y - size / 2);
-        ctx.lineTo(position.x + size, position.y + size / 2);
+        ctx.moveTo(position.x - size / 2, position.y);
+        ctx.lineTo(position.x + size / 2, position.y - size / 2);
+        ctx.lineTo(position.x + size / 2, position.y + size / 2);
       } else if (pointing === "right") {
-        ctx.moveTo(position.x, position.y);
-        ctx.lineTo(position.x - size, position.y - size / 2);
-        ctx.lineTo(position.x - size, position.y + size / 2);
+        ctx.moveTo(position.x + size / 2, position.y);
+        ctx.lineTo(position.x - size / 2, position.y - size / 2);
+        ctx.lineTo(position.x - size / 2, position.y + size / 2);
+      }
+      if (fill) {
+        ctx.fillStyle = color;
+        ctx.fill();
       }
       ctx.closePath();
       ctx.strokeStyle = color;
@@ -98,29 +112,26 @@ export const drawPump = (
   ctx: CanvasRenderingContext2D,
   position: Position,
   status: boolean,
+  color = "green",
   size = 30,
 ) => {
-  // Draw the pump square
-  drawShape({ ctx, position, size, color: "green" }).square();
+  drawShape({ ctx, position, size, color: color }).square();
 
-  // Draw the pump line, based on status
   if (status) {
-    // Draw a vertical line going down from the center of the square
     drawLine({
       ctx,
       orientation: "vertical",
       from: { x: position.x, y: position.y - size / 2 },
       length: size,
-      color: "green",
+      color: color,
     });
   } else {
-    // Draw a horizontal line through the center of the square
     drawLine({
       ctx,
       orientation: "horizontal",
       from: { x: position.x - size / 2, y: position.y },
       length: size,
-      color: "green",
+      color: color,
     });
   }
 };
@@ -131,12 +142,9 @@ export const drawValve = (
   status: boolean,
   size = 15,
 ) => {
-  // Draw the valve circle
   drawShape({ ctx, position, size, color: "green" }).circle();
 
-  // Draw the valve line, based on status
   if (status) {
-    // Draw a vertical line through the valve
     drawLine({
       ctx,
       orientation: "vertical",
@@ -145,7 +153,6 @@ export const drawValve = (
       color: "green",
     });
   } else {
-    // Draw a horizontal line through the valve
     drawLine({
       ctx,
       orientation: "horizontal",
@@ -330,7 +337,7 @@ export const ecamHeader = ({
 
   ctx.font = "18px Arial";
   ctx.fillStyle = "green";
-  ctx.fillText(`${yellow}`, yellowLineCoords.from.x - 15, 80);
+  ctx.fillText(`${blue}`, yellowLineCoords.from.x - 15, 80);
 
   ctx.font = "18px Arial";
   ctx.fillStyle = "white";
@@ -338,7 +345,7 @@ export const ecamHeader = ({
 
   ctx.font = "18px Arial";
   ctx.fillStyle = "green";
-  ctx.fillText(`${blue}`, blueLineCoords.from.x - 19, 80);
+  ctx.fillText(`${yellow}`, blueLineCoords.from.x - 19, 80);
 };
 
 export const drawReservoir = (

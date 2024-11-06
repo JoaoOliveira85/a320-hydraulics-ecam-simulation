@@ -44,8 +44,6 @@ const PUMP_RATE = {
   green: 500,
 };
 
-console.log("worker says hello");
-
 const updateLines = () => {
   if (pumps.engine1 && valves.engine1) {
     hydraulicFlow.green = Math.min(
