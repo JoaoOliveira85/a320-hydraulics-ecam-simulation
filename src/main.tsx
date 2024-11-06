@@ -1,9 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "components/App";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { App, Cockpit } from "components";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/cockpit" element={<Cockpit />} />
+      </Routes>
+    </Router>
   </StrictMode>,
 );

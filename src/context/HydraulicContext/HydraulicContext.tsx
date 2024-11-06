@@ -6,11 +6,10 @@ import {
   useRef,
   useEffect,
   useCallback,
+  useMemo,
 } from "react";
-import { TypesOfPumps, TypesOfValves } from "types";
+import { TypesOfPumps, TypesOfValves, HydraulicContextType } from "types";
 import HydraulicWorker from "workers/hydraulicsWorker.js?worker";
-
-import { HydraulicContextType } from "types";
 
 const HydraulicContext = createContext<HydraulicContextType | undefined>(
   undefined,
@@ -105,8 +104,27 @@ export const HydraulicProvider = ({
     handleValveButton,
   };
 
+  const values = useMemo(
+    () => ({
+      pressures,
+      controls: {
+        handlePumpButton: controls.handlePumpButton,
+        handleValveButton: controls.handleValveButton,
+      },
+      pumps,
+      valves,
+    }),
+    [
+      pressures,
+      controls.handlePumpButton,
+      controls.handleValveButton,
+      pumps,
+      valves,
+    ],
+  );
+
   return (
-    <HydraulicContext.Provider value={{ pressures, pumps, valves, controls }}>
+    <HydraulicContext.Provider value={values}>
       {children}
     </HydraulicContext.Provider>
   );

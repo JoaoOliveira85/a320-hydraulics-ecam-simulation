@@ -1,0 +1,76 @@
+.overhead-container {
+  position: relative;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overhead-image {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+.overhead-buttons {
+  &__engine1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8.71%;
+    transform: translate(183.39%, 114.8%);
+  }
+
+  &__engine2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8.24%;
+    transform: translate(904.53%, 129%);
+  }
+
+  &__ramAirTurbine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12.4%;
+    transform: translate(234%, 47.6%);
+  }
+
+  &__powerTransferUnit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8.72%;
+    transform: translate(690.8%, 55.9%);
+  }
+
+  &__blueElectricPump {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9.9%;
+    transform: translate(451.6%, 90.5%);
+  }
+
+  &__yellowElectricPump {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9.25%;
+    transform: translate(910.85%, 86.35%);
+  }
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

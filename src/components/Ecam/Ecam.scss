@@ -33,10 +33,11 @@
     @media screen and (max-width: $breakpoint-sm) {
       width: 100%;
       height: auto;
-      min-height: 500px;
-      min-width: 550px;
+      min-height: auto;
+      min-width: 500px;
+      aspect-ratio: auto;
       &__image {
-        transform: translateX(-10%);
+        transform: translate(-10%);
       }
     }
   }

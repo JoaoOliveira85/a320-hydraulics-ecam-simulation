@@ -20,15 +20,14 @@ export const App = () => {
       />
       <Box
         sx={{
-          width: "100vw",
-          height: "100vh",
-          minHeight: { xs: 850, xl: "100%" },
-          maxHeight: { xs: 900, xl: "100%" },
+          height: { xs: "auto", md: "100vh" },
+          minHeight: { xs: "100vh", md: "100vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           bgcolor: "background.default",
           color: "text.primary",
+          overflowY: "auto", // Enables scrolling on smaller screens
         }}
       >
         <LayoutConstructor />

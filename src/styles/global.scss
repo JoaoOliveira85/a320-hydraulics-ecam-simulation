@@ -1,5 +1,9 @@
 @use "./fonts.scss" as *;
 
+body {
+  margin: 0;
+}
+
 $breakpoint-xs: 0px;
 $breakpoint-sm: 600px;
 $breakpoint-md: 900px;

@@ -26,19 +26,9 @@ export interface ValveElement {
   label: string;
   operation: TypesOfValves;
 }
-export interface Pump {
-  [Pumps.engine1]: boolean;
-  [Pumps.engine2]: boolean;
-  [Pumps.powerTransferUnit]: boolean;
-  [Pumps.ramAirTurbine]: boolean;
-  [Pumps.blueElectricPump]: boolean;
-  [Pumps.yellowElectricPump]: boolean;
-}
+export type Pump = Record<TypesOfPumps, boolean>;
 
-export interface Valve {
-  [Valves.engine1]: boolean;
-  [Valves.engine2]: boolean;
-}
+export type Valve = Record<TypesOfValves, boolean>;
 
 export interface OverheadPanelProps {
   handlePumpButton: (button: TypesOfPumps) => void;

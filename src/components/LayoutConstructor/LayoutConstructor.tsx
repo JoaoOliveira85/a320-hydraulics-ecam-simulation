@@ -1,5 +1,4 @@
 import { SimulationControls } from "components/SimulationControls/SimulationControls";
-import "./LayoutConstructor.scss";
 import { Ecam } from "components";
 import { Box, Container, Paper } from "@mui/material";
 import { HydraulicProvider } from "context";
@@ -29,7 +28,7 @@ export const LayoutConstructor = () => {
             width: { xs: "100%", md: "auto" },
             height: { xs: "auto", md: "100%" },
             minWidth: { xs: "100%", md: 400 },
-            minHeight: { xs: 430, sm: 500 },
+            minHeight: { xs: 350, sm: 500 },
             overflow: "hidden",
             marginBottom: { xs: 2, md: 0 },
           }}

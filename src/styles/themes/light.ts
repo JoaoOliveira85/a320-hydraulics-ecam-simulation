@@ -1,3 +1,5 @@
+// Based on the Airbus branding guidelines https://brand.airbus.com/en/asset-library/colours
+
 import { createTheme } from "@mui/material";
 import colors from "../colors.module.scss";
 
