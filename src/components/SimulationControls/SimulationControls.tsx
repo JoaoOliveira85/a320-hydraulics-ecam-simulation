@@ -18,8 +18,9 @@ import { useHydraulicContext } from "context";
 import logoWhite from "assets/logos/logo_white.png";
 import logoBlue from "assets/logos/logo_blue.png";
 import SimulationSettingsComponent from "./subComponents/SimulationSettingsComponent/SimulationSettingsComponent";
-import { SimulationSettings } from "types";
+import { Colors, HydraulicContextType, SimulationSettings, TypesOfPumps, TypesOfValves } from "types";
 import { RealTimeData } from "./subComponents/RealTimeData";
+import { FailureControls } from "./subComponents/FailureControls";
 
 export const SimulationControls = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
@@ -27,10 +28,13 @@ export const SimulationControls = () => {
   const isMediumOrBelow = useMediaQuery("(max-width:900px)");
   const isTabletOrBelow = useMediaQuery("(max-width:1280px)");
   const isDarkTheme = useMediaQuery("(prefers-color-scheme: dark)");
+
+  const hydraulicSystem = useHydraulicContext();
+
   const {
     simControls: { resetSimulation, updateSettings },
     controls: { handlePumpButton, handleValveButton, handlePtuButton },
-  } = useHydraulicContext();
+  } = hydraulicSystem;
 
   const handleAccordionChange =
     (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
@@ -40,6 +44,23 @@ export const SimulationControls = () => {
   const handleTabChange = (_: React.SyntheticEvent, newValue: number) => {
     setSelectedTab(newValue);
   };
+
+  const failureManager = (system: HydraulicContextType) => {
+
+    return {
+      onTriggerPumpFailer: (pump: TypesOfPumps) => {
+        system.failures.handlePumpFailure(pump);
+      },
+      onTriggerValveFailure: (valve: TypesOfValves) => {
+        system.failures.handleValveFailure(valve)
+      },
+      onTriggerLineLeak: (line: Colors) => {
+        system.failures.handleLineLeak(line)
+      },
+    }
+  }
+
+  const { onTriggerPumpFailer, onTriggerValveFailure, onTriggerLineLeak } = failureManager(hydraulicSystem);
 
   const SECTION_LIST = useMemo(
     () => [
@@ -80,8 +101,8 @@ export const SimulationControls = () => {
       {
         key: "failures",
         summary: EN.failures.title,
-        disabled: true,
-        details: <div>baz</div>,
+        disabled: false,
+        details: <FailureControls onTriggerLineLeak={onTriggerLineLeak} onTriggerPumpFailure={onTriggerPumpFailer} onTriggerValveFailure={onTriggerValveFailure} />,
       },
     ],
     [handlePumpButton, handleValveButton],

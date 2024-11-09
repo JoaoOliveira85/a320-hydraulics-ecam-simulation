@@ -1,6 +1,7 @@
 import { TypesOfPumps, TypesOfValves, SimulationSettings, Color } from "types";
 import simulationSettings from "./simulationDefaultSettings.json";
-import { WorkerActions } from "types/HydraulicWorkerTypes";
+import { WorkerActions } from "types/hydraulicWorkerTypes";
+import { C } from "vitest/dist/chunks/environment.LoooBwUu.js";
 
 const TEMPERATURE_EFFECTS = {
   optimalTemp: 20,
@@ -8,19 +9,73 @@ const TEMPERATURE_EFFECTS = {
   minFactor: 0.5,
 };
 
+const applySettings = (
+  simulationSettings: SimulationSettings,
+  hydraulicSystem: HydraulicSystemController[],
+) => {
+  const {
+    reservoireStartingLevels,
+    reservoireLeakageRates,
+    pumpMaxFlowRates,
+    other,
+  } = simulationSettings;
+
+  hydraulicSystem[0].reservoires.green.currentLevel =
+    reservoireStartingLevels.green;
+  hydraulicSystem[0].reservoires.yellow.currentLevel =
+    reservoireStartingLevels.yellow;
+  hydraulicSystem[0].reservoires.blue.currentLevel =
+    reservoireStartingLevels.blue;
+
+  hydraulicSystem[0].reservoires.green.leakageRate =
+    reservoireLeakageRates.green;
+  hydraulicSystem[0].reservoires.yellow.leakageRate =
+    reservoireLeakageRates.yellow;
+  hydraulicSystem[0].reservoires.blue.leakageRate = reservoireLeakageRates.blue;
+
+  hydraulicSystem[0].pumps.engine1.maxFlowRate = pumpMaxFlowRates.engine1;
+  hydraulicSystem[0].pumps.engine2.maxFlowRate = pumpMaxFlowRates.engine2;
+  hydraulicSystem[0].pumps.blueElectricPump.maxFlowRate =
+    pumpMaxFlowRates.blueElectricPump;
+  hydraulicSystem[0].pumps.yellowElectricPump.maxFlowRate =
+    pumpMaxFlowRates.yellowElectricPump;
+  hydraulicSystem[0].pumps.ramAirTurbine.maxFlowRate =
+    pumpMaxFlowRates.ramAirTurbine;
+
+  hydraulicSystem[0].lines.green.maxPressure = other.hydraulicLineMaxPressure;
+  hydraulicSystem[0].lines.yellow.maxPressure = other.hydraulicLineMaxPressure;
+  hydraulicSystem[0].lines.blue.maxPressure = other.hydraulicLineMaxPressure;
+
+  hydraulicSystem[0].ptu.threshold = other.ptuThreshold;
+  hydraulicSystem[0].applyTemperatureEffects(other.airTemperature);
+};
+
 class Reservoir {
   currentLevel: number;
   capacity: number;
   leakageRate: number;
+  hasFailed: boolean;
 
   constructor(capacity: number, leakageRate: number) {
+    this.hasFailed = false;
     this.capacity = capacity;
     this.currentLevel = capacity;
     this.leakageRate = leakageRate;
   }
 
+  fail() {
+    this.hasFailed = true;
+  }
+
   leak() {
-    this.currentLevel = Math.max(0, this.currentLevel - this.leakageRate);
+    if (this.hasFailed) {
+      this.currentLevel = Math.max(
+        0,
+        this.currentLevel - this.leakageRate * 50,
+      );
+    } else {
+      this.currentLevel = Math.max(0, this.currentLevel - this.leakageRate);
+    }
   }
 
   isEmpty() {
@@ -46,15 +101,19 @@ class Pump {
   reservoire: Reservoir | undefined;
   baseFlowRate: number;
   baseRampUpRate: number;
+  hasFailed: boolean;
+  pumpTemperature: number;
 
   constructor(maxFlowRate: number, reservoire?: Reservoir) {
     this.isActive = true;
+    this.hasFailed = false;
     this.maxFlowRate = maxFlowRate;
     this.baseFlowRate = maxFlowRate;
     this.currentPressure = 0;
     this.rampUpRate = 100;
     this.baseRampUpRate = 100;
     this.reservoire = reservoire;
+    this.pumpTemperature = simulationSettings.other.airTemperature;
   }
 
   start() {
@@ -63,6 +122,10 @@ class Pump {
 
   stop() {
     this.isActive = false;
+  }
+
+  fail() {
+    this.hasFailed = true;
   }
 
   adjustByTemperature(temperature: number) {
@@ -79,7 +142,7 @@ class Pump {
   }
 
   calculateOutput(linePressure: number) {
-    if (!this.isActive || this.reservoire?.isEmpty()) {
+    if (!this.isActive || this.reservoire?.isEmpty() || this.hasFailed) {
       this.currentPressure = Math.max(
         this.currentPressure - this.rampUpRate,
         0,
@@ -101,9 +164,11 @@ class Pump {
 class Valve {
   isOpen: boolean;
   resistance: number;
+  hasFailed: boolean;
   constructor() {
     this.isOpen = true;
     this.resistance = 0.1;
+    this.hasFailed = false;
   }
 
   open() {
@@ -114,8 +179,14 @@ class Valve {
     this.isOpen = false;
   }
 
+  fail() {
+    this.hasFailed = true;
+  }
+
   calculateFlow(inputFlow: number) {
-    return this.isOpen ? inputFlow * (1 - this.resistance) : 0;
+    return this.isOpen && !this.hasFailed
+      ? inputFlow * (1 - this.resistance)
+      : 0;
   }
 }
 
@@ -124,12 +195,14 @@ class HydraulicLine {
   maxPressure: number;
   baseDropRate: number;
   dropRate: number;
+  hasFailed: boolean;
 
   constructor() {
     this.currentPressure = 0;
     this.maxPressure = simulationSettings.other.hydraulicLineMaxPressure;
     this.baseDropRate = 100;
     this.dropRate = this.baseDropRate;
+    this.hasFailed = false;
   }
 
   adjustByTemperature(temperature: number) {
@@ -347,6 +420,27 @@ class HydraulicSystemController {
       },
       ptuActive: this.ptu.isActive,
       settings: simulationSettings,
+      failures: {
+        reservoires: {
+          green: this.reservoires.green.hasFailed,
+          yellow: this.reservoires.yellow.hasFailed,
+          blue: this.reservoires.blue.hasFailed,
+        },
+        pumps: {
+          green: this.pumps.engine1.hasFailed,
+          yellow: this.pumps.engine2.hasFailed,
+          blue: this.pumps.blueElectricPump.hasFailed,
+        },
+        valves: {
+          green: this.valves.engine1.hasFailed,
+          yellow: this.valves.engine2.hasFailed,
+        },
+        lines: {
+          green: this.lines.green.hasFailed,
+          yellow: this.lines.yellow.hasFailed,
+          blue: this.lines.blue.hasFailed,
+        },
+      },
     });
   }
 }
@@ -367,44 +461,6 @@ const resetSimulation = () => {
   }, simulationSettings.other.speed);
 };
 
-const applySettings = () => {
-  const {
-    reservoireStartingLevels,
-    reservoireLeakageRates,
-    pumpMaxFlowRates,
-    other,
-  } = simulationSettings;
-
-  hydraulicSystem[0].reservoires.green.currentLevel =
-    reservoireStartingLevels.green;
-  hydraulicSystem[0].reservoires.yellow.currentLevel =
-    reservoireStartingLevels.yellow;
-  hydraulicSystem[0].reservoires.blue.currentLevel =
-    reservoireStartingLevels.blue;
-
-  hydraulicSystem[0].reservoires.green.leakageRate =
-    reservoireLeakageRates.green;
-  hydraulicSystem[0].reservoires.yellow.leakageRate =
-    reservoireLeakageRates.yellow;
-  hydraulicSystem[0].reservoires.blue.leakageRate = reservoireLeakageRates.blue;
-
-  hydraulicSystem[0].pumps.engine1.maxFlowRate = pumpMaxFlowRates.engine1;
-  hydraulicSystem[0].pumps.engine2.maxFlowRate = pumpMaxFlowRates.engine2;
-  hydraulicSystem[0].pumps.blueElectricPump.maxFlowRate =
-    pumpMaxFlowRates.blueElectricPump;
-  hydraulicSystem[0].pumps.yellowElectricPump.maxFlowRate =
-    pumpMaxFlowRates.yellowElectricPump;
-  hydraulicSystem[0].pumps.ramAirTurbine.maxFlowRate =
-    pumpMaxFlowRates.ramAirTurbine;
-
-  hydraulicSystem[0].lines.green.maxPressure = other.hydraulicLineMaxPressure;
-  hydraulicSystem[0].lines.yellow.maxPressure = other.hydraulicLineMaxPressure;
-  hydraulicSystem[0].lines.blue.maxPressure = other.hydraulicLineMaxPressure;
-
-  hydraulicSystem[0].ptu.threshold = other.ptuThreshold;
-  hydraulicSystem[0].applyTemperatureEffects(other.airTemperature);
-};
-
 type Event = {
   data: {
     type: WorkerActions;
@@ -412,6 +468,8 @@ type Event = {
     state: boolean;
     valve: TypesOfValves;
     settings: SimulationSettings;
+    line: Color;
+    reservoir: Color;
   };
 };
 
@@ -419,26 +477,43 @@ onmessage = function (event: Event) {
   switch (event.data.type) {
     case WorkerActions.UPDATE_SETTINGS:
       Object.assign(simulationSettings, event.data.settings);
-      applySettings();
+      applySettings(simulationSettings, hydraulicSystem);
       break;
+
     case WorkerActions.SET_PUMP_STATE: {
       const pump = hydraulicSystem[0].pumps[event.data.pump];
       event.data.state ? pump.start() : pump.stop();
       break;
     }
+
     case WorkerActions.SET_VALVE_STATE: {
       const valve = hydraulicSystem[0].valves[event.data.valve];
       event.data.state ? valve.open() : valve.close();
       break;
     }
+
     case WorkerActions.SET_PTU_STATE:
       event.data.state
         ? hydraulicSystem[0].ptu.start()
         : hydraulicSystem[0].ptu.stop();
       break;
+
     case WorkerActions.RESET_SIMULATION:
       resetSimulation();
       break;
+
+    case WorkerActions.TRIGGER_FAILURE: {
+      const { pump, valve, line } = event.data;
+      if (pump) {
+        hydraulicSystem[0].pumps[pump].fail();
+      } else if (valve) {
+        hydraulicSystem[0].valves[valve].fail();
+      } else if (line) {
+        hydraulicSystem[0].reservoires[line].fail();
+      }
+      break;
+    }
+
     default:
       console.warn(`Unknown message type: ${event.data.type}`);
   }

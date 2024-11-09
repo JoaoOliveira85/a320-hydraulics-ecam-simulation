@@ -1,6 +1,12 @@
 import { TypesOfPumps, TypesOfValves, TypesOfPtus } from "types";
 
-export type Color = "green" | "yellow" | "blue";
+export enum Colors {
+  green = "green",
+  blue = "blue",
+  yellow = "yellow",
+}
+
+export type Color = keyof typeof Colors;
 
 export interface HydraulicContextType {
   pressures: {
@@ -22,6 +28,11 @@ export interface HydraulicContextType {
     handleValveButton: (button: TypesOfValves) => void;
     handlePtuButton: (button: TypesOfPtus) => void;
   };
+  failures: {
+    handlePumpFailure: (pump: TypesOfPumps) => void;
+    handleValveFailure: (valve: TypesOfValves) => void;
+    handleLineLeak: (line: Colors) => void;
+  }
   pumps: Record<TypesOfPumps, boolean>;
   valves: Record<TypesOfValves, boolean>;
   ptus: Record<TypesOfPtus, boolean>;

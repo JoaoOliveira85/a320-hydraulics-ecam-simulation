@@ -14,8 +14,9 @@ import {
   HydraulicContextType,
   TypesOfPtus,
   SimulationSettings,
+  Color,
 } from "types";
-import { WorkerActions } from "types/HydraulicWorkerTypes";
+import { WorkerActions } from "types/hydraulicWorkerTypes";
 import HydraulicWorker from "workers/hydraulicsWorker.js?worker";
 import defaultSettings from "workers/simulationDefaultSettings.json";
 import EN from "constants/EN.json";
@@ -194,6 +195,15 @@ export const HydraulicProvider = ({
     }
   };
 
+  const triggerFailure = (failure: string, id: string) => {
+    if (workerRef.current) {
+      workerRef.current.postMessage({
+        type: WorkerActions.TRIGGER_FAILURE,
+        [failure]: id
+      });
+    }
+  }
+
   const handlePumpButton = useCallback((button: TypesOfPumps) => {
     setPumps((prevPumps) => {
       const newState = !prevPumps[button];
@@ -218,6 +228,18 @@ export const HydraulicProvider = ({
     });
   }, []);
 
+  const handleValveFailure = useCallback((valve: TypesOfValves) => {
+    triggerFailure('valve', valve);
+  }, []);
+
+  const handlePumpFailure = useCallback((pump: TypesOfPumps) => {
+    triggerFailure('pump', pump);
+  }, []);
+
+  const handleLineLeak = useCallback((line: Color) => {
+    triggerFailure('line', line);
+  }, []);
+
   const controls = {
     handlePumpButton,
     handleValveButton,
@@ -227,6 +249,12 @@ export const HydraulicProvider = ({
   const simControls = {
     updateSettings,
     resetSimulation,
+  };
+
+  const failures = {
+    handlePumpFailure,
+    handleValveFailure,
+    handleLineLeak,
   };
 
   const values = useMemo(
@@ -254,6 +282,7 @@ export const HydraulicProvider = ({
       valves,
       ptus,
       other,
+      failures,
     }),
     [
       pressures,
@@ -267,6 +296,7 @@ export const HydraulicProvider = ({
       valves,
       ptus,
       other,
+      failures     
     ],
   );
 
