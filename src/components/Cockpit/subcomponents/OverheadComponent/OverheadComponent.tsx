@@ -15,18 +15,10 @@ import yellowElectricPumpDay from "assets/buttons/elec_pump_day_on.webp";
 import yellowElectricPumpNight from "assets/buttons/elec_pump_night_on.webp";
 import { useMediaQuery } from "@mui/material";
 import { useHydraulicContext } from "context";
-import { Pumps, TypesOfPumps } from "types";
+import { Ptus, Pumps } from "types";
 
-enum ThemeOptions {
-  day = "day",
-  night = "night",
-}
-
-type ImageGroup = TypesOfPumps | "overheadPanel";
-
-type ImageCollection = {
-  [key in ThemeOptions]: Partial<Record<ImageGroup, string>>;
-};
+import EN from "constants/EN.json";
+import { ImageCollection } from "types/overheadTypes";
 
 const images: ImageCollection = {
   day: {
@@ -55,21 +47,22 @@ export const OverheadComponent = () => {
     : "day";
 
   const {
-    controls: { handlePumpButton },
+    controls: { handlePumpButton, handlePtuButton },
     pumps,
+    ptus,
   } = useHydraulicContext();
 
   return (
     <div className="overhead-container">
       <img
         src={images[currentTheme]["overheadPanel"]}
-        alt="Overhead Panel"
+        alt={EN.overhead_component.overheadPanel}
         className="overhead-image"
       />
       <button onClick={() => handlePumpButton(Pumps["engine1"])}>
         <img
           src={images[currentTheme]["engine1"]}
-          alt={`Engine 1 Toggle`}
+          alt={EN.overhead_component.engine1}
           style={{ opacity: pumps["engine1"] ? 0 : 1 }}
           className={`overhead-buttons__${"engine1"}`}
         />
@@ -77,7 +70,7 @@ export const OverheadComponent = () => {
       <button onClick={() => handlePumpButton(Pumps["engine2"])}>
         <img
           src={images[currentTheme]["engine2"]}
-          alt={`Engine 2 Toggle`}
+          alt={EN.overhead_component.engine2}
           style={{ opacity: pumps["engine2"] ? 0 : 1 }}
           className={`overhead-buttons__${"engine2"}`}
         />
@@ -85,23 +78,23 @@ export const OverheadComponent = () => {
       <button onClick={() => handlePumpButton(Pumps["ramAirTurbine"])}>
         <img
           src={images[currentTheme]["ramAirTurbine"]}
-          alt={`RAT MAN Toggle`}
+          alt={EN.overhead_component.rat}
           style={{ opacity: pumps["ramAirTurbine"] ? 1 : 0 }}
           className={`overhead-buttons__${"ramAirTurbine"}`}
         />
       </button>
-      <button onClick={() => handlePumpButton(Pumps["powerTransferUnit"])}>
+      <button onClick={() => handlePtuButton(Ptus["powerTransferUnit"])}>
         <img
           src={images[currentTheme]["powerTransferUnit"]}
-          alt={`PTU Toggle`}
-          style={{ opacity: pumps["powerTransferUnit"] ? 0 : 1 }}
+          alt={EN.overhead_component.ptu}
+          style={{ opacity: ptus["powerTransferUnit"] ? 0 : 1 }}
           className={`overhead-buttons__${"powerTransferUnit"}`}
         />
       </button>
       <button onClick={() => handlePumpButton(Pumps["blueElectricPump"])}>
         <img
           src={images[currentTheme]["blueElectricPump"]}
-          alt={`Blue Electric Pump Toggle`}
+          alt={EN.overhead_component.blueElec}
           style={{ opacity: pumps["blueElectricPump"] ? 0 : 1 }}
           className={`overhead-buttons__${"blueElectricPump"}`}
         />
@@ -109,8 +102,8 @@ export const OverheadComponent = () => {
       <button onClick={() => handlePumpButton(Pumps["yellowElectricPump"])}>
         <img
           src={images[currentTheme]["yellowElectricPump"]}
-          alt={`Yellow Electric Pump Toggle`}
-          style={{ opacity: pumps["yellowElectricPump"] ? 0 : 1 }}
+          alt={EN.overhead_component.yellowElec}
+          style={{ opacity: pumps["yellowElectricPump"] ? 1 : 0 }}
           className={`overhead-buttons__${"yellowElectricPump"}`}
         />
       </button>

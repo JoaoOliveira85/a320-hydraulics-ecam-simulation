@@ -1,4 +1,11 @@
-import { ButtonElement, Pumps, ValveElement, Valves } from "types";
+import {
+  ButtonElement,
+  Pumps,
+  ValveElement,
+  Valves,
+  Ptus,
+  PtusElement,
+} from "types";
 import EN from "constants/EN.json";
 
 const {
@@ -29,11 +36,6 @@ export const buttonList: Array<ButtonElement> = [
     operation: Pumps.ramAirTurbine,
   },
   {
-    id: "ptu-auto",
-    label: hydraulic_pumps["ptu-auto"],
-    operation: Pumps.powerTransferUnit,
-  },
-  {
     id: "elec-pump-2",
     label: hydraulic_pumps["elec-pump-2"],
     operation: Pumps.yellowElectricPump,
@@ -43,4 +45,12 @@ export const buttonList: Array<ButtonElement> = [
 export const ValveList: Array<ValveElement> = [
   { id: "eng1-valve", label: valves["eng1-valve"], operation: Valves.engine1 },
   { id: "eng2-valve", label: valves["eng2-valve"], operation: Valves.engine2 },
+];
+
+export const PtuList: Array<PtusElement> = [
+  {
+    id: "ptu-auto",
+    label: hydraulic_pumps["ptu-auto"],
+    operation: Ptus.powerTransferUnit,
+  },
 ];

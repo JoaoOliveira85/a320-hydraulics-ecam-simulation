@@ -1,115 +1,445 @@
-import { Pump, Valve } from "types";
+import { TypesOfPumps, TypesOfValves, SimulationSettings, Color } from "types";
+import simulationSettings from "./simulationDefaultSettings.json";
+import { WorkerActions } from "types/HydraulicWorkerTypes";
 
-const hydraulicFlow = {
-  yellow: 0,
-  blue: 0,
-  green: 0,
+const TEMPERATURE_EFFECTS = {
+  optimalTemp: 20,
+  tempRange: 15,
+  minFactor: 0.5,
 };
 
-const pressures = {
-  yellow: 0,
-  blue: 0,
-  green: 0,
-};
+class Reservoir {
+  currentLevel: number;
+  capacity: number;
+  leakageRate: number;
 
-const pumps: Pump = {
-  engine1: false,
-  engine2: false,
-  ramAirTurbine: false,
-  blueElectricPump: true,
-  yellowElectricPump: false,
-  powerTransferUnit: true,
-};
-
-const valves = {
-  engine1: true,
-  engine2: true,
-};
-
-const MAX_PRESSURE = {
-  yellow: 3000,
-  blue: 3000,
-  green: 3000,
-};
-
-const DROP_RATE = {
-  yellow: 100,
-  blue: 100,
-  green: 100,
-};
-
-const PUMP_RATE = {
-  yellow: 500,
-  blue: 500,
-  green: 500,
-};
-
-const updateLines = () => {
-  if (pumps.engine1 && valves.engine1) {
-    hydraulicFlow.green = Math.min(
-      hydraulicFlow.green + PUMP_RATE.green,
-      MAX_PRESSURE.green,
-    );
-  } else {
-    hydraulicFlow.green = Math.max(hydraulicFlow.green - DROP_RATE.green, 0);
+  constructor(capacity: number, leakageRate: number) {
+    this.capacity = capacity;
+    this.currentLevel = capacity;
+    this.leakageRate = leakageRate;
   }
 
-  if ((pumps.engine2 && valves.engine2) || pumps.yellowElectricPump) {
-    hydraulicFlow.yellow = Math.min(
-      hydraulicFlow.yellow + PUMP_RATE.yellow,
-      MAX_PRESSURE.yellow,
-    );
-  } else {
-    hydraulicFlow.yellow = Math.max(hydraulicFlow.yellow - DROP_RATE.yellow, 0);
+  leak() {
+    this.currentLevel = Math.max(0, this.currentLevel - this.leakageRate);
   }
 
-  if (pumps.blueElectricPump || pumps.ramAirTurbine) {
-    hydraulicFlow.blue = Math.min(
-      hydraulicFlow.blue + PUMP_RATE.blue,
-      MAX_PRESSURE.blue,
-    );
-  } else {
-    hydraulicFlow.blue = Math.max(hydraulicFlow.blue - DROP_RATE.blue, 0);
+  isEmpty() {
+    return this.currentLevel <= 0;
   }
 
-  if (pumps.powerTransferUnit) {
-    if (pumps.engine1 && valves.engine1) {
-      if (hydraulicFlow.green > hydraulicFlow.yellow) {
-        hydraulicFlow.yellow = Math.min(
-          hydraulicFlow.yellow + PUMP_RATE.green,
-          MAX_PRESSURE.yellow,
-        );
-      }
-    }
-    if ((pumps.engine2 && valves.engine2) || pumps.yellowElectricPump) {
-      if (hydraulicFlow.yellow > hydraulicFlow.green) {
-        hydraulicFlow.green = Math.min(
-          hydraulicFlow.green + PUMP_RATE.yellow,
-          MAX_PRESSURE.green,
-        );
-      }
+  consumeFluid(amount: number) {
+    if (this.currentLevel > amount) {
+      this.currentLevel -= amount;
+      return true;
+    } else {
+      this.currentLevel = 0;
+      return false;
     }
   }
+}
 
-  const output = {
-    green: Math.max(hydraulicFlow.green - DROP_RATE.green, 0),
-    yellow: Math.max(hydraulicFlow.yellow - DROP_RATE.yellow, 0),
-    blue: Math.max(hydraulicFlow.blue - DROP_RATE.blue, 0),
+class Pump {
+  isActive: boolean;
+  maxFlowRate: number;
+  currentPressure: number;
+  rampUpRate: number;
+  reservoire: Reservoir | undefined;
+  baseFlowRate: number;
+  baseRampUpRate: number;
+
+  constructor(maxFlowRate: number, reservoire?: Reservoir) {
+    this.isActive = true;
+    this.maxFlowRate = maxFlowRate;
+    this.baseFlowRate = maxFlowRate;
+    this.currentPressure = 0;
+    this.rampUpRate = 100;
+    this.baseRampUpRate = 100;
+    this.reservoire = reservoire;
+  }
+
+  start() {
+    this.isActive = true;
+  }
+
+  stop() {
+    this.isActive = false;
+  }
+
+  adjustByTemperature(temperature: number) {
+    const temperatureFactor =
+      TEMPERATURE_EFFECTS.minFactor +
+      (1 - TEMPERATURE_EFFECTS.minFactor) *
+        Math.exp(
+          -((temperature - TEMPERATURE_EFFECTS.optimalTemp) ** 2) /
+            (2 * TEMPERATURE_EFFECTS.tempRange ** 2),
+        );
+
+    this.maxFlowRate = this.baseFlowRate * temperatureFactor;
+    this.rampUpRate = this.baseRampUpRate * temperatureFactor;
+  }
+
+  calculateOutput(linePressure: number) {
+    if (!this.isActive || this.reservoire?.isEmpty()) {
+      this.currentPressure = Math.max(
+        this.currentPressure - this.rampUpRate,
+        0,
+      );
+    } else {
+      this.currentPressure = Math.min(
+        this.currentPressure + this.rampUpRate,
+        this.maxFlowRate,
+      );
+    }
+
+    const pressureDifference = this.currentPressure - linePressure;
+    const outputFlow = pressureDifference > 0 ? pressureDifference : 0;
+
+    return Math.min(outputFlow, this.maxFlowRate);
+  }
+}
+
+class Valve {
+  isOpen: boolean;
+  resistance: number;
+  constructor() {
+    this.isOpen = true;
+    this.resistance = 0.1;
+  }
+
+  open() {
+    this.isOpen = true;
+  }
+
+  close() {
+    this.isOpen = false;
+  }
+
+  calculateFlow(inputFlow: number) {
+    return this.isOpen ? inputFlow * (1 - this.resistance) : 0;
+  }
+}
+
+class HydraulicLine {
+  currentPressure: number;
+  maxPressure: number;
+  baseDropRate: number;
+  dropRate: number;
+
+  constructor() {
+    this.currentPressure = 0;
+    this.maxPressure = simulationSettings.other.hydraulicLineMaxPressure;
+    this.baseDropRate = 100;
+    this.dropRate = this.baseDropRate;
+  }
+
+  adjustByTemperature(temperature: number) {
+    const temperatureFactor =
+      TEMPERATURE_EFFECTS.minFactor +
+      (1 - TEMPERATURE_EFFECTS.minFactor) *
+        Math.exp(
+          -((temperature - TEMPERATURE_EFFECTS.optimalTemp) ** 2) /
+            (2 * TEMPERATURE_EFFECTS.tempRange ** 2),
+        );
+
+    this.dropRate = this.baseDropRate * temperatureFactor;
+  }
+
+  updatePressure(inputFlow: number) {
+    this.currentPressure = Math.max(
+      0,
+      Math.min(
+        this.currentPressure + inputFlow - this.dropRate,
+        this.maxPressure,
+      ),
+    );
+  }
+}
+
+class PowerTransferUnit {
+  isActive: boolean;
+  threshold: number;
+
+  constructor() {
+    this.isActive = true;
+    this.threshold = simulationSettings.other.ptuThreshold;
+  }
+
+  start() {
+    this.isActive = true;
+  }
+
+  stop() {
+    this.isActive = false;
+  }
+
+  checkAndTransfer(pressureGreen: number, pressureYellow: number) {
+    if (
+      this.isActive &&
+      Math.abs(pressureGreen - pressureYellow) > this.threshold
+    ) {
+      return pressureGreen > pressureYellow
+        ? { greenToYellow: true }
+        : { yellowToGreen: true };
+    }
+    return { greenToYellow: false, yellowToGreen: false };
+  }
+}
+
+class HydraulicSystemController {
+  pressures = {
+    yellow: 0,
+    blue: 0,
+    green: 0,
   };
+  pumps: Record<TypesOfPumps, Pump>;
+  reservoires: Record<Color, Reservoir>;
+  valves: Record<TypesOfValves, Valve>;
+  lines: Record<Color, HydraulicLine>;
+  ptu: PowerTransferUnit;
+  PTU_TRANSFER_RATE = 500;
 
-  pressures.yellow = output.yellow;
-  pressures.blue = output.blue;
-  pressures.green = output.green;
-  postMessage({ type: "update", pressures, pumps, valves });
+  constructor() {
+    this.reservoires = {
+      green: new Reservoir(
+        simulationSettings.reservoireStartingLevels.green,
+        simulationSettings.reservoireLeakageRates.green,
+      ),
+      yellow: new Reservoir(
+        simulationSettings.reservoireStartingLevels.yellow,
+        simulationSettings.reservoireLeakageRates.yellow,
+      ),
+      blue: new Reservoir(
+        simulationSettings.reservoireStartingLevels.blue,
+        simulationSettings.reservoireLeakageRates.blue,
+      ),
+    };
+
+    this.pumps = {
+      engine1: new Pump(
+        simulationSettings.pumpMaxFlowRates.engine1,
+        this.reservoires.green,
+      ),
+      engine2: new Pump(
+        simulationSettings.pumpMaxFlowRates.engine2,
+        this.reservoires.yellow,
+      ),
+      blueElectricPump: new Pump(
+        simulationSettings.pumpMaxFlowRates.blueElectricPump,
+        this.reservoires.blue,
+      ),
+      yellowElectricPump: new Pump(
+        simulationSettings.pumpMaxFlowRates.yellowElectricPump,
+        this.reservoires.yellow,
+      ),
+      ramAirTurbine: new Pump(
+        simulationSettings.pumpMaxFlowRates.ramAirTurbine,
+        this.reservoires.blue,
+      ),
+    };
+
+    this.valves = {
+      engine1: new Valve(),
+      engine2: new Valve(),
+    };
+
+    this.lines = {
+      green: new HydraulicLine(),
+      yellow: new HydraulicLine(),
+      blue: new HydraulicLine(),
+    };
+
+    this.ptu = new PowerTransferUnit();
+
+    this.applyTemperatureEffects(simulationSettings.other.airTemperature);
+  }
+
+  applyTemperatureEffects(temperature: number) {
+    Object.values(this.pumps).forEach((pump) =>
+      pump.adjustByTemperature(temperature),
+    );
+    Object.values(this.lines).forEach((line) =>
+      line.adjustByTemperature(temperature),
+    );
+  }
+
+  update() {
+    this.reservoires.green.leak();
+    this.reservoires.yellow.leak();
+    this.reservoires.blue.leak();
+
+    const greenFlow = this.valves.engine1.calculateFlow(
+      this.pumps.engine1.calculateOutput(this.lines.green.currentPressure),
+    );
+    const yellowFlow = this.valves.engine2.calculateFlow(
+      this.pumps.engine2.calculateOutput(this.lines.yellow.currentPressure),
+    );
+    const blueFlow = this.pumps.blueElectricPump.calculateOutput(
+      this.lines.blue.currentPressure,
+    );
+
+    if (this.ptu.isActive) {
+      const ptuTransfer = this.ptu.checkAndTransfer(
+        this.lines.green.currentPressure,
+        this.lines.yellow.currentPressure,
+      );
+
+      if (ptuTransfer.greenToYellow) {
+        const pressureDifference =
+          this.lines.green.currentPressure - this.lines.yellow.currentPressure;
+        const transferFlow = Math.min(
+          this.PTU_TRANSFER_RATE,
+          Math.abs(pressureDifference),
+        );
+        this.lines.green.updatePressure(-transferFlow);
+        this.lines.yellow.updatePressure(transferFlow);
+      } else if (ptuTransfer.yellowToGreen) {
+        const pressureDifference =
+          this.lines.yellow.currentPressure - this.lines.green.currentPressure;
+        const transferFlow = Math.min(
+          this.PTU_TRANSFER_RATE,
+          Math.abs(pressureDifference),
+        );
+        this.lines.yellow.updatePressure(-transferFlow);
+        this.lines.green.updatePressure(transferFlow);
+      }
+    }
+
+    if (this.pumps.ramAirTurbine.isActive) {
+      this.lines.blue.updatePressure(
+        this.pumps.ramAirTurbine.calculateOutput(
+          this.lines.blue.currentPressure,
+        ),
+      );
+    }
+
+    this.lines.green.updatePressure(greenFlow);
+    this.lines.yellow.updatePressure(yellowFlow);
+    this.lines.blue.updatePressure(blueFlow);
+
+    this.pressures.green = this.lines.green.currentPressure;
+    this.pressures.yellow = this.lines.yellow.currentPressure;
+    this.pressures.blue = this.lines.blue.currentPressure;
+
+    this.displayStatus();
+  }
+
+  displayStatus() {
+    postMessage({
+      type: "update",
+      pressures: {
+        green: Math.floor(this.pressures.green),
+        yellow: Math.floor(this.pressures.yellow),
+        blue: Math.floor(this.pressures.blue),
+      },
+      pumps: {
+        green: this.pumps.engine1.isActive,
+        yellow: this.pumps.engine2.isActive,
+        blue: this.pumps.blueElectricPump.isActive,
+      },
+      valves: {
+        green: this.valves.engine1.isOpen,
+        yellow: this.valves.engine2.isOpen,
+      },
+      reservoires: {
+        green: this.reservoires.green.currentLevel,
+        yellow: this.reservoires.yellow.currentLevel,
+        blue: this.reservoires.blue.currentLevel,
+      },
+      ptuActive: this.ptu.isActive,
+      settings: simulationSettings,
+    });
+  }
+}
+
+const hydraulicSystem = [new HydraulicSystemController()];
+hydraulicSystem[0].pumps.blueElectricPump.start();
+
+let simulationInterval = setInterval(() => {
+  simulationSettings.other.status && hydraulicSystem[0].update();
+}, simulationSettings.other.speed);
+
+const resetSimulation = () => {
+  clearInterval(simulationInterval);
+  hydraulicSystem.pop();
+  hydraulicSystem.push(new HydraulicSystemController());
+  simulationInterval = setInterval(() => {
+    simulationSettings.other.status && hydraulicSystem[0].update();
+  }, simulationSettings.other.speed);
 };
 
-setInterval(updateLines, 100);
+const applySettings = () => {
+  const {
+    reservoireStartingLevels,
+    reservoireLeakageRates,
+    pumpMaxFlowRates,
+    other,
+  } = simulationSettings;
 
-onmessage = function (event) {
-  if (event.data.type === "SET_PUMP_STATE") {
-    pumps[event.data.pump as keyof Pump] = event.data.state;
-  }
-  if (event.data.type === "SET_VALVE_STATE") {
-    valves[event.data.valve as keyof Valve] = event.data.state;
+  hydraulicSystem[0].reservoires.green.currentLevel =
+    reservoireStartingLevels.green;
+  hydraulicSystem[0].reservoires.yellow.currentLevel =
+    reservoireStartingLevels.yellow;
+  hydraulicSystem[0].reservoires.blue.currentLevel =
+    reservoireStartingLevels.blue;
+
+  hydraulicSystem[0].reservoires.green.leakageRate =
+    reservoireLeakageRates.green;
+  hydraulicSystem[0].reservoires.yellow.leakageRate =
+    reservoireLeakageRates.yellow;
+  hydraulicSystem[0].reservoires.blue.leakageRate = reservoireLeakageRates.blue;
+
+  hydraulicSystem[0].pumps.engine1.maxFlowRate = pumpMaxFlowRates.engine1;
+  hydraulicSystem[0].pumps.engine2.maxFlowRate = pumpMaxFlowRates.engine2;
+  hydraulicSystem[0].pumps.blueElectricPump.maxFlowRate =
+    pumpMaxFlowRates.blueElectricPump;
+  hydraulicSystem[0].pumps.yellowElectricPump.maxFlowRate =
+    pumpMaxFlowRates.yellowElectricPump;
+  hydraulicSystem[0].pumps.ramAirTurbine.maxFlowRate =
+    pumpMaxFlowRates.ramAirTurbine;
+
+  hydraulicSystem[0].lines.green.maxPressure = other.hydraulicLineMaxPressure;
+  hydraulicSystem[0].lines.yellow.maxPressure = other.hydraulicLineMaxPressure;
+  hydraulicSystem[0].lines.blue.maxPressure = other.hydraulicLineMaxPressure;
+
+  hydraulicSystem[0].ptu.threshold = other.ptuThreshold;
+  hydraulicSystem[0].applyTemperatureEffects(other.airTemperature);
+};
+
+type Event = {
+  data: {
+    type: WorkerActions;
+    pump: TypesOfPumps;
+    state: boolean;
+    valve: TypesOfValves;
+    settings: SimulationSettings;
+  };
+};
+
+onmessage = function (event: Event) {
+  switch (event.data.type) {
+    case WorkerActions.UPDATE_SETTINGS:
+      Object.assign(simulationSettings, event.data.settings);
+      applySettings();
+      break;
+    case WorkerActions.SET_PUMP_STATE: {
+      const pump = hydraulicSystem[0].pumps[event.data.pump];
+      event.data.state ? pump.start() : pump.stop();
+      break;
+    }
+    case WorkerActions.SET_VALVE_STATE: {
+      const valve = hydraulicSystem[0].valves[event.data.valve];
+      event.data.state ? valve.open() : valve.close();
+      break;
+    }
+    case WorkerActions.SET_PTU_STATE:
+      event.data.state
+        ? hydraulicSystem[0].ptu.start()
+        : hydraulicSystem[0].ptu.stop();
+      break;
+    case WorkerActions.RESET_SIMULATION:
+      resetSimulation();
+      break;
+    default:
+      console.warn(`Unknown message type: ${event.data.type}`);
   }
 };

@@ -18,14 +18,33 @@
         "sub_title": "Engine Fire Valves",
         "eng1-valve": "ENG 1 Valve",
         "eng2-valve": "ENG 2 Valve"
+      },
+      "ptus": {
+        "sub_title": "PTUs",
+        "ptu": "PTU"
       }
     }
+  },
+  "cockpit_simulation": {
+    "ecamAlt": "ECAM and Panel"
+  },
+  "overhead_component": {
+    "overheadPanel": "Overhead Panel",
+    "engine1": "Engine 1 Toggle",
+    "engine2": "Engine 2 Toggle",
+    "rat": "RAT MAN Toggle",
+    "ptu": "PTU Toggle",
+    "blueElec": "Blue Elec Toggle",
+    "yellowElec": "Yellow Elec Toggle"
   },
   "simulation_controls": {
     "title": "Simulation Controls",
     "start": "Start",
     "pause": "Pause",
-    "stop": "Stop"
+    "stop": "Stop",
+    "logo_alt": "Airbus Logo",
+    "summary_title": "Frontend Task",
+    "summary_text": ""
   },
   "real_time_data": {
     "title": "Real Time Data",
@@ -52,5 +71,16 @@
       "pressure": "Pressure",
       "temperature": "Temperature"
     }
+  },
+  "errors": {
+    "useHydraulicContext": "useHydraulic must be used within a HydraulicProvider"
+  },
+  "ecam_display": {
+    "rat": "RAT",
+    "ptu": "PTU",
+    "elec": "ELEC",
+    "one": "1",
+    "two": "2",
+    "lo": "LO"
   }
 }

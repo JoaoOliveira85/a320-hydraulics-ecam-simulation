@@ -6,18 +6,28 @@ import { EcamDisplay } from "components";
 import { useMediaQuery } from "@mui/material";
 import { useHydraulicContext } from "context";
 
+import EN from "constants/EN.json";
+
 export const Ecam = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const { pressures, pumps, valves } = useHydraulicContext();
+  const { reservoires, pressures, pumps, valves, ptus, other } =
+    useHydraulicContext();
 
   return (
     <div className="container__ecam">
       <img
         src={prefersDarkMode ? imageNight : imageDay}
-        alt="ECAM and panel"
+        alt={EN.cockpit_simulation.ecamAlt}
         className="container__ecam__image"
       />
-      <EcamDisplay pressures={pressures} pumps={pumps} valves={valves} />
+      <EcamDisplay
+        reservoires={reservoires}
+        pressures={pressures}
+        pumps={pumps}
+        valves={valves}
+        ptus={ptus}
+        other={other}
+      />
     </div>
   );
 };

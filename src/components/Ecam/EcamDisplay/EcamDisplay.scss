@@ -27,5 +27,18 @@
     width: 51.9%;
     left: 3.1%;
     border-radius: 2px;
+    position: relative;
+    min-height: unset;
+    transform: scaleY(0.79);
+
+  }
+  @media screen and (max-width: 530px) {
+    width: 51.9%;
+    left: 3.0%;
+    border-radius: 2px;
+    min-height: 269px;
+    top: 44px;
+    transform: unset;
+    position: absolute;
   }
 }

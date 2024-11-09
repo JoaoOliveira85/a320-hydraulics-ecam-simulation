@@ -27,7 +27,7 @@ export const App = () => {
           justifyContent: "center",
           bgcolor: "background.default",
           color: "text.primary",
-          overflowY: "auto", // Enables scrolling on smaller screens
+          overflowY: "auto",
         }}
       >
         <LayoutConstructor />

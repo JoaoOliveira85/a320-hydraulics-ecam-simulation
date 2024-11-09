@@ -17,6 +17,9 @@ import EN from "constants/EN.json";
 import { useHydraulicContext } from "context";
 import logoWhite from "assets/logos/logo_white.png";
 import logoBlue from "assets/logos/logo_blue.png";
+import SimulationSettingsComponent from "./subComponents/SimulationSettingsComponent/SimulationSettingsComponent";
+import { SimulationSettings } from "types";
+import { RealTimeData } from "./subComponents/RealTimeData";
 
 export const SimulationControls = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
@@ -25,7 +28,8 @@ export const SimulationControls = () => {
   const isTabletOrBelow = useMediaQuery("(max-width:1280px)");
   const isDarkTheme = useMediaQuery("(prefers-color-scheme: dark)");
   const {
-    controls: { handlePumpButton, handleValveButton },
+    simControls: { resetSimulation, updateSettings },
+    controls: { handlePumpButton, handleValveButton, handlePtuButton },
   } = useHydraulicContext();
 
   const handleAccordionChange =
@@ -46,20 +50,32 @@ export const SimulationControls = () => {
           <OverheadPanel
             handlePumpButton={handlePumpButton}
             handleValveButton={handleValveButton}
+            handlePtuButton={handlePtuButton}
           />
         ),
       },
       {
         key: "simulation_controls",
         summary: EN.simulation_controls.title,
-        disabled: true,
-        details: <div>foo</div>,
+        disabled: false,
+        details: (
+          <SimulationSettingsComponent
+            onApplySettings={(updatedSettings: SimulationSettings) => {
+              if (updatedSettings) {
+                updateSettings(updatedSettings);
+              }
+            }}
+            onResetSettings={() => {
+              resetSimulation();
+            }}
+          />
+        ),
       },
       {
         key: "real_time_data",
         summary: EN.real_time_data.title,
-        disabled: true,
-        details: <div>bar</div>,
+        disabled: false,
+        details: <RealTimeData />,
       },
       {
         key: "failures",
@@ -102,7 +118,7 @@ export const SimulationControls = () => {
         >
           <img
             src={isDarkTheme ? logoWhite : logoBlue}
-            alt="logo"
+            alt={EN.simulation_controls.logo_alt}
             style={{
               width: "80px",
               height: "auto",
@@ -146,7 +162,7 @@ export const SimulationControls = () => {
                     variant="h6"
                     sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
                   >
-                    TASK #1: Frontend Development
+                    {EN.simulation_controls.summary_title}
                   </Typography>
                   <Typography
                     variant="body1"
@@ -222,7 +238,7 @@ export const SimulationControls = () => {
                 variant="h6"
                 sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
               >
-                TASK #1: Frontend Development
+                {EN.simulation_controls.summary_title}
               </Typography>
               <Typography
                 variant="body1"

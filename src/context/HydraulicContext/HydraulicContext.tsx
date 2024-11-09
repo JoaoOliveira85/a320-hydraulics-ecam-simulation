@@ -8,8 +8,17 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import { TypesOfPumps, TypesOfValves, HydraulicContextType } from "types";
+import {
+  TypesOfPumps,
+  TypesOfValves,
+  HydraulicContextType,
+  TypesOfPtus,
+  SimulationSettings,
+} from "types";
+import { WorkerActions } from "types/HydraulicWorkerTypes";
 import HydraulicWorker from "workers/hydraulicsWorker.js?worker";
+import defaultSettings from "workers/simulationDefaultSettings.json";
+import EN from "constants/EN.json";
 
 const HydraulicContext = createContext<HydraulicContextType | undefined>(
   undefined,
@@ -29,19 +38,59 @@ export const HydraulicProvider = ({
     blue: initialState?.pressures?.blue ?? 0,
     yellow: initialState?.pressures?.yellow ?? 0,
   });
+  const [reservoires, setReservoires] = useState({
+    green:
+      initialState?.reservoires?.green ??
+      defaultSettings.reservoireStartingLevels.green,
+    blue:
+      initialState?.reservoires?.blue ??
+      defaultSettings.reservoireStartingLevels.blue,
+    yellow:
+      initialState?.reservoires?.yellow ??
+      defaultSettings.reservoireStartingLevels.yellow,
+  });
 
   const [pumps, setPumps] = useState({
-    engine1: initialState?.pumps?.engine1 ?? false,
-    engine2: initialState?.pumps?.engine2 ?? false,
-    powerTransferUnit: initialState?.pumps?.powerTransferUnit ?? true,
-    ramAirTurbine: initialState?.pumps?.ramAirTurbine ?? false,
-    blueElectricPump: initialState?.pumps?.blueElectricPump ?? true,
-    yellowElectricPump: initialState?.pumps?.yellowElectricPump ?? false,
+    engine1:
+      initialState?.pumps?.engine1 ?? defaultSettings.engineStartStatus.engine1,
+    engine2:
+      initialState?.pumps?.engine2 ?? defaultSettings.engineStartStatus.engine2,
+    ramAirTurbine:
+      initialState?.pumps?.ramAirTurbine ??
+      defaultSettings.pumpStartStatus.ramAirTurbine,
+    blueElectricPump:
+      initialState?.pumps?.blueElectricPump ??
+      defaultSettings.pumpStartStatus.blueElectricPump,
+    yellowElectricPump:
+      initialState?.pumps?.yellowElectricPump ??
+      defaultSettings.pumpStartStatus.yellowElectricPump,
+  });
+
+  const [ptus, setPtus] = useState({
+    powerTransferUnit:
+      initialState?.ptus?.powerTransferUnit ?? defaultSettings.ptuStartStatus,
   });
 
   const [valves, setValves] = useState({
-    engine1: initialState?.valves?.engine1 ?? true,
-    engine2: initialState?.valves?.engine2 ?? true,
+    engine1:
+      initialState?.valves?.engine1 ?? defaultSettings.valveStartStatus.green,
+    engine2:
+      initialState?.valves?.engine2 ?? defaultSettings.valveStartStatus.yellow,
+  });
+
+  const [other, setOther] = useState({
+    airTemperature:
+      initialState?.other?.airTemperature ??
+      defaultSettings.other.airTemperature,
+    grossWeight:
+      initialState?.other?.grossWeight ?? defaultSettings.other.grossWeight,
+    hydraulicLineMaxPressure:
+      initialState?.other?.hydraulicLineMaxPressure ??
+      defaultSettings.other.hydraulicLineMaxPressure,
+    ptuThreshold:
+      initialState?.other?.ptuThreshold ?? defaultSettings.other.ptuThreshold,
+    status: initialState?.other?.status ?? defaultSettings.other.status,
+    speed: initialState?.other?.speed ?? defaultSettings.other.speed,
   });
 
   const workerRef = useRef<Worker | null>(null);
@@ -63,6 +112,35 @@ export const HydraulicProvider = ({
           }
           return prevPressures;
         });
+
+        const newReservoires = event.data.reservoires;
+        setReservoires((prevReservoires) => {
+          if (
+            newReservoires.green !== prevReservoires.green ||
+            newReservoires.blue !== prevReservoires.blue ||
+            newReservoires.yellow !== prevReservoires.yellow
+          ) {
+            return newReservoires;
+          }
+          return prevReservoires;
+        });
+
+        const settings = event.data.settings.other;
+
+        setOther((prevOther) => {
+          if (
+            settings.airTemperature !== prevOther.airTemperature ||
+            settings.grossWeight !== prevOther.grossWeight ||
+            settings.hydraulicLineMaxPressure !==
+              prevOther.hydraulicLineMaxPressure ||
+            settings.ptuThreshold !== prevOther.ptuThreshold ||
+            settings.status !== prevOther.status ||
+            settings.speed !== prevOther.speed
+          ) {
+            return settings;
+          }
+          return prevOther;
+        });
       };
 
       return () => {
@@ -73,13 +151,46 @@ export const HydraulicProvider = ({
 
   const setPumpState = (pump: TypesOfPumps, state: boolean) => {
     if (workerRef.current) {
-      workerRef.current.postMessage({ type: "SET_PUMP_STATE", pump, state });
+      workerRef.current.postMessage({
+        type: WorkerActions.SET_PUMP_STATE,
+        pump,
+        state,
+      });
     }
   };
 
   const setValveState = (valve: TypesOfValves, state: boolean) => {
     if (workerRef.current) {
-      workerRef.current.postMessage({ type: "SET_VALVE_STATE", valve, state });
+      workerRef.current.postMessage({
+        type: WorkerActions.SET_VALVE_STATE,
+        valve,
+        state,
+      });
+    }
+  };
+
+  const setPtuState = (ptu: TypesOfPtus, state: boolean) => {
+    if (workerRef.current) {
+      workerRef.current.postMessage({
+        type: WorkerActions.SET_PTU_STATE,
+        ptu,
+        state,
+      });
+    }
+  };
+
+  const updateSettings = (settings: SimulationSettings) => {
+    if (workerRef.current) {
+      workerRef.current.postMessage({
+        type: WorkerActions.UPDATE_SETTINGS,
+        settings,
+      });
+    }
+  };
+
+  const resetSimulation = () => {
+    if (workerRef.current) {
+      workerRef.current.postMessage({ type: WorkerActions.RESET_SIMULATION });
     }
   };
 
@@ -99,27 +210,63 @@ export const HydraulicProvider = ({
     });
   }, []);
 
+  const handlePtuButton = useCallback((button: TypesOfPtus) => {
+    setPtus((prevPtus) => {
+      const newState = !prevPtus.powerTransferUnit;
+      setPtuState(button, newState);
+      return { ...prevPtus, powerTransferUnit: newState };
+    });
+  }, []);
+
   const controls = {
     handlePumpButton,
     handleValveButton,
+    handlePtuButton,
+  };
+
+  const simControls = {
+    updateSettings,
+    resetSimulation,
   };
 
   const values = useMemo(
     () => ({
       pressures,
+      reservoires: {
+        green:
+          (reservoires.green / defaultSettings.reservoireMaxLevels.green) * 100,
+        blue:
+          (reservoires.blue / defaultSettings.reservoireMaxLevels.blue) * 100,
+        yellow:
+          (reservoires.yellow / defaultSettings.reservoireMaxLevels.yellow) *
+          100,
+      },
+      simControls: {
+        updateSettings,
+        resetSimulation,
+      },
       controls: {
         handlePumpButton: controls.handlePumpButton,
         handleValveButton: controls.handleValveButton,
+        handlePtuButton: controls.handlePtuButton,
       },
       pumps,
       valves,
+      ptus,
+      other,
     }),
     [
       pressures,
+      reservoires,
+      simControls.updateSettings,
+      simControls.resetSimulation,
       controls.handlePumpButton,
       controls.handleValveButton,
+      controls.handlePtuButton,
       pumps,
       valves,
+      ptus,
+      other,
     ],
   );
 
@@ -133,7 +280,7 @@ export const HydraulicProvider = ({
 export const useHydraulicContext = () => {
   const context = useContext(HydraulicContext);
   if (context === undefined) {
-    throw new Error("useHydraulic must be used within a HydraulicProvider");
+    throw new Error(EN.errors.useHydraulicContext);
   }
   return context;
 };

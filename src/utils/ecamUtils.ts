@@ -359,9 +359,8 @@ export const drawReservoir = (
   ctx.beginPath();
   ctx.strokeStyle = "green";
   ctx.lineWidth = 3;
-  ctx.moveTo(x, y);
-  ctx.lineTo(x - length, y);
-  ctx.lineTo(x - length, y - height);
+
+  ctx.moveTo(x - length / 2, y - height);
   ctx.lineTo(x + length, y - height);
   ctx.lineTo(x + length, y - height + length * 3);
   ctx.lineTo(x - length / 4, y - height + length * 3);
@@ -371,8 +370,8 @@ export const drawReservoir = (
   ctx.beginPath();
   ctx.strokeStyle = "green";
   ctx.lineWidth = 3;
-  ctx.moveTo(x, y - height);
-  ctx.lineTo(x - length - 1, y - height - length * 2);
+  ctx.moveTo(x, y - (height / 100) * reservoirLevel);
+  ctx.lineTo(x - length - 1, y - (height / 100) * reservoirLevel - length * 2);
   ctx.stroke();
   ctx.closePath();
 
@@ -381,8 +380,19 @@ export const drawReservoir = (
   ctx.lineWidth = 3;
   ctx.moveTo(x, y);
   ctx.lineTo(x + length, y);
-  ctx.lineTo(x + length, y - reservoirLevel);
-  ctx.lineTo(x - length / 4, y - reservoirLevel);
+  ctx.lineTo(x + length, y - 30);
+  ctx.lineTo(x - length / 4, y - 30);
+  ctx.stroke();
+  ctx.closePath();
+
+  ctx.beginPath();
+  ctx.strokeStyle = "green";
+  ctx.lineWidth = 3;
+  ctx.moveTo(x, y);
+  ctx.lineTo(x - length, y);
+  ctx.lineTo(x - length, y - (height / 100) * reservoirLevel);
+  ctx.lineTo(x + length / 2, y - (height / 100) * reservoirLevel);
+
   ctx.stroke();
   ctx.closePath();
 };
