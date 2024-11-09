@@ -14,7 +14,7 @@ import blueElectricPumpNight from "assets/buttons/blue_pump_night_on.webp";
 import yellowElectricPumpDay from "assets/buttons/elec_pump_day_on.webp";
 import yellowElectricPumpNight from "assets/buttons/elec_pump_night_on.webp";
 import { useMediaQuery } from "@mui/material";
-import { useHydraulicContext } from "context";
+import { useHydraulicContext } from "hooks";
 import { Ptus, Pumps } from "types";
 
 import EN from "constants/EN.json";

@@ -4,7 +4,7 @@ import "./Ecam.scss";
 
 import { EcamDisplay } from "components";
 import { useMediaQuery } from "@mui/material";
-import { useHydraulicContext } from "context";
+import { useHydraulicContext } from "hooks";
 
 import EN from "constants/EN.json";
 

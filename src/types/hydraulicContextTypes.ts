@@ -32,7 +32,7 @@ export interface HydraulicContextType {
     handlePumpFailure: (pump: TypesOfPumps) => void;
     handleValveFailure: (valve: TypesOfValves) => void;
     handleLineLeak: (line: Colors) => void;
-  }
+  };
   pumps: Record<TypesOfPumps, boolean>;
   valves: Record<TypesOfValves, boolean>;
   ptus: Record<TypesOfPtus, boolean>;

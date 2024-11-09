@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { HydraulicProvider } from "context/HydraulicContext/HydraulicContext";
+import { HydraulicProvider } from "context/HydraulicContext/HydraulicContextProvider";
 
 export function renderWithHydraulicProvider(children: React.ReactElement) {
   const mockInitialState = {

@@ -1,4 +1,4 @@
-import { ThemeOptions } from "./general";
+import { ThemeOptions } from "./generalTypes";
 import { TypesOfPtus, TypesOfPumps } from "./overheadPanelTypes";
 
 export type ImageGroup = TypesOfPumps | TypesOfPtus | "overheadPanel";

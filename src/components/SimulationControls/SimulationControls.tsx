@@ -14,11 +14,17 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useMemo, useState } from "react";
 import { OverheadPanel } from "./subComponents/OverheadPanel/OverheadPanel";
 import EN from "constants/EN.json";
-import { useHydraulicContext } from "context";
+import { useHydraulicContext } from "hooks";
 import logoWhite from "assets/logos/logo_white.png";
 import logoBlue from "assets/logos/logo_blue.png";
 import SimulationSettingsComponent from "./subComponents/SimulationSettingsComponent/SimulationSettingsComponent";
-import { Colors, HydraulicContextType, SimulationSettings, TypesOfPumps, TypesOfValves } from "types";
+import {
+  Colors,
+  HydraulicContextType,
+  SimulationSettings,
+  TypesOfPumps,
+  TypesOfValves,
+} from "types";
 import { RealTimeData } from "./subComponents/RealTimeData";
 import { FailureControls } from "./subComponents/FailureControls";
 
@@ -46,21 +52,21 @@ export const SimulationControls = () => {
   };
 
   const failureManager = (system: HydraulicContextType) => {
-
     return {
       onTriggerPumpFailer: (pump: TypesOfPumps) => {
         system.failures.handlePumpFailure(pump);
       },
       onTriggerValveFailure: (valve: TypesOfValves) => {
-        system.failures.handleValveFailure(valve)
+        system.failures.handleValveFailure(valve);
       },
       onTriggerLineLeak: (line: Colors) => {
-        system.failures.handleLineLeak(line)
+        system.failures.handleLineLeak(line);
       },
-    }
-  }
+    };
+  };
 
-  const { onTriggerPumpFailer, onTriggerValveFailure, onTriggerLineLeak } = failureManager(hydraulicSystem);
+  const { onTriggerPumpFailer, onTriggerValveFailure, onTriggerLineLeak } =
+    failureManager(hydraulicSystem);
 
   const SECTION_LIST = useMemo(
     () => [
@@ -102,10 +108,25 @@ export const SimulationControls = () => {
         key: "failures",
         summary: EN.failures.title,
         disabled: false,
-        details: <FailureControls onTriggerLineLeak={onTriggerLineLeak} onTriggerPumpFailure={onTriggerPumpFailer} onTriggerValveFailure={onTriggerValveFailure} />,
+        details: (
+          <FailureControls
+            onTriggerLineLeak={onTriggerLineLeak}
+            onTriggerPumpFailure={onTriggerPumpFailer}
+            onTriggerValveFailure={onTriggerValveFailure}
+          />
+        ),
       },
     ],
-    [handlePumpButton, handleValveButton],
+    [
+      handlePumpButton,
+      handleValveButton,
+      handlePtuButton,
+      onTriggerLineLeak,
+      onTriggerPumpFailer,
+      onTriggerValveFailure,
+      resetSimulation,
+      updateSettings,
+    ],
   );
 
   return (

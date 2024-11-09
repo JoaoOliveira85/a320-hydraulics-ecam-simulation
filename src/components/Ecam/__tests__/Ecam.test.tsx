@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { test, expect, describe } from "vitest";
 import { Ecam } from "../Ecam";
-import { HydraulicProvider } from "context/HydraulicContext/HydraulicContext";
+import { HydraulicProvider } from "context/HydraulicContext/HydraulicContextProvider";
 
 class WorkerMock {
   onmessage: ((this: Worker, ev: MessageEvent<string>) => void) | null = null;
@@ -13,7 +13,9 @@ class WorkerMock {
     }
   }
 
-  terminate() {}
+  terminate() {
+    // Implementation not necessary for the purposes of this mock
+  }
 }
 
 // @ts-expect-error - Mocking Worker

@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Button } from "@mui/material";
+import { Box, Typography, Button, Grid2 as Grid } from "@mui/material";
 import { OverheadPanelProps } from "types";
 import EN from "constants/EN.json";
 import { buttonList, PtuList, ValveList } from "constants/controls";
@@ -22,7 +22,15 @@ export const OverheadPanel: React.FC<OverheadPanelProps> = ({
         </Typography>
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           {buttonList.map((button) => (
-            <Grid item key={button.id} xs={6} md={4}>
+            <Grid
+              key={button.id}
+              sx={{
+                gridColumn: {
+                  xs: "span 6",
+                  md: "span 4",
+                },
+              }}
+            >
               <Button
                 fullWidth
                 variant="contained"
@@ -36,13 +44,22 @@ export const OverheadPanel: React.FC<OverheadPanelProps> = ({
           ))}
         </Grid>
       </Box>
+
       <Box sx={{ position: "relative", width: "100%", padding: 0 }}>
         <Typography variant="h6" align="center">
           {valves.sub_title}
         </Typography>
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           {ValveList.map((button) => (
-            <Grid item key={button.id} xs={6} md={4}>
+            <Grid
+              key={button.id}
+              sx={{
+                gridColumn: {
+                  xs: "span 6",
+                  md: "span 4",
+                },
+              }}
+            >
               <Button
                 fullWidth
                 variant="contained"
@@ -56,13 +73,22 @@ export const OverheadPanel: React.FC<OverheadPanelProps> = ({
           ))}
         </Grid>
       </Box>
+
       <Box sx={{ position: "relative", width: "100%", padding: 0 }}>
         <Typography variant="h6" align="center">
           {ptus.sub_title}
         </Typography>
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           {PtuList.map((button) => (
-            <Grid item key={button.id} xs={6} md={4}>
+            <Grid
+              key={button.id}
+              sx={{
+                gridColumn: {
+                  xs: "span 6",
+                  md: "span 4",
+                },
+              }}
+            >
               <Button
                 fullWidth
                 variant="contained"

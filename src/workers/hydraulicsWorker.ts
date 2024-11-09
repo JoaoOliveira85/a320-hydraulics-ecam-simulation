@@ -1,7 +1,6 @@
 import { TypesOfPumps, TypesOfValves, SimulationSettings, Color } from "types";
 import simulationSettings from "./simulationDefaultSettings.json";
 import { WorkerActions } from "types/hydraulicWorkerTypes";
-import { C } from "vitest/dist/chunks/environment.LoooBwUu.js";
 
 const TEMPERATURE_EFFECTS = {
   optimalTemp: 20,
@@ -449,7 +448,7 @@ const hydraulicSystem = [new HydraulicSystemController()];
 hydraulicSystem[0].pumps.blueElectricPump.start();
 
 let simulationInterval = setInterval(() => {
-  simulationSettings.other.status && hydraulicSystem[0].update();
+  if (simulationSettings.other.status) hydraulicSystem[0].update();
 }, simulationSettings.other.speed);
 
 const resetSimulation = () => {
@@ -457,7 +456,7 @@ const resetSimulation = () => {
   hydraulicSystem.pop();
   hydraulicSystem.push(new HydraulicSystemController());
   simulationInterval = setInterval(() => {
-    simulationSettings.other.status && hydraulicSystem[0].update();
+    if (simulationSettings.other.status) hydraulicSystem[0].update();
   }, simulationSettings.other.speed);
 };
 
@@ -482,20 +481,30 @@ onmessage = function (event: Event) {
 
     case WorkerActions.SET_PUMP_STATE: {
       const pump = hydraulicSystem[0].pumps[event.data.pump];
-      event.data.state ? pump.start() : pump.stop();
+      if (event.data.state) {
+        pump.start();
+      } else {
+        pump.stop();
+      }
       break;
     }
 
     case WorkerActions.SET_VALVE_STATE: {
       const valve = hydraulicSystem[0].valves[event.data.valve];
-      event.data.state ? valve.open() : valve.close();
+      if (event.data.state) {
+        valve.open();
+      } else {
+        valve.close();
+      }
       break;
     }
 
     case WorkerActions.SET_PTU_STATE:
-      event.data.state
-        ? hydraulicSystem[0].ptu.start()
-        : hydraulicSystem[0].ptu.stop();
+      if (event.data.state) {
+        hydraulicSystem[0].ptu.start();
+      } else {
+        hydraulicSystem[0].ptu.stop();
+      }
       break;
 
     case WorkerActions.RESET_SIMULATION:

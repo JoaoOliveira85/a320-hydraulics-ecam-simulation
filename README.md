@@ -2,73 +2,166 @@
 
 A repository for the deliverables of the Frontend portion of the Test Task: Full Stack Development JS/TS
 
-## Test Task: Full Stack Development JS/TS
+## Project Overview
 
-### Full Stack Development of Airbus Hydraulic System Simulation using Microsoft Flight Simulator 2020 SDK
+This project simulates the hydraulics system of an A320 aircraft, providing an interactive frontend for educational and demonstration purposes.
 
-#### Objective
+## Prerequisites
 
-Develop a frontend application to simulate and visualize the hydraulic system of an Airbus aircraft. The simulation should leverage the Microsoft Flight Simulator 2020 SDK to fetch and manipulate data, providing a realistic simulation environment.
+- [Docker](https://docs.docker.com/get-docker/) (version 20.10 or higher)
+- [Docker Compose](https://docs.docker.com/compose/install/) (version 1.29 or higher)
 
-For additional merit you can create a full-stack development with custom backend development, but this is not essential.
+## Installation Instructions
 
-#### **Project Scope:**
+1. **Clone the Repository**
 
-1. **Frontend Development (TypeScript, React or Angular):**
-   - Develop a user interface that allows users to interact with the Airbus hydraulic system.
-   - The UI should provide real-time visualization of hydraulic pressures, fluid levels, and system status using a cockpit-like dashboard.
-   - Include features like starting and stopping the simulation, controlling hydraulic pumps, and showing warnings for system malfunctions.
-   - The UI should be responsive and user-friendly, with a focus on providing a realistic simulation experience.
-2. **Backend Development (Java, Spring Boot) (not essential):**
-   - Develop a backend API to handle business logic and communicate with the Microsoft Flight Simulator 2020 SDK.
-   - The backend should manage simulation states, perform calculations related to hydraulic dynamics, and store system states.
-   - The API should expose endpoints to:
-     - Start and stop the simulation.
-     - Fetch current hydraulic system status.
-     - Trigger hydraulic system failures or malfunctions for testing purposes.
-   - Ensure robust error handling and logging.
-3. **Integration with Microsoft Flight Simulator 2020 SDK:**
-   - Utilize the Microsoft Flight Simulator 2020 SDK to fetch real-time flight data (altitude, speed, etc.) and manipulate the Airbus aircraft's hydraulic system.
-   - Create a module that interacts with the SDK to simulate hydraulic pressure changes based on flight conditions and user input.
-   - Simulate various hydraulic system behaviors such as fluid leakages, pump failures, and different pressure scenarios.
-   - Ensure smooth and reliable communication between the application and the Flight Simulator SDK.
-4. **Database (PostgreSQL or MySQL):**
-   - Set up a database to store historical simulation data, including hydraulic system states, user actions, and system failures.
-   - Implement APIs to query historical data for analytics and reporting purposes.
-5. **Testing:**
-   - Write unit tests for both backend and frontend components to ensure robustness and reliability.
-   - Include integration tests to verify proper communication between the backend API and the Microsoft Flight Simulator SDK.
-   - Perform end-to-end testing to ensure the full system operates as expected.
-6. **Documentation:**
-   - Provide comprehensive documentation covering the setup and installation of the project, API usage, and architecture overview.
-   - Include a README file with instructions on how to run the application locally and deploy it on a server.
+   ```bash
+   git clone https://github.com/joaooliveira85/a320-hydraulics-frontend-demo.git
+   ```
 
-#### **Deliverables:**
+2. **Navigate to the Project Directory**
 
-1. **Source Code:** A GitHub repository containing all source code for both frontend and backend components.
-2. **Deployment:** A Docker Compose file or equivalent scripts to set up and run the entire system locally.
-3. **Documentation:** Detailed documentation for setting up and using the system.
-4. **Demo:** A video or a live demo showcasing the working application, demonstrating key features like real-time data visualization, system control, and SDK integration.
+   ```bash
+   cd a320-hydraulics-frontend-demo
+   ```
 
-#### **Evaluation Criteria:**
+3. **Build the Docker Image**
 
-1. **Code Quality:** Clean, modular, and maintainable code.
-2. **Architecture:** Well-structured architecture that separates concerns and ensures scalability.
-3. **Functionality:** Proper implementation of all required features, including SDK integration and data visualization.
-4. **Testing:** Comprehensive test coverage with well-written unit and integration tests.
-5. **Documentation:** Clear and comprehensive documentation that explains the system design and usage.
-6. **User Experience:** Intuitive and responsive UI that offers a realistic simulation experience.
+   ```bash
+   docker compose up --build
+   ```
 
-#### **Time Estimation:**
+4. **Access the Application**
 
-This task is expected to take approximately 20-30 hours of work, assuming familiarity with the required technologies and the Microsoft Flight Simulator SDK.
+   Open your browser and navigate to [http://localhost:2019](http://localhost:2019)
 
-#### **Notes:**
+## Usage
 
-- Access to Microsoft Flight Simulator 2020 and its SDK will be necessary to complete this task.
-- The applicant should demonstrate both technical skills and creativity in approaching the problem.
+## **Usage Instructions**
 
-#### Resources
+After successfully setting up and running the application (see the Installation Instructions), you can access and interact with the simulation through your web browser.
 
-- [AviaLearn Hydraulic System Presentation A320 Family](https://youtu.be/o2dJM9UNFqw?si=xzwAbIatnkLzQwzL)
-- [Microsoft Flight Simulator 2020 SDK Documentation](https://docs.flightsimulator.com/html/Introduction/Introduction.htm)
+### **Accessing the Application**
+
+- **Default Mode:** Open your browser and navigate to `http://localhost:2019/`.
+- **Cockpit Mode:** Navigate to `http://localhost:2019/cockpit`.
+
+---
+
+### **Application Modes**
+
+#### **1. Default Mode (`http://localhost:2019/`)**
+
+This is the primary interface of the application, offering a full-featured simulation experience. The interface is responsive and consists of two main sections:
+
+- **ECAM Display (Left Side):** An image of the Electronic Centralized Aircraft Monitor (ECAM) that reflects the real-time state of the aircraft's hydraulic systems.
+- **Control Panels (Right Side):** A set of interactive panels that allow you to manipulate the simulation.
+
+**Key Components:**
+
+##### **a. Overhead Panel**
+
+- **Pumps Control:** Toggle all engine and electric pumps on or off.
+- **Engine Fire Valves:** Open or close the engine fire valves.
+- **Power Transfer Units (PTUs):** Activate or deactivate the PTUs.
+- **Real-Time Updates:** Any changes here are immediately reflected on the ECAM display, allowing you to see the impact of your actions on the hydraulic systems.
+
+##### **b. Simulation Controls**
+
+- **Fine-Tuning Parameters:** Adjust various aspects of the simulation to customize your experience:
+  - **Starting Conditions:** Set initial states for different components.
+  - **Reservoir Levels:** Modify the hydraulic fluid levels in each reservoir.
+  - **Pump Flow Rates:** Change the maximum flow rates of the pumps.
+  - **Line Pressure:** Adjust the pressure within the hydraulic lines.
+  - **Air Temperature:** Set the ambient air temperature affecting system performance.
+  - **Simulation Speed:** Control the speed at which the simulation runs.
+- **Simulation Management:**
+  - **Start/Stop Simulation:** Begin or pause the simulation at any time.
+  - **Reset Simulation:** Restore all settings to their default values and restart the simulation.
+
+##### **c. Real-Time Data**
+
+- **Data Table:** View a continuously updating table that displays key data points from the simulation, such as pressure readings, flow rates, and system statuses.
+- **Monitoring:** Use this data to monitor the health and performance of the hydraulic systems as you interact with the simulation.
+
+##### **d. Failures Panel**
+
+- **Simulate Failures:** Introduce system failures to test how the hydraulic systems respond under adverse conditions:
+  - **Line Leaks:** Simulate hydraulic line leaks to observe pressure drops and fluid loss.
+  - **Pump Failures:** Trigger failures of specific pumps to see how the system compensates.
+- **Analysis:** Observe the immediate effects on the ECAM display and real-time data, enhancing your understanding of system redundancies and failure management.
+
+---
+
+#### **2. Cockpit Mode (`http://localhost:2019/cockpit`)**
+
+This mode provides a focused simulation experience with a simplified interface:
+
+- **Full-Screen Cockpit View:** The cockpit occupies the entire browser window, offering an immersive environment.
+- **Essential Controls:** Includes a select set of instruments from the overhead panel to control critical functions like pumps and valves.
+- **Real-Time ECAM Integration:** Interactions within the cockpit mode still reflect real-time changes on the ECAM display embedded in the cockpit interface.
+
+---
+
+### **Interacting with the Simulation**
+
+- **Toggle Switches and Buttons:**
+  - Click on switches or buttons in the Overhead Panel to control pumps, valves, and PTUs.
+- **Adjust Simulation Parameters:**
+  - Use input fields and sliders in the Simulation Controls panel to fine-tune settings.
+  - Input numerical values or use predefined options where available.
+- **Monitor Outputs:**
+  - Keep an eye on the ECAM display to see graphical representations of system statuses.
+  - Refer to the Real-Time Data table for precise numerical data and system indicators.
+- **Simulate Failures:**
+  - In the Failures panel, select the type of failure you want to simulate.
+  - Observe how the system responds, both visually on the ECAM and numerically in the data table.
+- **Control the Simulation Flow:**
+  - Use the Start, Stop, and Reset buttons to manage the simulation's progression.
+  - Experiment with different scenarios by adjusting parameters and introducing failures.
+
+---
+
+### **Tips for Effective Use**
+
+- **Explore System Interactions:**
+  - Experiment with turning different pumps on and off to see how they affect system pressure and flow.
+  - Use the PTUs to understand how power is transferred between hydraulic systems.
+- **Understand Failure Modes:**
+  - Simulate line leaks to observe how the system detects and manages fluid loss.
+  - Trigger pump failures to see how redundant systems compensate for component losses.
+- **Optimize Simulation Settings:**
+  - Adjust the simulation speed to slow down complex interactions for better analysis.
+  - Modify air temperature to see its effect on system performance, especially under extreme conditions.
+- **Utilize Real-Time Data:**
+  - Monitor the data table to track changes over time and correlate them with your actions.
+  - Use the data to validate system behavior and understand underlying mechanics.
+- **Responsive Design:**
+  - While the application is responsive and can be used on various devices, a larger screen (desktop or laptop) is recommended for the best experience.
+  - Ensure your browser window is maximized to fully appreciate the interface layout and details.
+
+---
+
+### **Troubleshooting**
+
+- **Port Conflict:** Ensure that port 2019 is not in use by another application.
+- **Docker Issues:** If you encounter Docker-related errors, try restarting Docker or running the commands with elevated privileges.
+- \*_Build Failures:_ Run `docker compose down --rmi all` to remove images and try rebuilding.
+
+---
+
+### **Conclusion**
+
+This application offers an interactive way to explore and understand the hydraulics system of an A320 aircraft. By engaging with the controls and observing the immediate effects on the system, you can gain valuable insights into aircraft operations, system dependencies, and failure management.
+
+Feel free to experiment with different settings and scenarios to fully leverage the capabilities of the simulation.
+
+---
+
+**Note:** If you encounter any issues or have questions about specific functionalities, please refer to the Troubleshooting section or contact the support team.
+
+## Contact Information
+
+- **Name:** João Oliveira
+- **Email:** <jpvfo42@gmail.com>
+- **GitHub:** [joaooliveira85](http://www.github.com/joaooliveira85)

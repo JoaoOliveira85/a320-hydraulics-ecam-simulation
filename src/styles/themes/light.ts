@@ -1,6 +1,4 @@
-// Based on the Airbus branding guidelines https://brand.airbus.com/en/asset-library/colours
-
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import colors from "../colors.module.scss";
 
 export const lightTheme = createTheme({
@@ -8,17 +6,19 @@ export const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: colors.airbusMediumBlue,
-      light: colors.airbusDarkBlue,
-      dark: colors.airbusSilver,
+      light: colors.airbusLightBlue,
+      dark: colors.airbusDarkBlue,
+      contrastText: colors.white,
     },
     secondary: {
       main: colors.green,
       light: colors.greenLight,
       dark: colors.greenDark,
+      contrastText: colors.white,
     },
     background: {
       default: colors.airbusLightBlue,
-      paper: colors.white,
+      paper: colors.extraLightGray,
     },
     text: {
       primary: colors.airbusDarkBlue,
@@ -28,31 +28,44 @@ export const lightTheme = createTheme({
       main: colors.red,
       dark: colors.redDark,
       light: colors.redLight,
+      contrastText: colors.white,
     },
     warning: {
       main: colors.yellow,
       dark: colors.yellowDark,
       light: colors.yellowLight,
+      contrastText: colors.black,
     },
     success: {
       main: colors.green,
       dark: colors.greenDark,
       light: colors.greenLight,
+      contrastText: colors.white,
     },
     info: {
       main: colors.cyan,
       dark: colors.cyanDark,
       light: colors.cyanLight,
+      contrastText: colors.white,
     },
+    divider: colors.lightGray,
   },
   typography: {
     fontFamily: "'Helvetica', Arial, sans-serif",
+    h1: {
+      fontFamily: "'Helvetica Bold', Arial, sans-serif",
+      fontWeight: 700,
+    },
+    h2: {
+      fontFamily: "'Helvetica Bold', Arial, sans-serif",
+      fontWeight: 700,
+    },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: "8px",
+          borderRadius: "4px",
           textTransform: "none",
           fontWeight: 600,
           padding: "8px 16px",
@@ -67,11 +80,6 @@ export const lightTheme = createTheme({
           minWidth: "100px",
           minHeight: "36px",
           fontSize: "0.8rem",
-        },
-        sizeMedium: {
-          minWidth: "120px",
-          minHeight: "40px",
-          fontSize: "0.875rem",
         },
         sizeLarge: {
           minWidth: "140px",

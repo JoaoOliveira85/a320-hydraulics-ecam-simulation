@@ -1,8 +1,6 @@
 import {
-  createContext,
   useState,
   ReactNode,
-  useContext,
   useRef,
   useEffect,
   useCallback,
@@ -19,11 +17,7 @@ import {
 import { WorkerActions } from "types/hydraulicWorkerTypes";
 import HydraulicWorker from "workers/hydraulicsWorker.js?worker";
 import defaultSettings from "workers/simulationDefaultSettings.json";
-import EN from "constants/EN.json";
-
-const HydraulicContext = createContext<HydraulicContextType | undefined>(
-  undefined,
-);
+import { HydraulicContext } from "./HydraulicContext";
 
 interface HydraulicProviderProps {
   children: ReactNode;
@@ -199,10 +193,10 @@ export const HydraulicProvider = ({
     if (workerRef.current) {
       workerRef.current.postMessage({
         type: WorkerActions.TRIGGER_FAILURE,
-        [failure]: id
+        [failure]: id,
       });
     }
-  }
+  };
 
   const handlePumpButton = useCallback((button: TypesOfPumps) => {
     setPumps((prevPumps) => {
@@ -229,15 +223,15 @@ export const HydraulicProvider = ({
   }, []);
 
   const handleValveFailure = useCallback((valve: TypesOfValves) => {
-    triggerFailure('valve', valve);
+    triggerFailure("valve", valve);
   }, []);
 
   const handlePumpFailure = useCallback((pump: TypesOfPumps) => {
-    triggerFailure('pump', pump);
+    triggerFailure("pump", pump);
   }, []);
 
   const handleLineLeak = useCallback((line: Color) => {
-    triggerFailure('line', line);
+    triggerFailure("line", line);
   }, []);
 
   const controls = {
@@ -246,16 +240,14 @@ export const HydraulicProvider = ({
     handlePtuButton,
   };
 
-  const simControls = {
-    updateSettings,
-    resetSimulation,
-  };
-
-  const failures = {
-    handlePumpFailure,
-    handleValveFailure,
-    handleLineLeak,
-  };
+  const failures = useMemo(
+    () => ({
+      handlePumpFailure,
+      handleValveFailure,
+      handleLineLeak,
+    }),
+    [handlePumpFailure, handleValveFailure, handleLineLeak],
+  );
 
   const values = useMemo(
     () => ({
@@ -287,8 +279,6 @@ export const HydraulicProvider = ({
     [
       pressures,
       reservoires,
-      simControls.updateSettings,
-      simControls.resetSimulation,
       controls.handlePumpButton,
       controls.handleValveButton,
       controls.handlePtuButton,
@@ -296,7 +286,7 @@ export const HydraulicProvider = ({
       valves,
       ptus,
       other,
-      failures     
+      failures,
     ],
   );
 
@@ -305,12 +295,4 @@ export const HydraulicProvider = ({
       {children}
     </HydraulicContext.Provider>
   );
-};
-
-export const useHydraulicContext = () => {
-  const context = useContext(HydraulicContext);
-  if (context === undefined) {
-    throw new Error(EN.errors.useHydraulicContext);
-  }
-  return context;
 };

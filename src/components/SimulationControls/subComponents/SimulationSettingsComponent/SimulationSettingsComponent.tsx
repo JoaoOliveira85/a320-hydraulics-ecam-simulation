@@ -1,5 +1,12 @@
 import { ChangeEvent, useState } from "react";
-import { Box, Button, TextField, Typography, Grid, Paper } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  Paper,
+  Grid2 as Grid,
+} from "@mui/material";
 import { SimulationSettings, Color, TypesOfPumps } from "types";
 import defaultSettings from "workers/simulationDefaultSettings.json";
 
@@ -49,13 +56,13 @@ export default function SimulationSettingsComponent({
       title: "Reservoir Starting Levels",
       category: "reservoireStartingLevels",
       fields: ["green", "yellow", "blue"],
-      unit: "ml",
+      unit: "L",
     },
     {
       title: "Reservoir Leakage Rates",
       category: "reservoireLeakageRates",
       fields: ["green", "yellow", "blue"],
-      unit: "ml/s",
+      unit: "L/s",
     },
     {
       title: "Pump Max Flow Rates",
@@ -88,23 +95,39 @@ export default function SimulationSettingsComponent({
         {settingsConfig.map((section) => (
           <Box key={section.category} sx={{ mt: 3 }}>
             <Typography variant="h6">{section.title}</Typography>
-            <Grid container spacing={2}>
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                display: "grid",
+                gridTemplateColumns: "repeat(12, 1fr)",
+              }}
+            >
               {section.fields.map((field) => {
                 const fieldKey = typeof field === "string" ? field : field.key;
                 const label = typeof field === "string" ? field : field.label;
                 return (
-                  <Grid item key={fieldKey} xs={6}>
+                  <Grid
+                    key={fieldKey}
+                    sx={{
+                      gridColumn: {
+                        xs: "span 12",
+                        sm: "span 6",
+                        md: "span 4",
+                      },
+                    }}
+                  >
                     <TextField
                       label={`${label} ${section.unit || ""}`}
                       type="number"
                       value={
                         settings[section.category][
-                          fieldKey as unknown as keyof SimulationSettings[typeof section.category]
+                          fieldKey as keyof SimulationSettings[typeof section.category]
                         ]
                       }
                       onChange={handleChange(
                         section.category,
-                        fieldKey as unknown as keyof SimulationSettings[typeof section.category],
+                        fieldKey as keyof SimulationSettings[typeof section.category],
                       )}
                       fullWidth
                     />

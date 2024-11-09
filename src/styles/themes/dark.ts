@@ -1,6 +1,4 @@
-// Based on the Airbus branding guidelines https://brand.airbus.com/en/asset-library/colours
-
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import colors from "../colors.module.scss";
 
 export const darkTheme = createTheme({
@@ -10,15 +8,17 @@ export const darkTheme = createTheme({
       main: colors.airbusLightBlue,
       light: colors.airbusSilver,
       dark: colors.airbusMediumBlue,
+      contrastText: colors.black,
     },
     secondary: {
       main: colors.greenLight,
       light: colors.green,
       dark: colors.greenDark,
+      contrastText: colors.black,
     },
     background: {
-      default: colors.black,
-      paper: colors.airbusBlue,
+      default: colors.airbusBlue,
+      paper: colors.darkGray,
     },
     text: {
       primary: colors.airbusSilver,
@@ -26,33 +26,46 @@ export const darkTheme = createTheme({
     },
     error: {
       main: colors.redLight,
-      dark: colors.red,
-      light: colors.redDark,
+      dark: colors.redDark,
+      light: colors.redLight,
+      contrastText: colors.white,
     },
     warning: {
       main: colors.yellowLight,
-      dark: colors.yellow,
-      light: colors.yellowDark,
+      dark: colors.yellowDark,
+      light: colors.yellowLight,
+      contrastText: colors.black,
     },
     success: {
       main: colors.greenLight,
-      dark: colors.green,
-      light: colors.greenDark,
+      dark: colors.greenDark,
+      light: colors.greenLight,
+      contrastText: colors.black,
     },
     info: {
       main: colors.cyanLight,
-      dark: colors.cyan,
-      light: colors.cyanDark,
+      dark: colors.cyanDark,
+      light: colors.cyanLight,
+      contrastText: colors.black,
     },
+    divider: colors.mediumGray,
   },
   typography: {
     fontFamily: "'Helvetica', Arial, sans-serif",
+    h1: {
+      fontFamily: "'Helvetica Bold', Arial, sans-serif",
+      fontWeight: 700,
+    },
+    h2: {
+      fontFamily: "'Helvetica Bold', Arial, sans-serif",
+      fontWeight: 700,
+    },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: "8px",
+          borderRadius: "4px",
           textTransform: "none",
           fontWeight: 600,
           padding: "8px 16px",
@@ -67,11 +80,6 @@ export const darkTheme = createTheme({
           minWidth: "100px",
           minHeight: "36px",
           fontSize: "0.8rem",
-        },
-        sizeMedium: {
-          minWidth: "120px",
-          minHeight: "40px",
-          fontSize: "0.875rem",
         },
         sizeLarge: {
           minWidth: "140px",
@@ -89,7 +97,7 @@ export const darkTheme = createTheme({
           borderColor: colors.airbusLightBlue,
           color: colors.airbusLightBlue,
           "&:hover": {
-            backgroundColor: colors.airbusDarkBlue,
+            backgroundColor: colors.darkGray,
             borderColor: colors.airbusMediumBlue,
             color: colors.airbusSilver,
           },

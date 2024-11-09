@@ -1,46 +1,46 @@
 {
-    "engineStartStatus": {
-        "engine1": true,
-        "engine2": true
-    },
-    "pumpStartStatus": {
-        "yellowElectricPump": false,
-        "blueElectricPump": true,
-        "ramAirTurbine": false
-    },
-    "valveStartStatus": {
-        "yellow": true,
-        "green": true
-    },
-    "ptuStartStatus": true,
-    "reservoireStartingLevels": {
-        "green": 3500,
-        "yellow": 4000,
-        "blue": 3000
-    },
-    "reservoireMaxLevels": {
-        "green": 5000,
-        "yellow": 5000,
-        "blue": 5000
-    },
-    "reservoireLeakageRates": {
-        "green": 0.5,
-        "yellow": 0.5,
-        "blue": 0.5
-    },
-    "pumpMaxFlowRates": {
-        "engine1": 3150,
-        "engine2": 3150,
-        "blueElectricPump": 3150,
-        "yellowElectricPump": 3150,
-        "ramAirTurbine": 3000
-    },
-    "other": {
-        "hydraulicLineMaxPressure": 3000,
-        "ptuThreshold": 500,
-        "airTemperature": 20,
-        "status": true,
-        "speed": 100,
-        "grossWeight": 50000
-    }
+  "engineStartStatus": {
+    "engine1": true,
+    "engine2": true
+  },
+  "pumpStartStatus": {
+    "yellowElectricPump": false,
+    "blueElectricPump": true,
+    "ramAirTurbine": false
+  },
+  "valveStartStatus": {
+    "yellow": true,
+    "green": true
+  },
+  "ptuStartStatus": true,
+  "reservoireStartingLevels": {
+    "green": 3500,
+    "yellow": 4000,
+    "blue": 3000
+  },
+  "reservoireMaxLevels": {
+    "green": 5000,
+    "yellow": 5000,
+    "blue": 5000
+  },
+  "reservoireLeakageRates": {
+    "green": 0.5,
+    "yellow": 0.5,
+    "blue": 0.5
+  },
+  "pumpMaxFlowRates": {
+    "engine1": 3150,
+    "engine2": 3150,
+    "blueElectricPump": 3150,
+    "yellowElectricPump": 3150,
+    "ramAirTurbine": 3000
+  },
+  "other": {
+    "hydraulicLineMaxPressure": 3000,
+    "ptuThreshold": 500,
+    "airTemperature": 20,
+    "status": true,
+    "speed": 100,
+    "grossWeight": 50000
+  }
 }

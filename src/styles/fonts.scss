@@ -1,50 +1,73 @@
+// fonts.scss
+
+// Define a variable for the font path
+$font-path: "/assets/fonts/";
+
+// Helvetica Regular
 @font-face {
   font-family: "Helvetica";
-  src: url("assets/fonts/Helvetica.ttf") format("truetype");
+  src: url("#{$font-path}Helvetica.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+// Helvetica Light
 @font-face {
   font-family: "Helvetica";
-  src: url("assets/fonts/Helvetica-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("assets/fonts/Helvetica-Light.ttf") format("truetype");
+  src: url("#{$font-path}Helvetica-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
+// Helvetica Bold
 @font-face {
   font-family: "Helvetica";
-  src: url("assets/fonts/Helvetica-Oblique.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("assets/fonts/Helvetica-BoldOblique.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("assets/fonts/helvetica-compressed-5871d14b6903a.otf")
-    format("opentype");
-  font-weight: 400;
-  font-style: condensed;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("assets/fonts/helvetica-rounded-bold-5871d05ead8de.otf")
-    format("opentype");
+  src: url("#{$font-path}Helvetica-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+// Helvetica Italic
+@font-face {
+  font-family: "Helvetica";
+  src: url("#{$font-path}Helvetica-Oblique.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Helvetica Bold Italic
+@font-face {
+  font-family: "Helvetica";
+  src: url("#{$font-path}Helvetica-BoldOblique.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Helvetica Compressed
+@font-face {
+  font-family: "Helvetica Compressed";
+  src: url("#{$font-path}helvetica-compressed.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+  font-display: swap;
+}
+
+// Helvetica Rounded Bold
+@font-face {
+  font-family: "Helvetica Rounded";
+  src: url("#{$font-path}helvetica-rounded-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Set default font family for the body
+body {
+  font-family: "Helvetica", Arial, sans-serif;
 }
