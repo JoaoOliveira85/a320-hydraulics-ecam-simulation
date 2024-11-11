@@ -1,12 +1,13 @@
-type Position = { x: number; y: number };
-
-type PermanentData = {
-  ctx: CanvasRenderingContext2D;
-  tat: number;
-  sat: number;
-  time: Date;
-  gw: number;
-};
+import {
+  DrawLineProps,
+  DrawShapeProps,
+  DrawPumpProps,
+  DrawValveProps,
+  PermanentDataProps,
+  EcamHeaderProps,
+  drawResrvoirProps,
+  DrawTextProps,
+} from "types";
 
 const CANVAS_SIZE = {
   width: 480,
@@ -20,14 +21,7 @@ export const drawLine = ({
   length,
   color,
   width = 3,
-}: {
-  ctx: CanvasRenderingContext2D;
-  orientation: "horizontal" | "vertical";
-  from: Position;
-  length: number;
-  color: string;
-  width?: number;
-}) => {
+}: DrawLineProps) => {
   ctx.beginPath();
   ctx.moveTo(from.x, from.y);
 
@@ -48,13 +42,7 @@ export const drawShape = ({
   size,
   color,
   fill = false,
-}: {
-  ctx: CanvasRenderingContext2D;
-  position: Position;
-  size: number;
-  color: string;
-  fill?: boolean;
-}) => {
+}: DrawShapeProps) => {
   return {
     circle: () => {
       ctx.beginPath();
@@ -108,13 +96,13 @@ export const drawShape = ({
   };
 };
 
-export const drawPump = (
-  ctx: CanvasRenderingContext2D,
-  position: Position,
-  status: boolean,
+export const drawPump = ({
+  ctx,
+  position,
+  status,
   color = "green",
   size = 30,
-) => {
+}: DrawPumpProps) => {
   drawShape({ ctx, position, size, color: color }).square();
 
   if (status) {
@@ -136,12 +124,12 @@ export const drawPump = (
   }
 };
 
-export const drawValve = (
-  ctx: CanvasRenderingContext2D,
-  position: Position,
-  status: boolean,
+export const drawValve = ({
+  ctx,
+  position,
+  status,
   size = 15,
-) => {
+}: DrawValveProps) => {
   drawShape({ ctx, position, size, color: "green" }).circle();
 
   if (status) {
@@ -163,7 +151,13 @@ export const drawValve = (
   }
 };
 
-export const permanentData = ({ ctx, tat, sat, time, gw }: PermanentData) => {
+export const permanentData = ({
+  ctx,
+  tat,
+  sat,
+  time,
+  gw,
+}: PermanentDataProps) => {
   const leftOffset = 40;
   const topOffset = 20;
   const lineOffset = 20;
@@ -279,29 +273,11 @@ export const permanentData = ({ ctx, tat, sat, time, gw }: PermanentData) => {
   });
 };
 
-type EcamHeader = {
-  ctx: CanvasRenderingContext2D;
-  data: {
-    green: number;
-    blue: number;
-    yellow: number;
-  };
-  refCoords: {
-    greenLineCoords: {
-      segment1: { from: Position; to: Position };
-      segment2: { from: Position; to: Position };
-      segment3: { from: Position; to: Position };
-    };
-    yellowLineCoords: { from: Position; to: Position };
-    blueLineCoords: { from: Position };
-  };
-};
-
 export const ecamHeader = ({
   ctx,
   data: { green, blue, yellow },
   refCoords,
-}: EcamHeader) => {
+}: EcamHeaderProps) => {
   const { greenLineCoords, yellowLineCoords, blueLineCoords } = refCoords;
 
   ctx.font = "20px Arial";
@@ -348,14 +324,13 @@ export const ecamHeader = ({
   ctx.fillText(`${yellow}`, blueLineCoords.from.x - 19, 80);
 };
 
-export const drawReservoir = (
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  length: number,
-  height: number,
-  reservoirLevel: number,
-) => {
+export const drawReservoir = ({
+  ctx,
+  position: { x, y },
+  length,
+  height,
+  reservoirLevel,
+}: drawResrvoirProps) => {
   ctx.beginPath();
   ctx.strokeStyle = "green";
   ctx.lineWidth = 3;
@@ -395,4 +370,17 @@ export const drawReservoir = (
 
   ctx.stroke();
   ctx.closePath();
+};
+
+export const drawText = ({
+  ctx,
+  position,
+  color,
+  text,
+  fontSize = 16,
+  font = "Arial",
+}: DrawTextProps) => {
+  ctx.font = `${fontSize}px ${font}`;
+  ctx.fillStyle = color;
+  ctx.fillText(text, position.x, position.y);
 };

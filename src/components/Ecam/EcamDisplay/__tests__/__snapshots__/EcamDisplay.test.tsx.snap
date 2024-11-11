@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EcamDisplay Component > GIVEN the component is rendered > THEN it gets rendered as expected 1`] = `
+<DocumentFragment>
+  <canvas
+    class="canvas"
+    data-testid="canvas"
+    height="640"
+    width="480"
+  />
+</DocumentFragment>
+`;
+
+exports[`EcamDisplay Component > WHEN cenas > THEN renas 1`] = `
+<DocumentFragment>
+  <canvas
+    class="canvas"
+    data-testid="canvas"
+    height="640"
+    width="480"
+  />
+</DocumentFragment>
+`;

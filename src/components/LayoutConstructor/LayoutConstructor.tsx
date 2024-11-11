@@ -1,7 +1,7 @@
 import { SimulationControls } from "components/SimulationControls/SimulationControls";
 import { Ecam } from "components";
 import { Box, Container, Paper } from "@mui/material";
-import { HydraulicProvider } from "context";
+import { HydraulicContextProvider } from "context";
 
 export const LayoutConstructor = () => {
   return (
@@ -19,7 +19,7 @@ export const LayoutConstructor = () => {
         background: "none",
       }}
     >
-      <HydraulicProvider>
+      <HydraulicContextProvider>
         <Paper
           square
           className="left-container"
@@ -58,7 +58,7 @@ export const LayoutConstructor = () => {
             <SimulationControls />
           </Box>
         </Paper>
-      </HydraulicProvider>
+      </HydraulicContextProvider>
     </Container>
   );
 };

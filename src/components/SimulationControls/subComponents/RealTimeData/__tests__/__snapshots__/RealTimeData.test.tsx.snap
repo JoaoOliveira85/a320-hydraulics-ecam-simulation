@@ -1,0 +1,313 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as expected 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-o0ko2t-MuiPaper-root-MuiTableContainer-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-h2rgh7-MuiTypography-root"
+      style="--Typography-textAlign: center;"
+    >
+      Simulation Data
+    </h6>
+    <table
+      aria-label="color-based simulation data table"
+      class="MuiTable-root css-86u4st-MuiTable-root"
+    >
+      <thead
+        class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+      >
+        <tr
+          class="MuiTableRow-root MuiTableRow-head css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            scope="col"
+          >
+            Parameter
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            scope="col"
+          >
+            Green
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            scope="col"
+          >
+            Yellow
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            scope="col"
+          >
+            Blue
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            Reservoir Levels (%)
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-reservoir_levels_%-green"
+          >
+            70.00
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-reservoir_levels_%-yellow"
+          >
+            80.00
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-reservoir_levels_%-blue"
+          >
+            60.00
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            Pressure (PSI)
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pressure_psi-green"
+          >
+            3000
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pressure_psi-yellow"
+          >
+            3000
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pressure_psi-blue"
+          >
+            3000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table
+      aria-label="engine-based simulation data table"
+      class="MuiTable-root css-86u4st-MuiTable-root"
+    >
+      <thead
+        class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+      >
+        <tr
+          class="MuiTableRow-root MuiTableRow-head css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            scope="col"
+          >
+            Parameter
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            data-testid="realTimeData-engine1-header"
+            scope="col"
+          >
+            engine1
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            data-testid="realTimeData-engine2-header"
+            scope="col"
+          >
+            engine2
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            data-testid="realTimeData-ramairturbine-header"
+            scope="col"
+          >
+            ramAirTurbine
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            data-testid="realTimeData-blueelectricpump-header"
+            scope="col"
+          >
+            blueElectricPump
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            data-testid="realTimeData-yellowelectricpump-header"
+            scope="col"
+          >
+            yellowElectricPump
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            Pump Status
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pump_status-engine1"
+          >
+            Inactive
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pump_status-engine2"
+          >
+            Inactive
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pump_status-ramairturbine"
+          >
+            Inactive
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pump_status-blueelectricpump"
+          >
+            Inactive
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-pump_status-yellowelectricpump"
+          >
+            Inactive
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            Valve Status
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-valve_status-engine1"
+          >
+            Open
+          </td>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            data-testid="realTimeData-valve_status-engine2"
+          >
+            Open
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table
+      aria-label="other-settings simulation data table"
+      class="MuiTable-root css-86u4st-MuiTable-root"
+    >
+      <tbody
+        class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            Air Temperature (°C)
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            colspan="3"
+            data-testid="realTimeData-air_temperature_c"
+          >
+            20
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            PTU Threshold
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            colspan="3"
+            data-testid="realTimeData-ptu_threshold"
+          >
+            500
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            System Speed
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            colspan="3"
+            data-testid="realTimeData-system_speed"
+          >
+            100
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            scope="row"
+          >
+            Gross Weight
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            colspan="3"
+            data-testid="realTimeData-gross_weight"
+          >
+            50000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;

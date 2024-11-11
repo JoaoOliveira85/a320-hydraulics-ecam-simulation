@@ -9,16 +9,8 @@ export enum Colors {
 export type Color = keyof typeof Colors;
 
 export interface HydraulicContextType {
-  pressures: {
-    green: number;
-    blue: number;
-    yellow: number;
-  };
-  reservoires: {
-    green: number;
-    blue: number;
-    yellow: number;
-  };
+  pressures: Record<Color, number>;
+  reservoires: Record<Color, number>;
   simControls: {
     resetSimulation: () => void;
     updateSettings: (settings: SimulationSettings) => void;

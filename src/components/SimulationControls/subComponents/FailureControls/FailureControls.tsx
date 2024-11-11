@@ -72,6 +72,7 @@ export const FailureControls: React.FC<FailureControlsProps> = ({
           {items.map((item) => (
             <Button
               key={String(item.id)}
+              data-testid={`button-${action}-${item.id}`}
               variant="contained"
               color="error"
               size="small"

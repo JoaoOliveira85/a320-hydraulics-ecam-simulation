@@ -1,0 +1,151 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FailureControls > GIVEN the component is rendered > THEN it is rendered correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-ynmjb7-MuiPaper-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-h2rgh7-MuiTypography-root"
+      style="--Typography-textAlign: center;"
+    >
+      Trigger Failures
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-octady-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-zgckm0-MuiGrid2-root"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Pump Failures
+          </h6>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-11x6yka-MuiGrid2-root"
+        >
+          <div
+            class="MuiBox-root css-itq5b1"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerPumpFailure-engine1"
+              tabindex="0"
+              type="button"
+            >
+              Eng 1
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerPumpFailure-engine2"
+              tabindex="0"
+              type="button"
+            >
+              Eng 2
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerPumpFailure-blueElectricPump"
+              tabindex="0"
+              type="button"
+            >
+              Eng 3
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-zgckm0-MuiGrid2-root"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Valve Failures
+          </h6>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-11x6yka-MuiGrid2-root"
+        >
+          <div
+            class="MuiBox-root css-itq5b1"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerValveFailure-engine1"
+              tabindex="0"
+              type="button"
+            >
+              Eng 1
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerValveFailure-engine2"
+              tabindex="0"
+              type="button"
+            >
+              Eng 2
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-zgckm0-MuiGrid2-root"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Line Leaks
+          </h6>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-11x6yka-MuiGrid2-root"
+        >
+          <div
+            class="MuiBox-root css-itq5b1"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerLineLeak-green"
+              tabindex="0"
+              type="button"
+            >
+              Green
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerLineLeak-yellow"
+              tabindex="0"
+              type="button"
+            >
+              Yellow
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+              data-testid="button-onTriggerLineLeak-blue"
+              tabindex="0"
+              type="button"
+            >
+              Blue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

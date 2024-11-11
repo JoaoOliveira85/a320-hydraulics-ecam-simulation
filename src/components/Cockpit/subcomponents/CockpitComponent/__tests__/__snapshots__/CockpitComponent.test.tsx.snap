@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CockpitComponent Component > GIVEN the component is rendered > THEN it gets rendered as expected 1`] = `
+<DocumentFragment>
+  <div
+    class="cockpit-container"
+  >
+    <img
+      alt="ECAM and Panel"
+      class="cockpit-image"
+      src="assets/cockpit_day_hyd_on.webp"
+    />
+    <canvas
+      class="canvas"
+      data-testid="canvas"
+      height="640"
+      width="480"
+    />
+  </div>
+</DocumentFragment>
+`;

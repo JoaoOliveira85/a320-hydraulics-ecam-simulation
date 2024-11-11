@@ -15,10 +15,10 @@ type SimulationSettingsComponentProps = {
   onResetSettings: () => void;
 };
 
-export default function SimulationSettingsComponent({
+export const SimulationSettingsComponent = ({
   onApplySettings,
   onResetSettings,
-}: Readonly<SimulationSettingsComponentProps>) {
+}: Readonly<SimulationSettingsComponentProps>) => {
   const [settings, setSettings] = useState(defaultSettings);
 
   const handleChange =
@@ -119,6 +119,11 @@ export default function SimulationSettingsComponent({
                   >
                     <TextField
                       label={`${label} ${section.unit || ""}`}
+                      slotProps={{
+                        htmlInput: {
+                          "data-testid": `${section.category}-${fieldKey}`,
+                        },
+                      }}
                       type="number"
                       value={
                         settings[section.category][
@@ -149,4 +154,4 @@ export default function SimulationSettingsComponent({
       </Box>
     </Paper>
   );
-}
+};

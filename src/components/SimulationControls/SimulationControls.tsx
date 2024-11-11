@@ -11,13 +11,13 @@ import {
   Tab,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useMemo, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import { OverheadPanel } from "./subComponents/OverheadPanel/OverheadPanel";
 import EN from "constants/EN.json";
 import { useHydraulicContext } from "hooks";
 import logoWhite from "assets/logos/logo_white.png";
 import logoBlue from "assets/logos/logo_blue.png";
-import SimulationSettingsComponent from "./subComponents/SimulationSettingsComponent/SimulationSettingsComponent";
+import { SimulationSettingsComponent } from "./subComponents/SimulationSettingsComponent/SimulationSettingsComponent";
 import {
   Colors,
   HydraulicContextType,
@@ -27,6 +27,7 @@ import {
 } from "types";
 import { RealTimeData } from "./subComponents/RealTimeData";
 import { FailureControls } from "./subComponents/FailureControls";
+import { HydraulicContext } from "context";
 
 export const SimulationControls = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
@@ -35,7 +36,8 @@ export const SimulationControls = () => {
   const isTabletOrBelow = useMediaQuery("(max-width:1280px)");
   const isDarkTheme = useMediaQuery("(prefers-color-scheme: dark)");
 
-  const hydraulicSystem = useHydraulicContext();
+  const context = useContext(HydraulicContext);
+  const hydraulicSystem = useHydraulicContext(context);
 
   const {
     simControls: { resetSimulation, updateSettings },
@@ -88,9 +90,7 @@ export const SimulationControls = () => {
         details: (
           <SimulationSettingsComponent
             onApplySettings={(updatedSettings: SimulationSettings) => {
-              if (updatedSettings) {
-                updateSettings(updatedSettings);
-              }
+              updateSettings(updatedSettings);
             }}
             onResetSettings={() => {
               resetSimulation();

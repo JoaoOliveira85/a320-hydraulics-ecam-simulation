@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import EN from "constants/EN.json";
-import { HydraulicContext } from "context";
+import { HydraulicContextType } from "types";
 
-export const useHydraulicContext = () => {
-  const context = useContext(HydraulicContext);
+export const useHydraulicContext = (context?: HydraulicContextType) => {
   if (context === undefined) {
     throw new Error(EN.errors.useHydraulicContext);
   }

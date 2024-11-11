@@ -1,0 +1,1557 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SimulationControls > GIVEN the component is rendered > THEN it is rendered correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg css-1nlqkjh-MuiContainer-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-102khqf-MuiPaper-root"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+    >
+      <div
+        class="MuiBox-root css-144e5jt"
+      >
+        <img
+          alt="Airbus Logo"
+          src="/src/assets/logos/logo_blue.png"
+          style="width: 80px; height: auto;"
+        />
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-iwuacr-MuiPaper-root-MuiAccordion-root"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+      >
+        <h3
+          class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+        >
+          <div
+            aria-expanded="false"
+            class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-qh2n00-MuiButtonBase-root-MuiAccordionSummary-root"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+              >
+                Overhead Panel
+              </h6>
+            </div>
+            <div
+              class="MuiAccordionSummary-expandIconWrapper css-1giso93-MuiAccordionSummary-expandIconWrapper"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </div>
+          </div>
+        </h3>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+            >
+              <div
+                class="MuiAccordion-region"
+                role="region"
+              >
+                <div
+                  class="MuiAccordionDetails-root css-1p9esvk-MuiAccordionDetails-root"
+                >
+                  <div
+                    class="MuiBox-root css-1et8dn9"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+                      style="--Typography-textAlign: center;"
+                    >
+                      Hydraulic Pumps
+                    </h6>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+                    >
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="eng1-pump"
+                          tabindex="0"
+                          type="button"
+                        >
+                          ENG 1 Pump
+                        </button>
+                      </div>
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="elec-pump"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Blue Pump
+                        </button>
+                      </div>
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="eng2-pump"
+                          tabindex="0"
+                          type="button"
+                        >
+                          ENG 2 Pump
+                        </button>
+                      </div>
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="rat-man-on"
+                          tabindex="0"
+                          type="button"
+                        >
+                          RAM MAN
+                        </button>
+                      </div>
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="elec-pump-2"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Y Elec Pump
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiBox-root css-1et8dn9"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+                      style="--Typography-textAlign: center;"
+                    >
+                      Engine Fire Valves
+                    </h6>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+                    >
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="eng1-valve"
+                          tabindex="0"
+                          type="button"
+                        >
+                          ENG 1 Valve
+                        </button>
+                      </div>
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="eng2-valve"
+                          tabindex="0"
+                          type="button"
+                        >
+                          ENG 2 Valve
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiBox-root css-1et8dn9"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+                      style="--Typography-textAlign: center;"
+                    >
+                      PTUs
+                    </h6>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+                    >
+                      <div
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+                          id="ptu-auto"
+                          tabindex="0"
+                          type="button"
+                        >
+                          PTU (auto)
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-iwuacr-MuiPaper-root-MuiAccordion-root"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+      >
+        <h3
+          class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+        >
+          <div
+            aria-expanded="false"
+            class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-qh2n00-MuiButtonBase-root-MuiAccordionSummary-root"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+              >
+                Simulation Controls
+              </h6>
+            </div>
+            <div
+              class="MuiAccordionSummary-expandIconWrapper css-1giso93-MuiAccordionSummary-expandIconWrapper"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </div>
+          </div>
+        </h3>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+            >
+              <div
+                class="MuiAccordion-region"
+                role="region"
+              >
+                <div
+                  class="MuiAccordionDetails-root css-1p9esvk-MuiAccordionDetails-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1y04e60-MuiPaper-root"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+                  >
+                    <form
+                      class="MuiBox-root css-0"
+                    >
+                      <div
+                        class="MuiBox-root css-178yklu"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                        >
+                          Reservoir Starting Levels
+                        </h6>
+                        <div
+                          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1nck0i5-MuiGrid2-root"
+                        >
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r0:"
+                                id=":r0:-label"
+                              >
+                                green L
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="reservoireStartingLevels-green"
+                                  id=":r0:"
+                                  type="number"
+                                  value="3500"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      green L
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r1:"
+                                id=":r1:-label"
+                              >
+                                yellow L
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="reservoireStartingLevels-yellow"
+                                  id=":r1:"
+                                  type="number"
+                                  value="4000"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      yellow L
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r2:"
+                                id=":r2:-label"
+                              >
+                                blue L
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="reservoireStartingLevels-blue"
+                                  id=":r2:"
+                                  type="number"
+                                  value="3000"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      blue L
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiBox-root css-178yklu"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                        >
+                          Reservoir Leakage Rates
+                        </h6>
+                        <div
+                          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1nck0i5-MuiGrid2-root"
+                        >
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r3:"
+                                id=":r3:-label"
+                              >
+                                green L/s
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="reservoireLeakageRates-green"
+                                  id=":r3:"
+                                  type="number"
+                                  value="0.5"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      green L/s
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r4:"
+                                id=":r4:-label"
+                              >
+                                yellow L/s
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="reservoireLeakageRates-yellow"
+                                  id=":r4:"
+                                  type="number"
+                                  value="0.5"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      yellow L/s
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r5:"
+                                id=":r5:-label"
+                              >
+                                blue L/s
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="reservoireLeakageRates-blue"
+                                  id=":r5:"
+                                  type="number"
+                                  value="0.5"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      blue L/s
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiBox-root css-178yklu"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                        >
+                          Pump Max Flow Rates
+                        </h6>
+                        <div
+                          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1nck0i5-MuiGrid2-root"
+                        >
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r6:"
+                                id=":r6:-label"
+                              >
+                                engine1 PSI
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="pumpMaxFlowRates-engine1"
+                                  id=":r6:"
+                                  type="number"
+                                  value="3150"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      engine1 PSI
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r7:"
+                                id=":r7:-label"
+                              >
+                                engine2 PSI
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="pumpMaxFlowRates-engine2"
+                                  id=":r7:"
+                                  type="number"
+                                  value="3150"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      engine2 PSI
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r8:"
+                                id=":r8:-label"
+                              >
+                                blueElectricPump PSI
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="pumpMaxFlowRates-blueElectricPump"
+                                  id=":r8:"
+                                  type="number"
+                                  value="3150"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      blueElectricPump PSI
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":r9:"
+                                id=":r9:-label"
+                              >
+                                yellowElectricPump PSI
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="pumpMaxFlowRates-yellowElectricPump"
+                                  id=":r9:"
+                                  type="number"
+                                  value="3150"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      yellowElectricPump PSI
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":ra:"
+                                id=":ra:-label"
+                              >
+                                ramAirTurbine PSI
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="pumpMaxFlowRates-ramAirTurbine"
+                                  id=":ra:"
+                                  type="number"
+                                  value="3000"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      ramAirTurbine PSI
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiBox-root css-178yklu"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                        >
+                          Other Settings
+                        </h6>
+                        <div
+                          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1nck0i5-MuiGrid2-root"
+                        >
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":rb:"
+                                id=":rb:-label"
+                              >
+                                Line Max Pressure 
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="other-hydraulicLineMaxPressure"
+                                  id=":rb:"
+                                  type="number"
+                                  value="3000"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      Line Max Pressure 
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":rc:"
+                                id=":rc:-label"
+                              >
+                                PTU Threshold 
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="other-ptuThreshold"
+                                  id=":rc:"
+                                  type="number"
+                                  value="500"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      PTU Threshold 
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":rd:"
+                                id=":rd:-label"
+                              >
+                                Air Temperature (°C) 
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="other-airTemperature"
+                                  id=":rd:"
+                                  type="number"
+                                  value="20"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      Air Temperature (°C) 
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid2-root MuiGrid2-direction-xs-row css-q6pubx-MuiGrid2-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-6107so-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
+                                for=":re:"
+                                id=":re:-label"
+                              >
+                                Speed 
+                              </label>
+                              <div
+                                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
+                                  data-testid="other-speed"
+                                  id=":re:"
+                                  type="number"
+                                  value="100"
+                                />
+                                <fieldset
+                                  aria-hidden="true"
+                                  class="MuiOutlinedInput-notchedOutline css-12rqw02-MuiOutlinedInput-notchedOutline"
+                                >
+                                  <legend
+                                    class="css-w1u3ce"
+                                  >
+                                    <span>
+                                      Speed 
+                                    </span>
+                                  </legend>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiBox-root css-vnm1sd"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-a63emt-MuiButtonBase-root-MuiButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary css-bdmont-MuiButtonBase-root-MuiButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Reset
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-iwuacr-MuiPaper-root-MuiAccordion-root"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+      >
+        <h3
+          class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+        >
+          <div
+            aria-expanded="false"
+            class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-qh2n00-MuiButtonBase-root-MuiAccordionSummary-root"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+              >
+                Real Time Data
+              </h6>
+            </div>
+            <div
+              class="MuiAccordionSummary-expandIconWrapper css-1giso93-MuiAccordionSummary-expandIconWrapper"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </div>
+          </div>
+        </h3>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+            >
+              <div
+                class="MuiAccordion-region"
+                role="region"
+              >
+                <div
+                  class="MuiAccordionDetails-root css-1p9esvk-MuiAccordionDetails-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-o0ko2t-MuiPaper-root-MuiTableContainer-root"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-h2rgh7-MuiTypography-root"
+                      style="--Typography-textAlign: center;"
+                    >
+                      Simulation Data
+                    </h6>
+                    <table
+                      aria-label="color-based simulation data table"
+                      class="MuiTable-root css-86u4st-MuiTable-root"
+                    >
+                      <thead
+                        class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root MuiTableRow-head css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            scope="col"
+                          >
+                            Parameter
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            scope="col"
+                          >
+                            Green
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            scope="col"
+                          >
+                            Yellow
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            scope="col"
+                          >
+                            Blue
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            Reservoir Levels (%)
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-reservoir_levels_%-green"
+                          >
+                            500.00
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-reservoir_levels_%-yellow"
+                          >
+                            600.00
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-reservoir_levels_%-blue"
+                          >
+                            450.00
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            Pressure (PSI)
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pressure_psi-green"
+                          >
+                            120
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pressure_psi-yellow"
+                          >
+                            130
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pressure_psi-blue"
+                          >
+                            115
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <table
+                      aria-label="engine-based simulation data table"
+                      class="MuiTable-root css-86u4st-MuiTable-root"
+                    >
+                      <thead
+                        class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root MuiTableRow-head css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            scope="col"
+                          >
+                            Parameter
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            data-testid="realTimeData-engine1-header"
+                            scope="col"
+                          >
+                            engine1
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            data-testid="realTimeData-engine2-header"
+                            scope="col"
+                          >
+                            engine2
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            data-testid="realTimeData-blueelectricpump-header"
+                            scope="col"
+                          >
+                            blueElectricPump
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            data-testid="realTimeData-yellowelectricpump-header"
+                            scope="col"
+                          >
+                            yellowElectricPump
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+                            data-testid="realTimeData-ramairturbine-header"
+                            scope="col"
+                          >
+                            ramAirTurbine
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            Pump Status
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pump_status-engine1"
+                          >
+                            Active
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pump_status-engine2"
+                          >
+                            Active
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pump_status-blueelectricpump"
+                          >
+                            Active
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pump_status-yellowelectricpump"
+                          >
+                            Inactive
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-pump_status-ramairturbine"
+                          >
+                            Inactive
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            Valve Status
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-valve_status-engine1"
+                          >
+                            Open
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            data-testid="realTimeData-valve_status-engine2"
+                          >
+                            Open
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br />
+                    <table
+                      aria-label="other-settings simulation data table"
+                      class="MuiTable-root css-86u4st-MuiTable-root"
+                    >
+                      <tbody
+                        class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            Air Temperature (°C)
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            colspan="3"
+                            data-testid="realTimeData-air_temperature_c"
+                          >
+                            25
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            PTU Threshold
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            colspan="3"
+                            data-testid="realTimeData-ptu_threshold"
+                          >
+                            75
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            System Speed
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            colspan="3"
+                            data-testid="realTimeData-system_speed"
+                          >
+                            60
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root css-voeqob-MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            scope="row"
+                          >
+                            Gross Weight
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+                            colspan="3"
+                            data-testid="realTimeData-gross_weight"
+                          >
+                            10000
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-iwuacr-MuiPaper-root-MuiAccordion-root"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+      >
+        <h3
+          class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+        >
+          <div
+            aria-expanded="false"
+            class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-qh2n00-MuiButtonBase-root-MuiAccordionSummary-root"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+              >
+                Failures
+              </h6>
+            </div>
+            <div
+              class="MuiAccordionSummary-expandIconWrapper css-1giso93-MuiAccordionSummary-expandIconWrapper"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </div>
+          </div>
+        </h3>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+            >
+              <div
+                class="MuiAccordion-region"
+                role="region"
+              >
+                <div
+                  class="MuiAccordionDetails-root css-1p9esvk-MuiAccordionDetails-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-ynmjb7-MuiPaper-root"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-h2rgh7-MuiTypography-root"
+                      style="--Typography-textAlign: center;"
+                    >
+                      Trigger Failures
+                    </h6>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-octady-MuiGrid2-root"
+                    >
+                      <div
+                        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-zgckm0-MuiGrid2-root"
+                      >
+                        <div
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
+                        >
+                          <h6
+                            class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+                            style="--Typography-textAlign: center;"
+                          >
+                            Pump Failures
+                          </h6>
+                        </div>
+                        <div
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-11x6yka-MuiGrid2-root"
+                        >
+                          <div
+                            class="MuiBox-root css-itq5b1"
+                          >
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerPumpFailure-engine1"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Eng 1
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerPumpFailure-engine2"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Eng 2
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerPumpFailure-blueElectricPump"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Eng 3
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-zgckm0-MuiGrid2-root"
+                      >
+                        <div
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
+                        >
+                          <h6
+                            class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+                            style="--Typography-textAlign: center;"
+                          >
+                            Valve Failures
+                          </h6>
+                        </div>
+                        <div
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-11x6yka-MuiGrid2-root"
+                        >
+                          <div
+                            class="MuiBox-root css-itq5b1"
+                          >
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerValveFailure-engine1"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Eng 1
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerValveFailure-engine2"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Eng 2
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-zgckm0-MuiGrid2-root"
+                      >
+                        <div
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
+                        >
+                          <h6
+                            class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+                            style="--Typography-textAlign: center;"
+                          >
+                            Line Leaks
+                          </h6>
+                        </div>
+                        <div
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-11x6yka-MuiGrid2-root"
+                        >
+                          <div
+                            class="MuiBox-root css-itq5b1"
+                          >
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerLineLeak-green"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Green
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerLineLeak-yellow"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Yellow
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-1o0kk7i-MuiButtonBase-root-MuiButton-root"
+                              data-testid="button-onTriggerLineLeak-blue"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Blue
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="right-container__header MuiBox-root css-mq9939"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 css-11gndy9-MuiTypography-root"
+        >
+          Frontend Task
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-m57623-MuiTypography-root"
+        >
+          This is a work in progress of the frontend development task. Currently, a responsive application is in place that simulates a rudimentary hydraulic system with three separate lines, each with its set of pumps and/or valves and redundancy systems.
+          <br />
+          The current implementation is fully functioning as an MVP, so for now, the development focus will shift to integrate the ECAM screen on the actual simulator before completing further functionalities in this demonstration.
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

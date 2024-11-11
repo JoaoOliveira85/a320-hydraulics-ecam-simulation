@@ -1,0 +1,144 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`OverheadPanel > GIVEN the component is rendered > THEN it is rendered correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1et8dn9"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+      style="--Typography-textAlign: center;"
+    >
+      Hydraulic Pumps
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="eng1-pump"
+          tabindex="0"
+          type="button"
+        >
+          ENG 1 Pump
+        </button>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="elec-pump"
+          tabindex="0"
+          type="button"
+        >
+          Blue Pump
+        </button>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="eng2-pump"
+          tabindex="0"
+          type="button"
+        >
+          ENG 2 Pump
+        </button>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="rat-man-on"
+          tabindex="0"
+          type="button"
+        >
+          RAM MAN
+        </button>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="elec-pump-2"
+          tabindex="0"
+          type="button"
+        >
+          Y Elec Pump
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root css-1et8dn9"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+      style="--Typography-textAlign: center;"
+    >
+      Engine Fire Valves
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="eng1-valve"
+          tabindex="0"
+          type="button"
+        >
+          ENG 1 Valve
+        </button>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="eng2-valve"
+          tabindex="0"
+          type="button"
+        >
+          ENG 2 Valve
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root css-1et8dn9"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+      style="--Typography-textAlign: center;"
+    >
+      PTUs
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
+          id="ptu-auto"
+          tabindex="0"
+          type="button"
+        >
+          PTU (auto)
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,15 +1,13 @@
-import { render } from "@testing-library/react";
 import { test, expect, vi } from "vitest";
 import { LayoutConstructor } from "../LayoutConstructor";
+import { renderWithWrappers } from "utils/testUtils";
 
-test("Renders layout component", () => {
-  global.Worker = class {
-    postMessage = vi.fn();
-    terminate = vi.fn();
-    onmessage = null;
-  } as unknown as typeof Worker;
+describe("GIVEN the component is rendered", () => {
+  test("THEN it gets rendered as expected", () => {
+    const { asFragment } = renderWithWrappers(<LayoutConstructor />);
+    expect(asFragment()).toMatchSnapshot();
+    vi.clearAllMocks();
 
-  const { asFragment } = render(<LayoutConstructor />);
-  expect(asFragment()).toMatchSnapshot();
-  vi.clearAllMocks();
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

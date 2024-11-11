@@ -1,14 +1,14 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Ecam Component > Renders layout component 1`] = `
+exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`] = `
 <DocumentFragment>
   <div
     class="container__ecam"
   >
     <img
-      alt="ECAM and panel"
+      alt="ECAM and Panel"
       class="container__ecam__image"
-      src="/src/assets/ecam_and_panel_day_hyd_off.webp"
+      src="/src/assets/ecam_and_panel_day_hyd_on.webp"
     />
     <canvas
       class="canvas"

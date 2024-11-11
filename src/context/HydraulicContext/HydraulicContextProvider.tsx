@@ -24,7 +24,7 @@ interface HydraulicProviderProps {
   initialState?: Partial<HydraulicContextType>;
 }
 
-export const HydraulicProvider = ({
+export const HydraulicContextProvider = ({
   children,
   initialState = {},
 }: HydraulicProviderProps) => {
@@ -91,111 +91,97 @@ export const HydraulicProvider = ({
   const workerRef = useRef<Worker | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hydraulicWorker = new HydraulicWorker();
-      workerRef.current = hydraulicWorker;
+    const hydraulicWorker = new HydraulicWorker();
+    workerRef.current = hydraulicWorker;
 
-      hydraulicWorker.onmessage = (event) => {
-        const newPressures = event.data.pressures;
-        setPressures((prevPressures) => {
-          if (
-            newPressures.green !== prevPressures.green ||
-            newPressures.blue !== prevPressures.blue ||
-            newPressures.yellow !== prevPressures.yellow
-          ) {
-            return newPressures;
-          }
-          return prevPressures;
-        });
+    hydraulicWorker.onmessage = (event) => {
+      const newPressures = event.data.pressures;
+      setPressures((prevPressures) => {
+        if (
+          newPressures.green !== prevPressures.green ||
+          newPressures.blue !== prevPressures.blue ||
+          newPressures.yellow !== prevPressures.yellow
+        ) {
+          return newPressures;
+        }
+        return prevPressures;
+      });
 
-        const newReservoires = event.data.reservoires;
-        setReservoires((prevReservoires) => {
-          if (
-            newReservoires.green !== prevReservoires.green ||
-            newReservoires.blue !== prevReservoires.blue ||
-            newReservoires.yellow !== prevReservoires.yellow
-          ) {
-            return newReservoires;
-          }
-          return prevReservoires;
-        });
+      const newReservoires = event.data.reservoires;
+      setReservoires((prevReservoires) => {
+        if (
+          newReservoires.green !== prevReservoires.green ||
+          newReservoires.blue !== prevReservoires.blue ||
+          newReservoires.yellow !== prevReservoires.yellow
+        ) {
+          return newReservoires;
+        }
+        return prevReservoires;
+      });
 
-        const settings = event.data.settings.other;
+      const settings = event.data.settings.other;
 
-        setOther((prevOther) => {
-          if (
-            settings.airTemperature !== prevOther.airTemperature ||
-            settings.grossWeight !== prevOther.grossWeight ||
-            settings.hydraulicLineMaxPressure !==
-              prevOther.hydraulicLineMaxPressure ||
-            settings.ptuThreshold !== prevOther.ptuThreshold ||
-            settings.status !== prevOther.status ||
-            settings.speed !== prevOther.speed
-          ) {
-            return settings;
-          }
-          return prevOther;
-        });
-      };
+      setOther((prevOther) => {
+        if (
+          settings.airTemperature !== prevOther.airTemperature ||
+          settings.grossWeight !== prevOther.grossWeight ||
+          settings.hydraulicLineMaxPressure !==
+            prevOther.hydraulicLineMaxPressure ||
+          settings.ptuThreshold !== prevOther.ptuThreshold ||
+          settings.status !== prevOther.status ||
+          settings.speed !== prevOther.speed
+        ) {
+          return settings;
+        }
+        return prevOther;
+      });
+    };
 
-      return () => {
-        hydraulicWorker.terminate();
-      };
-    }
+    return () => {
+      hydraulicWorker.terminate();
+    };
   }, []);
 
   const setPumpState = (pump: TypesOfPumps, state: boolean) => {
-    if (workerRef.current) {
-      workerRef.current.postMessage({
-        type: WorkerActions.SET_PUMP_STATE,
-        pump,
-        state,
-      });
-    }
+    workerRef.current!.postMessage({
+      type: WorkerActions.SET_PUMP_STATE,
+      pump,
+      state,
+    });
   };
 
   const setValveState = (valve: TypesOfValves, state: boolean) => {
-    if (workerRef.current) {
-      workerRef.current.postMessage({
-        type: WorkerActions.SET_VALVE_STATE,
-        valve,
-        state,
-      });
-    }
+    workerRef.current!.postMessage({
+      type: WorkerActions.SET_VALVE_STATE,
+      valve,
+      state,
+    });
   };
 
   const setPtuState = (ptu: TypesOfPtus, state: boolean) => {
-    if (workerRef.current) {
-      workerRef.current.postMessage({
-        type: WorkerActions.SET_PTU_STATE,
-        ptu,
-        state,
-      });
-    }
+    workerRef.current!.postMessage({
+      type: WorkerActions.SET_PTU_STATE,
+      ptu,
+      state,
+    });
   };
 
   const updateSettings = (settings: SimulationSettings) => {
-    if (workerRef.current) {
-      workerRef.current.postMessage({
-        type: WorkerActions.UPDATE_SETTINGS,
-        settings,
-      });
-    }
+    workerRef.current!.postMessage({
+      type: WorkerActions.UPDATE_SETTINGS,
+      settings,
+    });
   };
 
   const resetSimulation = () => {
-    if (workerRef.current) {
-      workerRef.current.postMessage({ type: WorkerActions.RESET_SIMULATION });
-    }
+    workerRef.current!.postMessage({ type: WorkerActions.RESET_SIMULATION });
   };
 
   const triggerFailure = (failure: string, id: string) => {
-    if (workerRef.current) {
-      workerRef.current.postMessage({
-        type: WorkerActions.TRIGGER_FAILURE,
-        [failure]: id,
-      });
-    }
+    workerRef.current!.postMessage({
+      type: WorkerActions.TRIGGER_FAILURE,
+      [failure]: id,
+    });
   };
 
   const handlePumpButton = useCallback((button: TypesOfPumps) => {

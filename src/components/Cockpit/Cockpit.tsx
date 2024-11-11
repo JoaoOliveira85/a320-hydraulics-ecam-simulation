@@ -1,7 +1,7 @@
 import "./Cockpit.scss";
 import { CockpitComponent, OverheadComponent } from "components";
 import { Box, Container } from "@mui/material";
-import { HydraulicProvider } from "context";
+import { HydraulicContextProvider } from "context";
 
 export const Cockpit = () => {
   return (
@@ -19,7 +19,7 @@ export const Cockpit = () => {
         overflow: "hidden",
       }}
     >
-      <HydraulicProvider>
+      <HydraulicContextProvider>
         <Box
           sx={{
             width: "auto",
@@ -48,7 +48,7 @@ export const Cockpit = () => {
         >
           <CockpitComponent />
         </Box>
-      </HydraulicProvider>
+      </HydraulicContextProvider>
     </Container>
   );
 };

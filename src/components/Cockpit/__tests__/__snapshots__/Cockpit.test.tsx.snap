@@ -1,0 +1,102 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CockpitComponent Component > GIVEN the component is rendered > THEN it gets rendered as expected 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiContainer-root MuiContainer-disableGutters css-u0unu1-MuiContainer-root"
+  >
+    <div
+      class="MuiBox-root css-yyarl5"
+    >
+      <div
+        class="overhead-container"
+      >
+        <img
+          alt="Overhead Panel"
+          class="overhead-image"
+          src="assets/overhead_panel_day_hyd_offc.webp"
+        />
+        <button
+          data-testid="button-engine1"
+        >
+          <img
+            alt="Engine 1 Toggle"
+            class="overhead-buttons__engine1"
+            src="assets/buttons/eng1_day_on.webp"
+            style="opacity: 0;"
+          />
+        </button>
+        <button
+          data-testid="button-engine2"
+        >
+          <img
+            alt="Engine 2 Toggle"
+            class="overhead-buttons__engine2"
+            src="assets/buttons/eng2_day_on.webp"
+            style="opacity: 0;"
+          />
+        </button>
+        <button
+          data-testid="button-ramTurbine"
+        >
+          <img
+            alt="RAT MAN Toggle"
+            class="overhead-buttons__ramAirTurbine"
+            src="assets/buttons/rat_day_on.webp"
+            style="opacity: 0;"
+          />
+        </button>
+        <button
+          data-testid="button-ptu"
+        >
+          <img
+            alt="PTU Toggle"
+            class="overhead-buttons__powerTransferUnit"
+            src="assets/buttons/ptu_day_on.webp"
+            style="opacity: 0;"
+          />
+        </button>
+        <button
+          data-testid="button-electricBlue"
+        >
+          <img
+            alt="Blue Elec Toggle"
+            class="overhead-buttons__blueElectricPump"
+            src="assets/buttons/blue_pump_day_on.webp"
+            style="opacity: 0;"
+          />
+        </button>
+        <button
+          data-testid="button-electricYellow"
+        >
+          <img
+            alt="Yellow Elec Toggle"
+            class="overhead-buttons__yellowElectricPump"
+            src="assets/buttons/elec_pump_day_on.webp"
+            style="opacity: 0;"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-8b2n9g"
+    >
+      <div
+        class="cockpit-container"
+      >
+        <img
+          alt="ECAM and Panel"
+          class="cockpit-image"
+          src="assets/cockpit_day_hyd_on.webp"
+        />
+        <canvas
+          class="canvas"
+          data-testid="canvas"
+          height="640"
+          width="480"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

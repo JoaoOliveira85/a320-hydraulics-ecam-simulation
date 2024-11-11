@@ -1,33 +1,10 @@
-import { render } from "@testing-library/react";
 import { test, expect, describe } from "vitest";
 import { Ecam } from "../Ecam";
-import { HydraulicProvider } from "context/HydraulicContext/HydraulicContextProvider";
+import { renderWithWrappers } from "utils/testUtils";
 
-class WorkerMock {
-  onmessage: ((this: Worker, ev: MessageEvent<string>) => void) | null = null;
-
-  postMessage(message: string) {
-    if (this.onmessage) {
-      // @ts-expect-error - Mocking postMessage
-      this.onmessage({ data: message } as MessageEvent<string>);
-    }
-  }
-
-  terminate() {
-    // Implementation not necessary for the purposes of this mock
-  }
-}
-
-// @ts-expect-error - Mocking Worker
-(global as Global).Worker = WorkerMock;
-
-describe("Ecam Component", () => {
-  test("Renders layout component", () => {
-    const { asFragment } = render(
-      <HydraulicProvider>
-        <Ecam />
-      </HydraulicProvider>,
-    );
+describe("GIVEN the component is rendered", () => {
+  test("THEN it gets rendered as expected", () => {
+    const { asFragment } = renderWithWrappers(<Ecam />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
