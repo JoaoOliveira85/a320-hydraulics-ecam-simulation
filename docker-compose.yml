@@ -1,11 +1,5 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     ports:
       - "2019:2019"
-    volumes:
-      - .:/app:cached
-      - /app/node_modules
-    working_dir: /app

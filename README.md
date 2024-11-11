@@ -27,10 +27,16 @@ This project simulates the hydraulics system of an A320 aircraft, providing an i
 3. **Build the Docker Image**
 
    ```bash
-   docker compose up --build
+   docker compose build
    ```
 
-4. **Access the Application**
+4. **Start the Docker Containers**
+
+   ```bash
+   docker compose up
+   ```
+
+5. **Access the Application**
 
    Open your browser and navigate to [http://localhost:2019](http://localhost:2019)
 
