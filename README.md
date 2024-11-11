@@ -8,8 +8,7 @@ This project simulates the hydraulics system of an A320 aircraft, providing an i
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/) (version 20.10 or higher)
-- [Docker Compose](https://docs.docker.com/compose/install/) (version 1.29 or higher)
+- [Docker](https://docs.docker.com/get-docker/) (version 27 or higher)
 
 ## Installation Instructions
 
@@ -147,6 +146,96 @@ This mode provides a focused simulation experience with a simplified interface:
 - **Port Conflict:** Ensure that port 2019 is not in use by another application.
 - **Docker Issues:** If you encounter Docker-related errors, try restarting Docker or running the commands with elevated privileges.
 - \*_Build Failures:_ Run `docker compose down --rmi all` to remove images and try rebuilding.
+
+---
+
+### **NPM Scripts**
+
+The project includes several npm scripts to assist with development, testing, and deployment. Below is a list of the main scripts available in the package.json file (requires Node.js version 20 or higher and NPM version 10 or higher):
+
+- dev: Runs the application in development mode using Vite.
+
+```bash
+npm run dev
+```
+
+- build: Compiles TypeScript and builds the application for production.
+
+```bash
+npm run build
+```
+
+- preview: Serves the production build locally for previewing the application.
+
+```bash
+npm run preview
+```
+
+- docker:up: Starts the Docker containers.
+
+```bash
+npm run docker:up
+```
+
+- docker:build: Builds the Docker images.
+
+```bash
+npm run docker:build
+```
+
+- docker:down: Stops and removes the Docker containers.
+
+```bash
+npm run docker:down
+```
+
+- lint: Runs ESLint to analyze code for potential errors and code quality issues.
+
+```bash
+npm run lint
+```
+
+- lint:fix: Runs ESLint and automatically fixes fixable problems.
+
+```bash
+npm run lint:fix
+```
+
+- format:write: Formats code using Prettier and writes changes to the files.
+
+```bash
+npm run format:write
+```
+
+- format:check: Checks code formatting with Prettier without modifying any files.
+
+```bash
+npm run format:check
+```
+
+- nvm-use: Changes the Node.js version using a PowerShell script. This is useful if you manage multiple Node.js versions with NVM.
+
+```bash
+npm run nvm-use
+```
+
+- test: Runs tests using Vitest and generates coverage reports.
+
+```bash
+npm run test
+```
+
+- prepare: Installs Husky Git hooks. This script is automatically run when you install dependencies.
+
+```bash
+npm run prepare
+```
+
+- pre-commit: Runs linting and formatting scripts before committing code. This helps maintain code quality.
+
+```bash
+npm run pre-commit
+```
 
 ---
 

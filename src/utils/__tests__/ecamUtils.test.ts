@@ -192,12 +192,26 @@ describe("Canvas Utility Functions", () => {
       ctx,
       position: { x: 50, y: 50 },
       status: true,
+      lowPressure: false,
+    });
+
+    expect(ctx.strokeStyle).toBe("green");
+    expect(ctx.lineTo).toHaveBeenCalledWith(50, 65);
+  });
+
+  test("drawPump - draws a pump with a LO indication if pressure is low", () => {
+    const ctx = createMockContext();
+    drawPump({
+      ctx,
+      position: { x: 50, y: 50 },
+      status: true,
       color: "black",
       size: 20,
+      lowPressure: true,
     });
 
     expect(ctx.strokeStyle).toBe("black");
-    expect(ctx.lineTo).toHaveBeenCalledWith(50, 60);
+    expect(ctx.fillText).toHaveBeenCalledWith("LO", 40, 55);
   });
 
   test("drawValve - draws a valve with a horizontal line if status is false", () => {

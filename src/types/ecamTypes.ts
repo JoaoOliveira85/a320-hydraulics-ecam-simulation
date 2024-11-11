@@ -38,6 +38,7 @@ export type DrawPumpProps = {
   ctx: CanvasRenderingContext2D;
   position: Position;
   status: boolean;
+  lowPressure: boolean;
   color?: EcamColorsType;
   size?: number;
 };

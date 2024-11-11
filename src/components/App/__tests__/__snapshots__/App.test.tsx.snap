@@ -29,7 +29,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
         </div>
       </div>
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 right-container css-ms002t-MuiPaper-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 right-container css-19aexc7-MuiPaper-root"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
@@ -120,7 +120,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                               class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
                             >
                               <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
                                   class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
@@ -132,7 +132,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 </button>
                               </div>
                               <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
                                   class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
@@ -144,7 +144,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 </button>
                               </div>
                               <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
                                   class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
@@ -156,7 +156,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 </button>
                               </div>
                               <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
                                   class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
@@ -168,7 +168,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 </button>
                               </div>
                               <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                                class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
                                   class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
@@ -936,7 +936,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         for=":re:"
                                         id=":re:-label"
                                       >
-                                        Speed 
+                                        Speed ms/Step 
                                       </label>
                                       <div
                                         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
@@ -957,7 +957,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                             class="css-w1u3ce"
                                           >
                                             <span>
-                                              Speed 
+                                              Speed ms/Step 
                                             </span>
                                           </legend>
                                         </fieldset>
@@ -982,6 +982,13 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   type="button"
                                 >
                                   Reset
+                                </button>
+                                <button
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary css-1mk9qbf-MuiButtonBase-root-MuiButton-root"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  Resume
                                 </button>
                               </div>
                             </form>

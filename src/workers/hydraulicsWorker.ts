@@ -47,6 +47,9 @@ const applySettings = (
 
   hydraulicSystem[0].ptu.threshold = other.ptuThreshold;
   hydraulicSystem[0].applyTemperatureEffects(other.airTemperature);
+  hydraulicSystem[0].applySettings(simulationSettings);
+
+  hydraulicSystem[0].setSimulationSpeed(other.speed);
 };
 
 class Reservoir {
@@ -332,6 +335,23 @@ class HydraulicSystemController {
     Object.values(this.lines).forEach((line) =>
       line.adjustByTemperature(temperature),
     );
+  }
+
+  setSimulationSpeed = (speed: number) => {
+    clearInterval(simulationInterval);
+    simulationInterval = setInterval(() => {
+      if (simulationSettings.other.status) hydraulicSystem[0].update();
+    }, speed);
+  };
+
+  applySettings(settings: SimulationSettings) {
+    const { other } = settings;
+    this.lines.green.maxPressure = other.hydraulicLineMaxPressure;
+    this.lines.yellow.maxPressure = other.hydraulicLineMaxPressure;
+    this.lines.blue.maxPressure = other.hydraulicLineMaxPressure;
+
+    this.ptu.threshold = other.ptuThreshold;
+    this.applyTemperatureEffects(other.airTemperature);
   }
 
   update() {

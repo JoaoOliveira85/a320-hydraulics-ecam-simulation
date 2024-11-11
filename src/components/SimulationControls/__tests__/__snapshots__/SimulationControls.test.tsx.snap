@@ -87,7 +87,7 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
                     >
                       <div
-                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -99,7 +99,7 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                         </button>
                       </div>
                       <div
-                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -111,7 +111,7 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                         </button>
                       </div>
                       <div
-                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -123,7 +123,7 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                         </button>
                       </div>
                       <div
-                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -135,7 +135,7 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                         </button>
                       </div>
                       <div
-                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -903,7 +903,7 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                                 for=":re:"
                                 id=":re:-label"
                               >
-                                Speed 
+                                Speed ms/Step 
                               </label>
                               <div
                                 class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-4etl4u-MuiInputBase-root-MuiOutlinedInput-root"
@@ -924,7 +924,7 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                                     class="css-w1u3ce"
                                   >
                                     <span>
-                                      Speed 
+                                      Speed ms/Step 
                                     </span>
                                   </legend>
                                 </fieldset>
@@ -949,6 +949,13 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
                           type="button"
                         >
                           Reset
+                        </button>
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary css-bdmont-MuiButtonBase-root-MuiButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Resume
                         </button>
                       </div>
                     </form>

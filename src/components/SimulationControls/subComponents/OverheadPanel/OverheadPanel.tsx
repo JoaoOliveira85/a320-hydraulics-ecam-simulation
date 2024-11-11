@@ -26,7 +26,7 @@ export const OverheadPanel: React.FC<OverheadPanelProps> = ({
               key={button.id}
               sx={{
                 gridColumn: {
-                  xs: "span 6",
+                  xs: "span 2",
                   md: "span 4",
                 },
               }}

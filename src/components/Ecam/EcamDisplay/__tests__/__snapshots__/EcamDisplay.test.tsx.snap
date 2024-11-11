@@ -10,14 +10,3 @@ exports[`EcamDisplay Component > GIVEN the component is rendered > THEN it gets 
   />
 </DocumentFragment>
 `;
-
-exports[`EcamDisplay Component > WHEN cenas > THEN renas 1`] = `
-<DocumentFragment>
-  <canvas
-    class="canvas"
-    data-testid="canvas"
-    height="640"
-    width="480"
-  />
-</DocumentFragment>
-`;

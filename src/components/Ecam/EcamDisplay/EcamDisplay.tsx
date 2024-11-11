@@ -116,14 +116,22 @@ export const EcamDisplay = ({
       ctx,
       orientation: "vertical",
       from: { x: canvas.width / 5, y: canvas.height - 535 },
-      length: 130,
+      length: 45,
       color: `${(pumps.engine1 && valves.engine1) || (pumps.engine2 && valves.engine2 && ptus.powerTransferUnit) || (pumps.yellowElectricPump && ptus.powerTransferUnit) ? EcamColors["green"] : EcamColors["orange"]}`,
+    });
+    drawLine({
+      ctx,
+      orientation: "vertical",
+      from: { x: canvas.width / 5, y: canvas.height - 490 },
+      length: 85,
+      color: `${pumps.engine1 && valves.engine1 ? EcamColors["green"] : EcamColors["orange"]}`,
     });
     drawPump({
       ctx,
       position: { x: canvas.width / 5, y: 250 },
       status: pumps.engine1,
-      color: `${(pumps.engine1 && valves.engine1) || (pumps.engine2 && valves.engine2 && ptus.powerTransferUnit) || (pumps.yellowElectricPump && ptus.powerTransferUnit) ? EcamColors["green"] : EcamColors["orange"]}`,
+      color: `${pumps.engine1 && valves.engine1 && reservoires.green > 0 ? EcamColors["green"] : EcamColors["orange"]}`,
+      lowPressure: reservoires.green < 20,
     });
     drawText({
       ctx,
@@ -200,7 +208,9 @@ export const EcamDisplay = ({
       size: 15,
       color: `${ptus.powerTransferUnit ? EcamColors["green"] : EcamColors["orange"]}`,
       fill: ptuActive,
-    }).triangle("right");
+    }).triangle(
+      pumps.engine2 && valves.engine2 && ptuActive ? "left" : "right",
+    );
     drawText({
       ctx,
       position: { x: canvas.width / 2 + 62, y: 156 },
@@ -220,7 +230,9 @@ export const EcamDisplay = ({
       size: 15,
       color: `${ptus.powerTransferUnit ? EcamColors["green"] : EcamColors["orange"]}`,
       fill: ptuActive,
-    }).triangle(ptuActive ? "right" : "left");
+    }).triangle(
+      pumps.engine2 && valves.engine2 && ptuActive ? "left" : "right",
+    );
     drawLine({
       ctx,
       orientation: "horizontal",
@@ -246,7 +258,9 @@ export const EcamDisplay = ({
       size: 15,
       color: `${ptus.powerTransferUnit ? EcamColors["green"] : EcamColors["orange"]}`,
       fill: ptuActive,
-    }).triangle(ptuActive ? "right" : "left");
+    }).triangle(
+      pumps.engine2 && valves.engine2 && ptuActive ? "left" : "right",
+    );
     drawLine({
       ctx,
       orientation: "horizontal",
@@ -260,12 +274,14 @@ export const EcamDisplay = ({
       orientation: "vertical",
       from: { x: canvas.width / 2, y: canvas.height - 535 },
       length: 210,
-      color: EcamColors["green"],
+      color: `${pumps.blueElectricPump ? EcamColors["green"] : EcamColors["orange"]}`,
     });
     drawPump({
       ctx,
       position: { x: canvas.width / 2, y: 330 },
       status: pumps.blueElectricPump,
+      color: `${pumps.blueElectricPump && reservoires.blue > 0 ? EcamColors["green"] : EcamColors["orange"]}`,
+      lowPressure: reservoires.blue < 20,
     });
     drawLine({
       ctx,
@@ -298,8 +314,22 @@ export const EcamDisplay = ({
       ctx,
       orientation: "vertical",
       from: { x: canvas.width / 1.25, y: canvas.height - 535 },
-      length: 130,
+      length: 45,
       color: `${(pumps.engine2 && valves.engine2) || (pumps.engine1 && valves.engine1 && ptus.powerTransferUnit) || pumps.yellowElectricPump ? EcamColors["green"] : EcamColors["orange"]}`,
+    });
+    drawLine({
+      ctx,
+      orientation: "vertical",
+      from: { x: canvas.width / 1.25, y: canvas.height - 490 },
+      length: 45,
+      color: `${(pumps.engine2 && valves.engine2) || pumps.yellowElectricPump ? EcamColors["green"] : EcamColors["orange"]}`,
+    });
+    drawLine({
+      ctx,
+      orientation: "vertical",
+      from: { x: canvas.width / 1.25, y: canvas.height - 445 },
+      length: 40,
+      color: `${pumps.engine2 && valves.engine2 ? EcamColors["green"] : EcamColors["orange"]}`,
     });
     ctx.font = "18px Arial";
     ctx.fillStyle = `${pumps.yellowElectricPump ? EcamColors["green"] : EcamColors["white"]}`;
@@ -308,7 +338,8 @@ export const EcamDisplay = ({
       ctx,
       position: { x: canvas.width / 1.25, y: 250 },
       status: pumps.engine2,
-      color: `${(pumps.engine2 && valves.engine2) || (pumps.engine1 && valves.engine1 && ptus.powerTransferUnit) || pumps.yellowElectricPump ? EcamColors["green"] : EcamColors["orange"]}`,
+      color: `${pumps.engine2 && valves.engine2 && reservoires.yellow > 0 ? EcamColors["green"] : EcamColors["orange"]}`,
+      lowPressure: reservoires.yellow < 20,
     });
     drawShape({
       ctx,

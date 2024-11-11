@@ -83,7 +83,7 @@ export const SimulationSettingsComponent = ({
         { key: "hydraulicLineMaxPressure", label: "Line Max Pressure" },
         { key: "ptuThreshold", label: "PTU Threshold" },
         { key: "airTemperature", label: "Air Temperature (°C)" },
-        { key: "speed", label: "Speed" },
+        { key: "speed", label: "Speed ms/Step" },
       ],
       unit: "",
     },
@@ -149,6 +149,22 @@ export const SimulationSettingsComponent = ({
           </Button>
           <Button variant="outlined" color="secondary" onClick={resetSettings}>
             Reset
+          </Button>
+          <Button
+            variant="outlined"
+            color="secondary"
+            onClick={() => {
+              setSettings((prevSettings) => ({
+                ...prevSettings,
+                other: {
+                  ...prevSettings.other,
+                  status: !prevSettings.other.status,
+                },
+              }));
+              applySettings();
+            }}
+          >
+            {!settings.other.status ? "Pause" : "Resume"}
           </Button>
         </Box>
       </Box>

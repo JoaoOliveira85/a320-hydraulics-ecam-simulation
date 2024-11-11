@@ -15,7 +15,7 @@ exports[`OverheadPanel > GIVEN the component is rendered > THEN it is rendered c
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6xp2us-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -27,7 +27,7 @@ exports[`OverheadPanel > GIVEN the component is rendered > THEN it is rendered c
         </button>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -39,7 +39,7 @@ exports[`OverheadPanel > GIVEN the component is rendered > THEN it is rendered c
         </button>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -51,7 +51,7 @@ exports[`OverheadPanel > GIVEN the component is rendered > THEN it is rendered c
         </button>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"
@@ -63,7 +63,7 @@ exports[`OverheadPanel > GIVEN the component is rendered > THEN it is rendered c
         </button>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1b9uypg-MuiButtonBase-root-MuiButton-root"

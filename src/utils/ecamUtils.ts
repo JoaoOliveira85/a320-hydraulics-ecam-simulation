@@ -100,12 +100,21 @@ export const drawPump = ({
   ctx,
   position,
   status,
+  lowPressure,
   color = "green",
   size = 30,
 }: DrawPumpProps) => {
   drawShape({ ctx, position, size, color: color }).square();
 
-  if (status) {
+  if (lowPressure) {
+    drawText({
+      ctx,
+      position: { x: position.x - 10, y: position.y + 5 },
+      color: "orange",
+      text: "LO",
+      fontSize: 16,
+    });
+  } else if (status) {
     drawLine({
       ctx,
       orientation: "vertical",

@@ -206,5 +206,30 @@ describe("SimulationControls", () => {
         expect(handleResetButton).toHaveBeenCalled();
       });
     });
+    describe("WHEN I pause the simulation", () => {
+      test("THEN the simulation pauses", () => {
+        mockHydraulicContext(mockDefaultHydraulicContext);
+
+        const settingsHandler = vi.spyOn(
+          mockDefaultHydraulicContext.simControls,
+          "updateSettings",
+        );
+
+        renderWithWrappers(<SimulationControls />);
+
+        const overheadPanelButton = screen.getByRole("button", {
+          name: EN.simulation_controls.title,
+        });
+
+        fireEvent.click(overheadPanelButton);
+
+        const pauseResumeButton = screen.getByRole("button", {
+          name: "Resume",
+        });
+
+        fireEvent.click(pauseResumeButton);
+        expect(settingsHandler).toHaveBeenCalled();
+      });
+    });
   });
 });
