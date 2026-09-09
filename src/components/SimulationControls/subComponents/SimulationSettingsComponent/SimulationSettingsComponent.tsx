@@ -27,7 +27,8 @@ export const SimulationSettingsComponent = ({
       key: S,
     ) =>
     (event: ChangeEvent<HTMLInputElement>) => {
-      const value = +event.target.value;
+      const value = Number(event.target.value);
+      if (!Number.isFinite(value)) return;
       setSettings((prevSettings) => ({
         ...prevSettings,
         [category]: { ...prevSettings[category], [key]: value },
@@ -122,6 +123,7 @@ export const SimulationSettingsComponent = ({
                       slotProps={{
                         htmlInput: {
                           "data-testid": `${section.category}-${fieldKey}`,
+                          min: 0,
                         },
                       }}
                       type="number"
@@ -154,17 +156,15 @@ export const SimulationSettingsComponent = ({
             variant="outlined"
             color="secondary"
             onClick={() => {
-              setSettings((prevSettings) => ({
-                ...prevSettings,
-                other: {
-                  ...prevSettings.other,
-                  status: !prevSettings.other.status,
-                },
-              }));
-              applySettings();
+              const nextSettings = {
+                ...settings,
+                other: { ...settings.other, status: !settings.other.status },
+              };
+              setSettings(nextSettings);
+              onApplySettings(nextSettings);
             }}
           >
-            {!settings.other.status ? "Pause" : "Resume"}
+            {settings.other.status ? "Pause" : "Resume"}
           </Button>
         </Box>
       </Box>
