@@ -10,15 +10,6 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
     >
       <div
-        class="MuiBox-root css-144e5jt"
-      >
-        <img
-          alt="Airbus Logo"
-          src="/src/assets/logos/logo_blue.png"
-          style="width: 80px; height: auto;"
-        />
-      </div>
-      <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-iwuacr-MuiPaper-root-MuiAccordion-root"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
       >
@@ -1548,14 +1539,12 @@ exports[`SimulationControls > GIVEN the component is rendered > THEN it is rende
         <h6
           class="MuiTypography-root MuiTypography-h6 css-11gndy9-MuiTypography-root"
         >
-          Frontend Task
+          About This Simulation
         </h6>
         <p
           class="MuiTypography-root MuiTypography-body1 css-m57623-MuiTypography-root"
         >
-          This is a work in progress of the frontend development task. Currently, a responsive application is in place that simulates a rudimentary hydraulic system with three separate lines, each with its set of pumps and/or valves and redundancy systems.
-          <br />
-          The current implementation is fully functioning as an MVP, so for now, the development focus will shift to integrate the ECAM screen on the actual simulator before completing further functionalities in this demonstration.
+          A working model of the A320's three hydraulic systems - green, blue and yellow - each with its own pumps, valves and reservoir. The simulation runs in a Web Worker and drives the ECAM display in real time. Use the overhead panel to operate the pumps and fire valves, the simulation controls to adjust operating parameters, and the failures panel to see how the system responds when a component is lost.
         </p>
       </div>
     </div>

@@ -20,11 +20,6 @@ export default defineConfig({
       types: path.resolve(__dirname, "./src/types"),
     },
   },
-  build: {
-    rollupOptions: {
-      external: ["@/types/hydraulicsWorker.ts"],
-    },
-  },
   css: {
     preprocessorOptions: {
       scss: {

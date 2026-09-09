@@ -1,5 +1,5 @@
 import { render, act, cleanup } from "@testing-library/react";
-import { vi } from "vitest";
+import { vi, type Mock } from "vitest";
 import { useContext } from "react";
 import { HydraulicContextProvider } from "../HydraulicContextProvider";
 import { HydraulicContext } from "../HydraulicContext";
@@ -7,7 +7,9 @@ import { WorkerActions } from "types/hydraulicWorkerTypes";
 import defaultSettings from "workers/simulationDefaultSettings.json";
 import { Colors, HydraulicContextType } from "types";
 
-const mockWorkers: Worker[] = [];
+type MockWorker = Worker & { postMessage: Mock; terminate: Mock };
+
+const mockWorkers: MockWorker[] = [];
 
 vi.mock("workers/hydraulicsWorker.js?worker", () => {
   return {
@@ -159,7 +161,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     const initialPumpState = defaultSettings.engineStartStatus.engine1;
@@ -189,7 +191,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     const initialValveState = defaultSettings.valveStartStatus.green;
@@ -219,7 +221,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     const initialPtuState = defaultSettings.ptuStartStatus;
@@ -249,7 +251,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     act(() => {
@@ -275,7 +277,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     act(() => {
@@ -301,7 +303,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     act(() => {
@@ -327,7 +329,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     const newSettings = {
@@ -373,7 +375,7 @@ describe("HydraulicContextProvider", () => {
       </HydraulicContextProvider>,
     );
 
-    const worker = mockWorkers[0] as jest.Mocked<Worker>;
+    const worker = mockWorkers[0];
     worker.postMessage.mockClear();
 
     act(() => {

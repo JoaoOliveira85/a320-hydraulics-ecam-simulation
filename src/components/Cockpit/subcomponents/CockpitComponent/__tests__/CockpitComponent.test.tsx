@@ -11,7 +11,7 @@ import EN from "constants/EN.json";
 
 describe("CockpitComponent Component", () => {
   beforeEach(() => {
-    vi.resetAllMocks();
+    vi.clearAllMocks();
     mockHydraulicContext();
   });
 
