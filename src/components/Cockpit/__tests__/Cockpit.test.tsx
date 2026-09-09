@@ -6,7 +6,7 @@ import "@testing-library/jest-dom";
 
 describe("CockpitComponent Component", () => {
   beforeEach(() => {
-    vi.resetAllMocks();
+    vi.clearAllMocks();
     mockHydraulicContext();
   });
 

@@ -6,12 +6,18 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
-    setupFiles: "./src/setupTests.ts",
+    setupFiles: ["vitest-canvas-mock", "./src/setupTests.ts"],
     exclude: ["node_modules", "dist", "build", "src/**/__test__/**"],
     coverage: {
       provider: "istanbul",
       include: ["src/**/*.ts", "src/**/*.tsx"],
-      exclude: ["src/**/*.d.ts", "src/**/index.ts", "src/**/__tests__/**"],
+      exclude: [
+        "src/**/*.d.ts",
+        "src/**/index.ts",
+        "src/**/__tests__/**",
+        "src/utils/testUtils/**",
+        "src/main.tsx",
+      ],
     },
   },
 });

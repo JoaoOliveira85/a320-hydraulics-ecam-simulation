@@ -15,8 +15,6 @@ import { useContext, useMemo, useState } from "react";
 import { OverheadPanel } from "./subComponents/OverheadPanel/OverheadPanel";
 import EN from "constants/EN.json";
 import { useHydraulicContext } from "hooks";
-import logoWhite from "assets/logos/logo_white.png";
-import logoBlue from "assets/logos/logo_blue.png";
 import { SimulationSettingsComponent } from "./subComponents/SimulationSettingsComponent/SimulationSettingsComponent";
 import {
   Colors,
@@ -34,7 +32,6 @@ export const SimulationControls = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const isMediumOrBelow = useMediaQuery("(max-width:900px)");
   const isTabletOrBelow = useMediaQuery("(max-width:1280px)");
-  const isDarkTheme = useMediaQuery("(prefers-color-scheme: dark)");
 
   const context = useContext(HydraulicContext);
   const hydraulicSystem = useHydraulicContext(context);
@@ -55,7 +52,7 @@ export const SimulationControls = () => {
 
   const failureManager = (system: HydraulicContextType) => {
     return {
-      onTriggerPumpFailer: (pump: TypesOfPumps) => {
+      onTriggerPumpFailure: (pump: TypesOfPumps) => {
         system.failures.handlePumpFailure(pump);
       },
       onTriggerValveFailure: (valve: TypesOfValves) => {
@@ -67,7 +64,7 @@ export const SimulationControls = () => {
     };
   };
 
-  const { onTriggerPumpFailer, onTriggerValveFailure, onTriggerLineLeak } =
+  const { onTriggerPumpFailure, onTriggerValveFailure, onTriggerLineLeak } =
     failureManager(hydraulicSystem);
 
   const SECTION_LIST = useMemo(
@@ -111,7 +108,7 @@ export const SimulationControls = () => {
         details: (
           <FailureControls
             onTriggerLineLeak={onTriggerLineLeak}
-            onTriggerPumpFailure={onTriggerPumpFailer}
+            onTriggerPumpFailure={onTriggerPumpFailure}
             onTriggerValveFailure={onTriggerValveFailure}
           />
         ),
@@ -122,7 +119,7 @@ export const SimulationControls = () => {
       handleValveButton,
       handlePtuButton,
       onTriggerLineLeak,
-      onTriggerPumpFailer,
+      onTriggerPumpFailure,
       onTriggerValveFailure,
       resetSimulation,
       updateSettings,
@@ -150,24 +147,6 @@ export const SimulationControls = () => {
           maxHeight: "100%",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            paddingBottom: { xs: 0, md: 2 },
-            marginBottom: { xs: 0, md: 3 },
-          }}
-        >
-          <img
-            src={isDarkTheme ? logoWhite : logoBlue}
-            alt={EN.simulation_controls.logo_alt}
-            style={{
-              width: "80px",
-              height: "auto",
-            }}
-          />
-        </Box>
-
         {isMediumOrBelow ? (
           <>
             <Tabs
@@ -214,16 +193,7 @@ export const SimulationControls = () => {
                       maxHeight: "100%",
                     }}
                   >
-                    This is a work in progress of the frontend development task.
-                    Currently, a responsive application is in place that
-                    simulates a rudimentary hydraulic system with three separate
-                    lines, each with its set of pumps and/or valves and
-                    redundancy systems.
-                    <br />
-                    The current implementation is fully functioning as an MVP,
-                    so for now, the development focus will shift to integrate
-                    the ECAM screen on the actual simulator before completing
-                    further functionalities in this demonstration.
+                    {EN.simulation_controls.summary_text}
                   </Typography>
                 </Box>
               ) : (
@@ -290,15 +260,7 @@ export const SimulationControls = () => {
                   maxHeight: "100%",
                 }}
               >
-                This is a work in progress of the frontend development task.
-                Currently, a responsive application is in place that simulates a
-                rudimentary hydraulic system with three separate lines, each
-                with its set of pumps and/or valves and redundancy systems.
-                <br />
-                The current implementation is fully functioning as an MVP, so
-                for now, the development focus will shift to integrate the ECAM
-                screen on the actual simulator before completing further
-                functionalities in this demonstration.
+                {EN.simulation_controls.summary_text}
               </Typography>
             </Box>
           </>
