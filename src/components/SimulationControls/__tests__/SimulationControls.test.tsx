@@ -224,11 +224,15 @@ describe("SimulationControls", () => {
         fireEvent.click(overheadPanelButton);
 
         const pauseResumeButton = screen.getByRole("button", {
-          name: "Resume",
+          name: "Pause",
         });
 
         fireEvent.click(pauseResumeButton);
-        expect(settingsHandler).toHaveBeenCalled();
+        expect(settingsHandler).toHaveBeenCalledWith(
+          expect.objectContaining({
+            other: expect.objectContaining({ status: false }),
+          }),
+        );
       });
     });
   });
