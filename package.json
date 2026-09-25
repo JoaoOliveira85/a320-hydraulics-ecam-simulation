@@ -14,10 +14,9 @@
     "lint:fix": "eslint --fix .",
     "format:write": "prettier --write .",
     "format:check": "prettier --check .",
-    "nvm-use": "powershell -File ./scripts/changeversion.ps1",
     "test": "vitest --coverage",
     "prepare": "husky install",
-    "pre-commit": "npm run lint:fix && npm run format:write"
+    "pre-commit": "npm run lint && npm run format:check"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
