@@ -73,5 +73,6 @@ Known gaps:
 
 ## License
 
-[MIT](LICENSE) for the code. The images in `src/assets/` are the author's own screenshots
-from a flight simulator and are not covered by it.
+[MIT](LICENSE) for the code. The images in `src/assets/` are screenshots of a third-party
+flight simulator. The artwork in them belongs to that simulator's developers and is not
+covered by the MIT license.
