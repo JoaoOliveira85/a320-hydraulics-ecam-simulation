@@ -219,13 +219,11 @@ class HydraulicLine {
     this.dropRate = this.baseDropRate * temperatureFactor;
   }
 
-  updatePressure(inputFlow: number) {
+  updatePressure(inputFlow: number, applyDrop = true) {
+    const drop = applyDrop ? this.dropRate : 0;
     this.currentPressure = Math.max(
       0,
-      Math.min(
-        this.currentPressure + inputFlow - this.dropRate,
-        this.maxPressure,
-      ),
+      Math.min(this.currentPressure + inputFlow - drop, this.maxPressure),
     );
   }
 }
@@ -391,8 +389,8 @@ class HydraulicSystemController {
           this.PTU_TRANSFER_RATE,
           Math.abs(pressureDifference),
         );
-        this.lines.green.updatePressure(-transferFlow);
-        this.lines.yellow.updatePressure(transferFlow);
+        this.lines.green.updatePressure(-transferFlow, false);
+        this.lines.yellow.updatePressure(transferFlow, false);
       } else if (ptuTransfer.yellowToGreen) {
         const pressureDifference =
           this.lines.yellow.currentPressure - this.lines.green.currentPressure;
@@ -400,8 +398,8 @@ class HydraulicSystemController {
           this.PTU_TRANSFER_RATE,
           Math.abs(pressureDifference),
         );
-        this.lines.yellow.updatePressure(-transferFlow);
-        this.lines.green.updatePressure(transferFlow);
+        this.lines.yellow.updatePressure(-transferFlow, false);
+        this.lines.green.updatePressure(transferFlow, false);
       }
     }
 
@@ -410,6 +408,7 @@ class HydraulicSystemController {
         this.pumps.ramAirTurbine.calculateOutput(
           this.lines.blue.currentPressure,
         ),
+        false,
       );
     }
 
