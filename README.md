@@ -1,4 +1,4 @@
-# a320-hydraulics-ecam
+# a320-hydraulics-ecam-simulation
 
 An interactive simulation of the Airbus A320 hydraulic system. Operate the overhead
 panel, inject failures, and watch the ECAM hydraulic page respond in real time.
@@ -10,8 +10,8 @@ Built with React, TypeScript, MUI and Vite. The simulation runs in a Web Worker.
 Requires [Docker](https://docs.docker.com/get-docker/) 27 or newer.
 
 ```bash
-git clone https://github.com/JoaoOliveira85/a320-hydraulics-ecam.git
-cd a320-hydraulics-ecam
+git clone https://github.com/JoaoOliveira85/a320-hydraulics-ecam-simulation.git
+cd a320-hydraulics-ecam-simulation
 docker compose up --build
 ```
 
@@ -56,11 +56,46 @@ build on every push to `main` and on pull requests.
 If the Docker build misbehaves, `docker compose down --rmi all` and rebuild. If the app
 doesn't load, check that port 2019 is free.
 
+## Key Components
+
+### **a. Overhead Panel**
+
+- **Pumps Control:** Toggle all engine and electric pumps on or off.
+- **Engine Fire Valves:** Open or close the engine fire valves.
+- **Power Transfer Units (PTUs):** Activate or deactivate the PTUs.
+- **Real-Time Updates:** Any changes here are immediately reflected on the ECAM display, allowing you to see the impact of your actions on the hydraulic systems.
+
+### **b. Simulation Controls**
+
+- **Fine-Tuning Parameters:** Adjust various aspects of the simulation to customize your experience:
+  - **Starting Conditions:** Set initial states for different components.
+  - **Reservoir Levels:** Modify the hydraulic fluid levels in each reservoir.
+  - **Pump Flow Rates:** Change the maximum flow rates of the pumps.
+  - **Line Pressure:** Adjust the pressure within the hydraulic lines.
+  - **Air Temperature:** Set the ambient air temperature affecting system performance.
+  - **Simulation Speed:** Control the speed at which the simulation runs.
+- **Simulation Management:**
+  - **Start/Stop Simulation:** Begin or pause the simulation at any time.
+  - **Reset Simulation:** Restore all settings to their default values and restart the simulation.
+
+### **c. Real-Time Data**
+
+- **Data Table:** View a continuously updating table that displays key data points from the simulation, such as pressure readings, flow rates, and system statuses.
+- **Monitoring:** Use this data to monitor the health and performance of the hydraulic systems as you interact with the simulation.
+
+### **d. Failures Panel**
+
+- **Simulate Failures:** Introduce system failures to test how the hydraulic systems respond under adverse conditions:
+  - **Line Leaks:** Simulate hydraulic line leaks to observe pressure drops and fluid loss.
+  - **Pump Failures:** Trigger failures of specific pumps to see how the system compensates.
+- **Analysis:** Observe the immediate effects on the ECAM display and real-time data, enhancing your understanding of system redundancies and failure management.
+
+---
+
 ## Notes
 
-Re-imported into a fresh repository in September 2026 to drop committed build output and
-third-party assets, so the repository creation date and the `(#NN)` references in the
-2024 commit messages don't line up with the commit dates.
+Re-imported into a fresh repository in September 2026 to drop committed build output,
+third-party assets and some other content, so the repository creation date and the `(#NN)` references in the 2024 commit messages don't line up with the commit dates.
 
 Known gaps:
 
