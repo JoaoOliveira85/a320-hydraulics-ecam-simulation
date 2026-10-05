@@ -5,6 +5,9 @@ panel, inject failures, and watch the ECAM hydraulic page respond in real time.
 
 Built with React, TypeScript, MUI and Vite. The simulation runs in a Web Worker.
 
+This is an independent, educational project. It is not affiliated with, endorsed by or
+sponsored by Airbus. Airbus and A320 are trademarks of their respective owners.
+
 ## Run it
 
 Requires [Docker](https://docs.docker.com/get-docker/) 27 or newer.
