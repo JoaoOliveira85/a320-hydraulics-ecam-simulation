@@ -71,4 +71,5 @@ Known gaps:
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) for the code. The images in `src/assets/` are the author's own screenshots
+from a flight simulator and are not covered by it.
