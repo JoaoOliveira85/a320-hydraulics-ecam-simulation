@@ -59,7 +59,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                       class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
                     >
                       <h6
-                        class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-h6 css-fk0zhv-MuiTypography-root"
                       >
                         Overhead Panel
                       </h6>
@@ -102,7 +102,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                             class="MuiBox-root css-1et8dn9"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-1feua4j-MuiTypography-root"
                               style="--Typography-textAlign: center;"
                             >
                               Hydraulic Pumps
@@ -114,7 +114,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="eng1-pump"
                                   tabindex="0"
                                   type="button"
@@ -126,7 +126,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="elec-pump"
                                   tabindex="0"
                                   type="button"
@@ -138,7 +138,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="eng2-pump"
                                   tabindex="0"
                                   type="button"
@@ -150,7 +150,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="rat-man-on"
                                   tabindex="0"
                                   type="button"
@@ -162,7 +162,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-1n9mx5w-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="elec-pump-2"
                                   tabindex="0"
                                   type="button"
@@ -176,7 +176,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                             class="MuiBox-root css-1et8dn9"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-1feua4j-MuiTypography-root"
                               style="--Typography-textAlign: center;"
                             >
                               Engine Fire Valves
@@ -188,7 +188,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="eng1-valve"
                                   tabindex="0"
                                   type="button"
@@ -200,7 +200,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="eng2-valve"
                                   tabindex="0"
                                   type="button"
@@ -214,7 +214,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                             class="MuiBox-root css-1et8dn9"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-18957qw-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-1feua4j-MuiTypography-root"
                               style="--Typography-textAlign: center;"
                             >
                               PTUs
@@ -226,7 +226,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiGrid2-root MuiGrid2-direction-xs-row css-fer6v7-MuiGrid2-root"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1d1mjof-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ypncw4-MuiButtonBase-root-MuiButton-root"
                                   id="ptu-auto"
                                   tabindex="0"
                                   type="button"
@@ -259,7 +259,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                       class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
                     >
                       <h6
-                        class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-h6 css-fk0zhv-MuiTypography-root"
                       >
                         Simulation Controls
                       </h6>
@@ -309,7 +309,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiBox-root css-178yklu"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 css-5fnhct-MuiTypography-root"
                                 >
                                   Reservoir Starting Levels
                                 </h6>
@@ -323,7 +323,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r0:"
                                         id=":r0:-label"
@@ -331,7 +331,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         green L
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -364,7 +364,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r1:"
                                         id=":r1:-label"
@@ -372,7 +372,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         yellow L
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -405,7 +405,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r2:"
                                         id=":r2:-label"
@@ -413,7 +413,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         blue L
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -445,7 +445,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiBox-root css-178yklu"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 css-5fnhct-MuiTypography-root"
                                 >
                                   Reservoir Leakage Rates
                                 </h6>
@@ -459,7 +459,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r3:"
                                         id=":r3:-label"
@@ -467,7 +467,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         green L/s
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -500,7 +500,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r4:"
                                         id=":r4:-label"
@@ -508,7 +508,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         yellow L/s
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -541,7 +541,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r5:"
                                         id=":r5:-label"
@@ -549,7 +549,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         blue L/s
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -581,7 +581,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiBox-root css-178yklu"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 css-5fnhct-MuiTypography-root"
                                 >
                                   Pump Max Flow Rates
                                 </h6>
@@ -595,7 +595,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r6:"
                                         id=":r6:-label"
@@ -603,7 +603,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         engine1 PSI
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -636,7 +636,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r7:"
                                         id=":r7:-label"
@@ -644,7 +644,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         engine2 PSI
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -677,7 +677,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r8:"
                                         id=":r8:-label"
@@ -685,7 +685,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         blueElectricPump PSI
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -718,7 +718,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":r9:"
                                         id=":r9:-label"
@@ -726,7 +726,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         yellowElectricPump PSI
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -759,7 +759,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":ra:"
                                         id=":ra:-label"
@@ -767,7 +767,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         ramAirTurbine PSI
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -799,7 +799,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiBox-root css-178yklu"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 css-27wtmm-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 css-5fnhct-MuiTypography-root"
                                 >
                                   Other Settings
                                 </h6>
@@ -813,7 +813,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":rb:"
                                         id=":rb:-label"
@@ -821,7 +821,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         Line Max Pressure 
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -854,7 +854,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":rc:"
                                         id=":rc:-label"
@@ -862,7 +862,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         PTU Threshold 
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -895,7 +895,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":rd:"
                                         id=":rd:-label"
@@ -903,7 +903,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         Air Temperature (°C) 
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -936,7 +936,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1732jes-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-15py2po-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="true"
                                         for=":re:"
                                         id=":re:-label"
@@ -944,7 +944,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                         Speed ms/Step 
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1lcx7cf-MuiInputBase-root-MuiOutlinedInput-root"
+                                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-gl77hk-MuiInputBase-root-MuiOutlinedInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -976,21 +976,21 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                 class="MuiBox-root css-vnm1sd"
                               >
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1hv07bg-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-qwqwzf-MuiButtonBase-root-MuiButton-root"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Apply
                                 </button>
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary css-1mk9qbf-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary css-1ll68wd-MuiButtonBase-root-MuiButton-root"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Reset
                                 </button>
                                 <button
-                                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary css-1mk9qbf-MuiButtonBase-root-MuiButton-root"
+                                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorSecondary css-1ll68wd-MuiButtonBase-root-MuiButton-root"
                                   tabindex="0"
                                   type="button"
                                 >
@@ -1022,7 +1022,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                       class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
                     >
                       <h6
-                        class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-h6 css-fk0zhv-MuiTypography-root"
                       >
                         Real Time Data
                       </h6>
@@ -1066,14 +1066,14 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-h2rgh7-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-16ywj6e-MuiTypography-root"
                               style="--Typography-textAlign: center;"
                             >
                               Simulation Data
                             </h6>
                             <table
                               aria-label="color-based simulation data table"
-                              class="MuiTable-root css-9skrpm-MuiTable-root"
+                              class="MuiTable-root css-14r8pf9-MuiTable-root"
                             >
                               <thead
                                 class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
@@ -1082,25 +1082,25 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root MuiTableRow-head css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     scope="col"
                                   >
                                     Parameter
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     scope="col"
                                   >
                                     Green
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     scope="col"
                                   >
                                     Yellow
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     scope="col"
                                   >
                                     Blue
@@ -1114,25 +1114,25 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     Reservoir Levels (%)
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-reservoir_levels_%-green"
                                   >
                                     70.00
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-reservoir_levels_%-yellow"
                                   >
                                     80.00
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-reservoir_levels_%-blue"
                                   >
                                     60.00
@@ -1142,25 +1142,25 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     Pressure (PSI)
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pressure_psi-green"
                                   >
                                     0
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pressure_psi-yellow"
                                   >
                                     0
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pressure_psi-blue"
                                   >
                                     0
@@ -1171,7 +1171,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                             <br />
                             <table
                               aria-label="engine-based simulation data table"
-                              class="MuiTable-root css-9skrpm-MuiTable-root"
+                              class="MuiTable-root css-14r8pf9-MuiTable-root"
                             >
                               <thead
                                 class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
@@ -1180,41 +1180,41 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root MuiTableRow-head css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     scope="col"
                                   >
                                     Parameter
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     data-testid="realTimeData-engine1-header"
                                     scope="col"
                                   >
                                     engine1
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     data-testid="realTimeData-engine2-header"
                                     scope="col"
                                   >
                                     engine2
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     data-testid="realTimeData-ramairturbine-header"
                                     scope="col"
                                   >
                                     ramAirTurbine
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     data-testid="realTimeData-blueelectricpump-header"
                                     scope="col"
                                   >
                                     blueElectricPump
                                   </th>
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-117ujwi-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-10no6mi-MuiTableCell-root"
                                     data-testid="realTimeData-yellowelectricpump-header"
                                     scope="col"
                                   >
@@ -1229,37 +1229,37 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     Pump Status
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pump_status-engine1"
                                   >
                                     Active
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pump_status-engine2"
                                   >
                                     Active
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pump_status-ramairturbine"
                                   >
                                     Inactive
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pump_status-blueelectricpump"
                                   >
                                     Active
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-pump_status-yellowelectricpump"
                                   >
                                     Inactive
@@ -1269,19 +1269,19 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     Valve Status
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-valve_status-engine1"
                                   >
                                     Open
                                   </td>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     data-testid="realTimeData-valve_status-engine2"
                                   >
                                     Open
@@ -1292,7 +1292,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                             <br />
                             <table
                               aria-label="other-settings simulation data table"
-                              class="MuiTable-root css-9skrpm-MuiTable-root"
+                              class="MuiTable-root css-14r8pf9-MuiTable-root"
                             >
                               <tbody
                                 class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
@@ -1301,13 +1301,13 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     Air Temperature (°C)
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     colspan="3"
                                     data-testid="realTimeData-air_temperature_c"
                                   >
@@ -1318,13 +1318,13 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     PTU Threshold
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     colspan="3"
                                     data-testid="realTimeData-ptu_threshold"
                                   >
@@ -1335,13 +1335,13 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     System Speed
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     colspan="3"
                                     data-testid="realTimeData-system_speed"
                                   >
@@ -1352,13 +1352,13 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiTableRow-root css-fua8q5-MuiTableRow-root"
                                 >
                                   <th
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     scope="row"
                                   >
                                     Gross Weight
                                   </th>
                                   <td
-                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1c78q5o-MuiTableCell-root"
+                                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1bqzpib-MuiTableCell-root"
                                     colspan="3"
                                     data-testid="realTimeData-gross_weight"
                                   >
@@ -1391,7 +1391,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                       class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-7iurs7-MuiAccordionSummary-content"
                     >
                       <h6
-                        class="MuiTypography-root MuiTypography-h6 css-8l7hc6-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-h6 css-fk0zhv-MuiTypography-root"
                       >
                         Failures
                       </h6>
@@ -1435,7 +1435,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-h2rgh7-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-16ywj6e-MuiTypography-root"
                               style="--Typography-textAlign: center;"
                             >
                               Trigger Failures
@@ -1450,7 +1450,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
                                 >
                                   <h6
-                                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-1slyv21-MuiTypography-root"
                                     style="--Typography-textAlign: center;"
                                   >
                                     Pump Failures
@@ -1463,7 +1463,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                     class="MuiBox-root css-itq5b1"
                                   >
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerPumpFailure-engine1"
                                       tabindex="0"
                                       type="button"
@@ -1471,7 +1471,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       Eng 1
                                     </button>
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerPumpFailure-engine2"
                                       tabindex="0"
                                       type="button"
@@ -1479,7 +1479,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       Eng 2
                                     </button>
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerPumpFailure-blueElectricPump"
                                       tabindex="0"
                                       type="button"
@@ -1496,7 +1496,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
                                 >
                                   <h6
-                                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-1slyv21-MuiTypography-root"
                                     style="--Typography-textAlign: center;"
                                   >
                                     Valve Failures
@@ -1509,7 +1509,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                     class="MuiBox-root css-itq5b1"
                                   >
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerValveFailure-engine1"
                                       tabindex="0"
                                       type="button"
@@ -1517,7 +1517,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       Eng 1
                                     </button>
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerValveFailure-engine2"
                                       tabindex="0"
                                       type="button"
@@ -1534,7 +1534,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                   class="MuiGrid2-root MuiGrid2-direction-xs-row css-1phklie-MuiGrid2-root"
                                 >
                                   <h6
-                                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-epcu4q-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignCenter css-1slyv21-MuiTypography-root"
                                     style="--Typography-textAlign: center;"
                                   >
                                     Line Leaks
@@ -1547,7 +1547,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                     class="MuiBox-root css-itq5b1"
                                   >
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerLineLeak-green"
                                       tabindex="0"
                                       type="button"
@@ -1555,7 +1555,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       Green
                                     </button>
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerLineLeak-yellow"
                                       tabindex="0"
                                       type="button"
@@ -1563,7 +1563,7 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                                       Yellow
                                     </button>
                                     <button
-                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-3ny1aq-MuiButtonBase-root-MuiButton-root"
+                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorError css-o1dkg0-MuiButtonBase-root-MuiButton-root"
                                       data-testid="button-onTriggerLineLeak-blue"
                                       tabindex="0"
                                       type="button"
@@ -1585,12 +1585,12 @@ exports[`App Component > GIVEN the component is rendered > THEN it gets rendered
                 class="right-container__header MuiBox-root css-mq9939"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-11gndy9-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9shrv5-MuiTypography-root"
                 >
                   About This Simulation
                 </h6>
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-m57623-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hthk0h-MuiTypography-root"
                 >
                   A working model of the A320's three hydraulic systems - green, blue and yellow - each with its own pumps, valves and reservoir. The simulation runs in a Web Worker and drives the ECAM display in real time. Use the overhead panel to operate the pumps and fire valves, the simulation controls to adjust operating parameters, and the failures panel to see how the system responds when a component is lost.
                 </p>
