@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+import { vi, type Mock } from "vitest";
 import * as mui from "@mui/material";
 
 vi.mock("@mui/material", async () => {
@@ -9,4 +9,4 @@ vi.mock("@mui/material", async () => {
   };
 });
 
-export const mockedUseMediaQuery = mui.useMediaQuery as unknown as jest.Mock;
+export const mockedUseMediaQuery = mui.useMediaQuery as unknown as Mock;

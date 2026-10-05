@@ -42,9 +42,8 @@
     "start": "Start",
     "pause": "Pause",
     "stop": "Stop",
-    "logo_alt": "Airbus Logo",
-    "summary_title": "Frontend Task",
-    "summary_text": ""
+    "summary_title": "About This Simulation",
+    "summary_text": "A working model of the A320's three hydraulic systems - green, blue and yellow - each with its own pumps, valves and reservoir. The simulation runs in a Web Worker and drives the ECAM display in real time. Use the overhead panel to operate the pumps and fire valves, the simulation controls to adjust operating parameters, and the failures panel to see how the system responds when a component is lost."
   },
   "real_time_data": {
     "title": "Real Time Data",
