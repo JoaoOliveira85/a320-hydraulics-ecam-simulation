@@ -335,6 +335,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireStartingLevels-green"
                                         id=":r0:"
+                                        min="0"
                                         type="number"
                                         value="3500"
                                       />
@@ -375,6 +376,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireStartingLevels-yellow"
                                         id=":r1:"
+                                        min="0"
                                         type="number"
                                         value="4000"
                                       />
@@ -415,6 +417,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireStartingLevels-blue"
                                         id=":r2:"
+                                        min="0"
                                         type="number"
                                         value="3000"
                                       />
@@ -468,6 +471,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireLeakageRates-green"
                                         id=":r3:"
+                                        min="0"
                                         type="number"
                                         value="0.5"
                                       />
@@ -508,6 +512,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireLeakageRates-yellow"
                                         id=":r4:"
+                                        min="0"
                                         type="number"
                                         value="0.5"
                                       />
@@ -548,6 +553,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireLeakageRates-blue"
                                         id=":r5:"
+                                        min="0"
                                         type="number"
                                         value="0.5"
                                       />
@@ -601,6 +607,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-engine1"
                                         id=":r6:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -641,6 +648,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-engine2"
                                         id=":r7:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -681,6 +689,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-blueElectricPump"
                                         id=":r8:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -721,6 +730,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-yellowElectricPump"
                                         id=":r9:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -761,6 +771,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-ramAirTurbine"
                                         id=":ra:"
+                                        min="0"
                                         type="number"
                                         value="3000"
                                       />
@@ -814,6 +825,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-hydraulicLineMaxPressure"
                                         id=":rb:"
+                                        min="0"
                                         type="number"
                                         value="3000"
                                       />
@@ -854,6 +866,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-ptuThreshold"
                                         id=":rc:"
+                                        min="0"
                                         type="number"
                                         value="500"
                                       />
@@ -894,6 +907,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-airTemperature"
                                         id=":rd:"
+                                        min="0"
                                         type="number"
                                         value="20"
                                       />
@@ -934,6 +948,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-speed"
                                         id=":re:"
+                                        min="0"
                                         type="number"
                                         value="100"
                                       />
@@ -976,7 +991,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 1`]
                                 tabindex="0"
                                 type="button"
                               >
-                                Resume
+                                Pause
                               </button>
                             </div>
                           </form>
@@ -1920,6 +1935,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireStartingLevels-green"
                                         id=":r0:"
+                                        min="0"
                                         type="number"
                                         value="3500"
                                       />
@@ -1960,6 +1976,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireStartingLevels-yellow"
                                         id=":r1:"
+                                        min="0"
                                         type="number"
                                         value="4000"
                                       />
@@ -2000,6 +2017,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireStartingLevels-blue"
                                         id=":r2:"
+                                        min="0"
                                         type="number"
                                         value="3000"
                                       />
@@ -2053,6 +2071,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireLeakageRates-green"
                                         id=":r3:"
+                                        min="0"
                                         type="number"
                                         value="0.5"
                                       />
@@ -2093,6 +2112,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireLeakageRates-yellow"
                                         id=":r4:"
+                                        min="0"
                                         type="number"
                                         value="0.5"
                                       />
@@ -2133,6 +2153,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="reservoireLeakageRates-blue"
                                         id=":r5:"
+                                        min="0"
                                         type="number"
                                         value="0.5"
                                       />
@@ -2186,6 +2207,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-engine1"
                                         id=":r6:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -2226,6 +2248,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-engine2"
                                         id=":r7:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -2266,6 +2289,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-blueElectricPump"
                                         id=":r8:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -2306,6 +2330,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-yellowElectricPump"
                                         id=":r9:"
+                                        min="0"
                                         type="number"
                                         value="3150"
                                       />
@@ -2346,6 +2371,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="pumpMaxFlowRates-ramAirTurbine"
                                         id=":ra:"
+                                        min="0"
                                         type="number"
                                         value="3000"
                                       />
@@ -2399,6 +2425,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-hydraulicLineMaxPressure"
                                         id=":rb:"
+                                        min="0"
                                         type="number"
                                         value="3000"
                                       />
@@ -2439,6 +2466,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-ptuThreshold"
                                         id=":rc:"
+                                        min="0"
                                         type="number"
                                         value="500"
                                       />
@@ -2479,6 +2507,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-airTemperature"
                                         id=":rd:"
+                                        min="0"
                                         type="number"
                                         value="20"
                                       />
@@ -2519,6 +2548,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                         class="MuiInputBase-input MuiOutlinedInput-input css-j3jqhj-MuiInputBase-input-MuiOutlinedInput-input"
                                         data-testid="other-speed"
                                         id=":re:"
+                                        min="0"
                                         type="number"
                                         value="100"
                                       />
@@ -2561,7 +2591,7 @@ exports[`GIVEN the component is rendered > THEN it gets rendered as expected 2`]
                                 tabindex="0"
                                 type="button"
                               >
-                                Resume
+                                Pause
                               </button>
                             </div>
                           </form>

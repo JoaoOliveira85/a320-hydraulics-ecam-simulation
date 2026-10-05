@@ -2,6 +2,17 @@ import { TypesOfPumps, TypesOfValves, SimulationSettings, Color } from "types";
 import simulationSettings from "./simulationDefaultSettings.json";
 import { WorkerActions } from "types/hydraulicWorkerTypes";
 
+const DEFAULT_SETTINGS = JSON.parse(
+  JSON.stringify(simulationSettings),
+) as typeof simulationSettings;
+
+const MIN_TICK_MS = 10;
+
+const tickInterval = (speed: number) =>
+  Number.isFinite(speed) && speed > 0
+    ? Math.max(MIN_TICK_MS, speed)
+    : DEFAULT_SETTINGS.other.speed;
+
 const TEMPERATURE_EFFECTS = {
   optimalTemp: 20,
   tempRange: 15,
@@ -12,19 +23,8 @@ const applySettings = (
   simulationSettings: SimulationSettings,
   hydraulicSystem: HydraulicSystemController[],
 ) => {
-  const {
-    reservoireStartingLevels,
-    reservoireLeakageRates,
-    pumpMaxFlowRates,
-    other,
-  } = simulationSettings;
-
-  hydraulicSystem[0].reservoires.green.currentLevel =
-    reservoireStartingLevels.green;
-  hydraulicSystem[0].reservoires.yellow.currentLevel =
-    reservoireStartingLevels.yellow;
-  hydraulicSystem[0].reservoires.blue.currentLevel =
-    reservoireStartingLevels.blue;
+  const { reservoireLeakageRates, pumpMaxFlowRates, other } =
+    simulationSettings;
 
   hydraulicSystem[0].reservoires.green.leakageRate =
     reservoireLeakageRates.green;
@@ -106,8 +106,8 @@ class Pump {
   hasFailed: boolean;
   pumpTemperature: number;
 
-  constructor(maxFlowRate: number, reservoire?: Reservoir) {
-    this.isActive = true;
+  constructor(maxFlowRate: number, reservoire?: Reservoir, isActive = true) {
+    this.isActive = isActive;
     this.hasFailed = false;
     this.maxFlowRate = maxFlowRate;
     this.baseFlowRate = maxFlowRate;
@@ -167,8 +167,8 @@ class Valve {
   isOpen: boolean;
   resistance: number;
   hasFailed: boolean;
-  constructor() {
-    this.isOpen = true;
+  constructor(isOpen = true) {
+    this.isOpen = isOpen;
     this.resistance = 0.1;
     this.hasFailed = false;
   }
@@ -219,13 +219,11 @@ class HydraulicLine {
     this.dropRate = this.baseDropRate * temperatureFactor;
   }
 
-  updatePressure(inputFlow: number) {
+  updatePressure(inputFlow: number, applyDrop = true) {
+    const drop = applyDrop ? this.dropRate : 0;
     this.currentPressure = Math.max(
       0,
-      Math.min(
-        this.currentPressure + inputFlow - this.dropRate,
-        this.maxPressure,
-      ),
+      Math.min(this.currentPressure + inputFlow - drop, this.maxPressure),
     );
   }
 }
@@ -235,7 +233,7 @@ class PowerTransferUnit {
   threshold: number;
 
   constructor() {
-    this.isActive = true;
+    this.isActive = simulationSettings.ptuStartStatus;
     this.threshold = simulationSettings.other.ptuThreshold;
   }
 
@@ -293,28 +291,33 @@ class HydraulicSystemController {
       engine1: new Pump(
         simulationSettings.pumpMaxFlowRates.engine1,
         this.reservoires.green,
+        simulationSettings.engineStartStatus.engine1,
       ),
       engine2: new Pump(
         simulationSettings.pumpMaxFlowRates.engine2,
         this.reservoires.yellow,
+        simulationSettings.engineStartStatus.engine2,
       ),
       blueElectricPump: new Pump(
         simulationSettings.pumpMaxFlowRates.blueElectricPump,
         this.reservoires.blue,
+        simulationSettings.pumpStartStatus.blueElectricPump,
       ),
       yellowElectricPump: new Pump(
         simulationSettings.pumpMaxFlowRates.yellowElectricPump,
         this.reservoires.yellow,
+        simulationSettings.pumpStartStatus.yellowElectricPump,
       ),
       ramAirTurbine: new Pump(
         simulationSettings.pumpMaxFlowRates.ramAirTurbine,
         this.reservoires.blue,
+        simulationSettings.pumpStartStatus.ramAirTurbine,
       ),
     };
 
     this.valves = {
-      engine1: new Valve(),
-      engine2: new Valve(),
+      engine1: new Valve(simulationSettings.valveStartStatus.green),
+      engine2: new Valve(simulationSettings.valveStartStatus.yellow),
     };
 
     this.lines = {
@@ -341,7 +344,7 @@ class HydraulicSystemController {
     clearInterval(simulationInterval);
     simulationInterval = setInterval(() => {
       if (simulationSettings.other.status) hydraulicSystem[0].update();
-    }, speed);
+    }, tickInterval(speed));
   };
 
   applySettings(settings: SimulationSettings) {
@@ -362,9 +365,13 @@ class HydraulicSystemController {
     const greenFlow = this.valves.engine1.calculateFlow(
       this.pumps.engine1.calculateOutput(this.lines.green.currentPressure),
     );
-    const yellowFlow = this.valves.engine2.calculateFlow(
-      this.pumps.engine2.calculateOutput(this.lines.yellow.currentPressure),
-    );
+    const yellowFlow =
+      this.valves.engine2.calculateFlow(
+        this.pumps.engine2.calculateOutput(this.lines.yellow.currentPressure),
+      ) +
+      this.pumps.yellowElectricPump.calculateOutput(
+        this.lines.yellow.currentPressure,
+      );
     const blueFlow = this.pumps.blueElectricPump.calculateOutput(
       this.lines.blue.currentPressure,
     );
@@ -382,8 +389,8 @@ class HydraulicSystemController {
           this.PTU_TRANSFER_RATE,
           Math.abs(pressureDifference),
         );
-        this.lines.green.updatePressure(-transferFlow);
-        this.lines.yellow.updatePressure(transferFlow);
+        this.lines.green.updatePressure(-transferFlow, false);
+        this.lines.yellow.updatePressure(transferFlow, false);
       } else if (ptuTransfer.yellowToGreen) {
         const pressureDifference =
           this.lines.yellow.currentPressure - this.lines.green.currentPressure;
@@ -391,8 +398,8 @@ class HydraulicSystemController {
           this.PTU_TRANSFER_RATE,
           Math.abs(pressureDifference),
         );
-        this.lines.yellow.updatePressure(-transferFlow);
-        this.lines.green.updatePressure(transferFlow);
+        this.lines.yellow.updatePressure(-transferFlow, false);
+        this.lines.green.updatePressure(transferFlow, false);
       }
     }
 
@@ -401,6 +408,7 @@ class HydraulicSystemController {
         this.pumps.ramAirTurbine.calculateOutput(
           this.lines.blue.currentPressure,
         ),
+        false,
       );
     }
 
@@ -465,19 +473,22 @@ class HydraulicSystemController {
 }
 
 const hydraulicSystem = [new HydraulicSystemController()];
-hydraulicSystem[0].pumps.blueElectricPump.start();
 
 let simulationInterval = setInterval(() => {
   if (simulationSettings.other.status) hydraulicSystem[0].update();
-}, simulationSettings.other.speed);
+}, tickInterval(simulationSettings.other.speed));
 
 const resetSimulation = () => {
   clearInterval(simulationInterval);
+  Object.assign(
+    simulationSettings,
+    JSON.parse(JSON.stringify(DEFAULT_SETTINGS)),
+  );
   hydraulicSystem.pop();
   hydraulicSystem.push(new HydraulicSystemController());
   simulationInterval = setInterval(() => {
     if (simulationSettings.other.status) hydraulicSystem[0].update();
-  }, simulationSettings.other.speed);
+  }, tickInterval(simulationSettings.other.speed));
 };
 
 type Event = {
