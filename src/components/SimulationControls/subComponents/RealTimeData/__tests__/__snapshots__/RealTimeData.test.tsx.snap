@@ -7,14 +7,14 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12); --Paper-overlay: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-h2rgh7-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter css-16ywj6e-MuiTypography-root"
       style="--Typography-textAlign: center;"
     >
       Simulation Data
     </h6>
     <table
       aria-label="color-based simulation data table"
-      class="MuiTable-root css-86u4st-MuiTable-root"
+      class="MuiTable-root css-cvh5rh-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
@@ -23,25 +23,25 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root MuiTableRow-head css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             scope="col"
           >
             Parameter
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             scope="col"
           >
             Green
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             scope="col"
           >
             Yellow
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             scope="col"
           >
             Blue
@@ -55,25 +55,25 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             Reservoir Levels (%)
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-reservoir_levels_%-green"
           >
             70.00
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-reservoir_levels_%-yellow"
           >
             80.00
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-reservoir_levels_%-blue"
           >
             60.00
@@ -83,25 +83,25 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             Pressure (PSI)
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pressure_psi-green"
           >
             3000
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pressure_psi-yellow"
           >
             3000
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pressure_psi-blue"
           >
             3000
@@ -112,7 +112,7 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
     <br />
     <table
       aria-label="engine-based simulation data table"
-      class="MuiTable-root css-86u4st-MuiTable-root"
+      class="MuiTable-root css-cvh5rh-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
@@ -121,41 +121,41 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root MuiTableRow-head css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             scope="col"
           >
             Parameter
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             data-testid="realTimeData-engine1-header"
             scope="col"
           >
             engine1
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             data-testid="realTimeData-engine2-header"
             scope="col"
           >
             engine2
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             data-testid="realTimeData-ramairturbine-header"
             scope="col"
           >
             ramAirTurbine
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             data-testid="realTimeData-blueelectricpump-header"
             scope="col"
           >
             blueElectricPump
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-zcinux-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeSmall css-8xayhp-MuiTableCell-root"
             data-testid="realTimeData-yellowelectricpump-header"
             scope="col"
           >
@@ -170,37 +170,37 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             Pump Status
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pump_status-engine1"
           >
             Inactive
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pump_status-engine2"
           >
             Inactive
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pump_status-ramairturbine"
           >
             Inactive
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pump_status-blueelectricpump"
           >
             Inactive
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-pump_status-yellowelectricpump"
           >
             Inactive
@@ -210,19 +210,19 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             Valve Status
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-valve_status-engine1"
           >
             Open
           </td>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             data-testid="realTimeData-valve_status-engine2"
           >
             Open
@@ -233,7 +233,7 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
     <br />
     <table
       aria-label="other-settings simulation data table"
-      class="MuiTable-root css-86u4st-MuiTable-root"
+      class="MuiTable-root css-cvh5rh-MuiTable-root"
     >
       <tbody
         class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
@@ -242,13 +242,13 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             Air Temperature (°C)
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             colspan="3"
             data-testid="realTimeData-air_temperature_c"
           >
@@ -259,13 +259,13 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             PTU Threshold
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             colspan="3"
             data-testid="realTimeData-ptu_threshold"
           >
@@ -276,13 +276,13 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             System Speed
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             colspan="3"
             data-testid="realTimeData-system_speed"
           >
@@ -293,13 +293,13 @@ exports[`RealTimeData > GIVEN the component is rendered > THEN it's rendered as 
           class="MuiTableRow-root css-voeqob-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             scope="row"
           >
             Gross Weight
           </th>
           <td
-            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-1z7miw-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeSmall css-u3ees1-MuiTableCell-root"
             colspan="3"
             data-testid="realTimeData-gross_weight"
           >

@@ -51,13 +51,13 @@ export const lightTheme = createTheme({
     divider: colors.lightGray,
   },
   typography: {
-    fontFamily: "'Helvetica', Arial, sans-serif",
+    fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
     h1: {
-      fontFamily: "'Helvetica Bold', Arial, sans-serif",
+      fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
       fontWeight: 700,
     },
     h2: {
-      fontFamily: "'Helvetica Bold', Arial, sans-serif",
+      fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
       fontWeight: 700,
     },
   },
